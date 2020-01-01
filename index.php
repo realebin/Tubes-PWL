@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- Title -->
-<title>Soup - Restaurant with Online Ordering System Template</title>
+<title>Mougs - Delicious Restaurant</title>
 
 <!-- Favicons -->
 <link rel="shortcut icon" href="assets/img/favicon.png">
@@ -45,7 +45,7 @@
                     <!-- Logo -->
                     <div class="module module-logo dark">
                         <a href="index.php">
-                            <img src="assets/img/logo-light.svg" alt="" width="88">
+                            <img src="assets/img/logoMougsPutih.png" alt="" width="200">
                         </a>
                     </div>
                 </div>
@@ -68,6 +68,11 @@
                                 <a href="#">About</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
+                                        <li><a href="index.php?page=about">About Us</a></li>
+                                        <li><a href="index.php?page=service">Services</a></li>
+                                        <li><a href="index.php?page=gallery">Gallery</a></li>
+                                        <li><a href="index.php?page=review">Reviews</a></li>
+                                        <li><a href="index.php?page=faq">FAQ</a></li>
                                         <?php
                                         $page = FILTER_INPUT(INPUT_GET, "page");
                                         switch ($page) {
@@ -85,13 +90,10 @@
                                                 break;
                                             case 'contact' : include_once 'page-contact.html';
                                                 break;
+                                            default : include_once 'index.php';
+                                                break;
                                         }
                                         ?>
-                                        <li><a href="index.php?page=about">About Us</a></li>
-                                        <li><a href="index.php?page=service">Services</a></li>
-                                        <li><a href="index.php?page=gallery">Gallery</a></li>
-                                        <li><a href="index.php?page=review">Reviews</a></li>
-                                        <li><a href="index.php?page=faq">FAQ</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-about.jpg" alt="">
@@ -177,7 +179,7 @@
 
         <div class="module module-logo">
             <a href="index.php">
-                <img src="assets/img/logo-horizontal-dark.svg" alt="">
+                <img src="assets/img/logoMougsPutih.png" alt="">
             </a>
         </div>
 
@@ -462,7 +464,7 @@
                 <!-- Footer 1st Row -->
                 <div class="footer-first-row row">
                     <div class="col-lg-3 text-center">
-                        <a href="index.php"><img src="assets/img/logo-light.svg" alt="" width="88" class="mt-5 mb-5"></a>
+                        <a href="index.php"><img src="assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-muted">Latest news</h5>
