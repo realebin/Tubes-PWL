@@ -53,16 +53,16 @@
                     <!-- Navigation -->
                     <nav class="module module-navigation left mr-4">
                         <ul id="nav-main" class="nav nav-main">
-                            <li class="has-dropdown">
-                                <a href="#">Home</a>
-                                <div class="dropdown-container">
-                                    <ul>
+                            <li>
+                                <a href="index.php">Home</a>
+<!--                                <div class="dropdown-container">-->
+<!--                                    <ul>-->
 
-                                        <li><a href="index.php">Home Basic</a></li>
-                                        <li><a href="index-slider.html">Home Fullwidth Slider</a></li>
-                                        <li><a href="index-video.html">Home Video</a></li>
-                                    </ul>
-                                </div>
+<!--                                        <li><a href="index.php">Home Basic</a></li>-->
+<!--                                        <li><a href="index-slider.html">Home Fullwidth Slider</a></li>-->
+<!--                                        <li><a href="index-video.html">Home Video</a></li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
                             </li>
                             <li class="has-dropdown">
                                 <a href="#">About</a>
@@ -86,7 +86,6 @@
                                             case 'contact' : include_once 'page-contact.html';
                                                 break;
                                         }
-
                                         ?>
                                         <li><a href="index.php?page=about">About Us</a></li>
                                         <li><a href="index.php?page=service">Services</a></li>
