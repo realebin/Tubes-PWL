@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27c346e-4f65-4a4e-b4ac-5bce5707ab9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dao/KategoriDaoImpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dao/MenuDaoImpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/Dao/MenuDaoImpl.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +61,7 @@
       <workItem from="1575423014809" duration="5788000" />
       <workItem from="1575975218460" duration="1266000" />
       <workItem from="1577888379398" duration="4738000" />
-      <workItem from="1577944988743" duration="2456000" />
+      <workItem from="1577944988743" duration="3693000" />
     </task>
     <servers />
   </component>
