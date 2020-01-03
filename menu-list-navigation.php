@@ -131,7 +131,7 @@ if(!isset($nav))
                     <!-- Logo -->
                     <div class="module module-logo dark">
                         <a href="index.php">
-                            <img src="assets/img/logo-light.svg" alt="" width="88">
+                            <img src="assets/img/logoMougsPutih.png" alt="" width="200">
                         </a>
                     </div>
                 </div>
@@ -182,7 +182,7 @@ if(!isset($nav))
 
         <div class="module module-logo">
             <a href="index.php">
-                <img src="assets/img/logo-horizontal-dark.svg" alt="">
+                <img src="assets/img/logoMougsPutih.png" alt="">
             </a>
         </div>
 
@@ -605,7 +605,7 @@ if(!isset($nav))
                 <!-- Footer 1st Row -->
                 <div class="footer-first-row row">
                     <div class="col-lg-3 text-center">
-                        <a href="index.php"><img src="assets/img/logo-light.svg" alt="" width="88" class="mt-5 mb-5"></a>
+                        <a href="index.php"><img src="assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-muted">Latest news</h5>
@@ -738,7 +738,7 @@ if(!isset($nav))
     <nav id="panel-mobile">
         <div class="module module-logo bg-dark dark">
             <a href="#">
-                <img src="assets/img/logo-light.svg" alt="" width="88">
+                <img src="assets/img/logoMougsPutih.png" alt="" width="200">
             </a>
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>
