@@ -19,6 +19,17 @@ CREATE SCHEMA IF NOT EXISTS `restaurant` DEFAULT CHARACTER SET utf8 ;
 USE `restaurant` ;
 
 -- -----------------------------------------------------
+-- Table `restaurant`.`kategori`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `restaurant`.`kategori` (
+  `idKategori` INT(11) NOT NULL AUTO_INCREMENT,
+  `nama` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`idKategori`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
 -- Table `restaurant`.`menu`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `restaurant`.`menu` (
@@ -26,23 +37,12 @@ CREATE TABLE IF NOT EXISTS `restaurant`.`menu` (
   `nama` VARCHAR(45) NOT NULL,
   `harga` DOUBLE NOT NULL,
   `status` TINYINT(4) NOT NULL,
-  PRIMARY KEY (`idMenu`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `restaurant`.`kategori`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `restaurant`.`kategori` (
-  `idKategori` INT(11) NOT NULL AUTO_INCREMENT,
-  `nama` VARCHAR(50) NOT NULL,
-  `menu_id` INT(11) NOT NULL,
-  PRIMARY KEY (`idKategori`),
-  INDEX `fk_kategori_menu1_idx` (`menu_id` ASC) ,
-  CONSTRAINT `fk_kategori_menu1`
-    FOREIGN KEY (`menu_id`)
-    REFERENCES `restaurant`.`menu` (`idMenu`)
+  `kategori_idKategori` INT(11) NOT NULL,
+  PRIMARY KEY (`idMenu`),
+  INDEX `fk_menu_kategori1_idx` (`kategori_idKategori` ASC) ,
+  CONSTRAINT `fk_menu_kategori1`
+    FOREIGN KEY (`kategori_idKategori`)
+    REFERENCES `restaurant`.`kategori` (`idKategori`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
