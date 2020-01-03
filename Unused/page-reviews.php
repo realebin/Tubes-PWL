@@ -10,24 +10,24 @@
 <title>Soup - Restaurant with Online Ordering System Template</title>
 
 <!-- Favicons -->
-<link rel="shortcut icon" href="assets/img/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
+<link rel="shortcut icon" href="../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon_60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon_76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon_120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon_152x152.png">
 
 <!-- CSS Plugins -->
-<link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
-<link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
-<link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
+<link rel="stylesheet" href="../assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../assets/plugins/slick-carousel/slick/slick.css" />
+<link rel="stylesheet" href="../assets/plugins/animate.css/animate.min.css" />
+<link rel="stylesheet" href="../assets/plugins/animsition/dist/css/animsition.min.css" />
 
 <!-- CSS Icons -->
-<link rel="stylesheet" href="assets/css/themify-icons.css" />
-<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../assets/css/themify-icons.css" />
+<link rel="stylesheet" href="../assets/plugins/font-awesome/css/font-awesome.min.css" />
 
 <!-- CSS Theme -->
-<link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
+<link id="theme" rel="stylesheet" href="../assets/css/themes/theme-beige.min.css" />
 
 </head>
 
@@ -44,8 +44,8 @@
                 <div class="col-md-3">
                     <!-- Logo -->
                     <div class="module module-logo dark">
-                        <a href="index.php">
-                            <img src="assets/img/logo-light.svg" alt="" width="88">
+                        <a href="../index.php">
+                            <img src="../assets/img/logo-light.svg" alt="" width="88">
                         </a>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                                 <a href="#">Home</a>
                                 <div class="dropdown-container">
                                     <ul>
-                                        <li><a href="index.php">Home Basic</a></li>
+                                        <li><a href="../index.php">Home Basic</a></li>
                                         <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
                                         <li><a href="index-video.php">Home Video</a></li>
                                     </ul>
@@ -67,14 +67,14 @@
                                 <a href="#">About</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="page-about.php">About Us</a></li>
+                                        <li><a href="../page-about.php">About Us</a></li>
                                         <li><a href="page-services.php">Services</a></li>
                                         <li><a href="page-gallery.php">Gallery</a></li>
                                         <li><a href="page-reviews.php">Reviews</a></li>
                                         <li><a href="page-faq.php">FAQ</a></li>
                                     </ul>
                                     <div class="dropdown-image">
-                                        <img src="assets/img/photos/dropdown-about.jpg" alt="">
+                                        <img src="../assets/img/photos/dropdown-about.jpg" alt="">
                                     </div>
                                 </div>
                             </li>
@@ -85,7 +85,7 @@
                                         <li class="has-dropdown">
                                             <a href="#">List</a>
                                             <ul>
-                                                <li><a href="menu-list-navigation.php">Navigation</a></li>
+                                                <li><a href="../menu-list-navigation.php">Navigation</a></li>
                                                 <li><a href="menu-list-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
@@ -100,28 +100,29 @@
                                 </div>
                             </li>
                             <li><a href="page-offers.php">Offers</a></li>
-                            <li><a href="page-contact.php">Contact</a></li>
+                            <li><a href="../page-contact.php">Contact</a></li>
                             <li class="has-dropdown">   
                                 <a href="#">More</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.php">Book a table</a></li>
-                                        <li><a href="checkout.php">Checkout</a></li>
-                                        <li><a href="confirmation.php">Confirmation</a></li>
+                                        <li><a href="../book-a-table.php">Book a table</a></li>
+                                        <li><a href="../checkout.php">Checkout</a></li>
+                                        <li><a href="../confirmation.php">Confirmation</a></li>
                                         <li><a href="blog.php">Blog</a></li>
                                         <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
                                         <li><a href="blog-post.php">Blog Post</a></li>
+                                        <li><a href="blog-post-sidebar.html">Blog Post + Sidebar</a></li>
                                         <li><a href="documentation.php">Documentation</a></li>
                                     </ul>
                                     <div class="dropdown-image">
-                                        <img src="assets/img/photos/dropdown-more.jpg" alt="">
+                                        <img src="../assets/img/photos/dropdown-more.jpg" alt="">
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </nav>
                     <div class="module left">
-                        <a href="menu-list-navigation.php" class="btn btn-outline-secondary"><span>Order</span></a>
+                        <a href="../menu-list-navigation.php" class="btn btn-outline-secondary"><span>Order</span></a>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -147,8 +148,8 @@
         </div>    
 
         <div class="module module-logo">
-            <a href="index.php">
-                <img src="assets/img/logo-horizontal-dark.svg" alt="">
+            <a href="../index.php">
+                <img src="../assets/img/logo-horizontal-dark.svg" alt="">
             </a>
         </div>
 
@@ -161,79 +162,133 @@
     <!-- Header / End -->
 
     <!-- Content -->
-    <div id="content" class="bg-light">
+    <div id="content">
 
-        <!-- Post / Single -->
-        <article class="post single">
-            <div class="post-image bg-parallax"><img src="assets/img/posts/post01_lg.jpg" alt=""></div>
-            <div class="container container-md">
-                <div class="post-content">
-                    <ul class="post-meta">
-                        <li>24 July, 2016</li>
-                        <li>by Johnatan Doe</li>
-                    </ul>
-                    <h1 class="post-title">Delicious idea for your Sunday dessert</h1>
-                    <hr>
-                    <p class="lead">Integer commodo nisi nec hendrerit volutpat. Ut semper lacus felis, vitae malesuada orci dapibus at. Etiam bibendum sed quam vitae scelerisque. Mauris aliquet vulputate lorem ultrices porttitor. Vivamus lobortis nisl felis, laoreet tincidunt lectus bibendum id. </p>
-                    <p>Etiam et lobortis turpis, blandit vestibulum nisl. Sed vel enim sit amet lectus mollis feugiat eget et augue. Nunc eu felis dignissim, malesuada mi at, tempor ex. Quisque quis elit non sem vehicula dictum at sed turpis. In dignissim sodales leo nec pharetra. Fusce a lectus quis lorem condimentum consectetur ac at turpis. Nunc pulvinar non nisl tempor blandit.</p>
-                    <p>Cras non placerat mi. Sed condimentum tristique gravida. In egestas malesuada tempus. In quis orci eros. Sed risus ligula, scelerisque nec lacinia eu, rutrum a est. Cras sodales libero libero, sagittis tempor augue sollicitudin ut. In tortor nibh, aliquet sed rutrum sit amet, scelerisque sit amet odio. Nulla facilisi. Ut hendrerit justo eu eleifend volutpat.</p>
-                    <p>Proin eu faucibus ante. Nunc euismod purus vel neque porta egestas. Nunc pellentesque enim felis, at egestas libero semper quis. Nullam non tristique metus. Cras ipsum justo, dignissim eu euismod id, fermentum eu lectus. Praesent malesuada dolor eu magna posuere, non pharetra est semper. Curabitur interdum lacinia justo ac posuere. Phasellus auctor tempus est, a tempor odio dictum id. Nulla at ullamcorper est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur pulvinar tristique justo, sit amet rutrum lectus posuere et. Donec quis facilisis dolor, et molestie elit.</p>
-                    <hr>
-                    <div class="post-comments post-module">
-                        <h4><i class="ti ti-comments mr-3 text-primary"></i>Comments</h4>
-                        <div class="content">
-                            <ul class="comments">
-                                <li>
-                                    <div class="avatar"><img src="assets/img/avatars/avatar01.jpg" alt=""></div>
-                                    <div class="content">
-                                        <span class="details">Jessica Biel on September 20,  <a href="#" class="text-primary">Reply</a></span>
-                                        <p>Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus.</p>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="avatar"><img src="assets/img/avatars/avatar02.jpg" alt=""></div>
-                                            <div class="content">
-                                                <span class="details">Jessica Biel on September 20</span>
-                                                <p>Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus, nec dapibus felis tempus in. Quisque eget elementum sem, cursus tristique orci. Donec velit nisi, auctor ac pharetra in, maximus eu justo.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <div class="avatar"><img src="assets/img/avatars/avatar03.jpg" alt=""></div>
-                                    <div class="content">
-                                        <span class="details">Jessica Biel on September 20,  <a href="#" class="text-primary">Reply</a></span>
-                                        <p>Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="post-add-comment post-module">
-                        <h4><i class="ti ti-pencil mr-3 text-primary"></i>Write a comment</h4>
-                        <div class="content">
-                            <form action="#" id="add-comment" class="validate-form">
-                                <div class="row gutters-sm">
-                                    <div class="col-md-6 form-group">
-                                        <input type="text" class="form-control" placeholder="Name" required>
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <input type="email" class="form-control" placeholder="E-mail" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <textarea id="comment" cols="30" rows="4" class="form-control" placeholder="Comment" required></textarea>
-                                </div>
-                                <div class="text-center">
-                                    <button class="btn btn-primary"><span>Send a comment</span></button>
-                                </div>
-                            </form>
-                        </div>
+        <!-- Page Title -->
+        <div class="page-title page-title-lg bg-dark dark">
+            <div class="bg-image bg-parallax"><img src="../assets/img/photos/bg-croissant.jpg" alt=""></div>
+            <div class="row">
+                <div class="col-lg-4 push-lg-4 text-center">
+                    <h1 class="mb-2">Reviews</h1>
+                    <h5 class="text-muted mb-0">Some informations about our restaurant</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="page-content pt-0 pull-up-30 protrude">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-xl-8 push-xl-2">
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg light" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>It’ was amazing feeling for may belly!</p>
+                            </div>
+                            <footer>
+                                <img src="../assets/img/avatars/avatar01.jpg" alt="">
+                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg light" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>Proin tincidunt, quam ut suscipit mollis, tortor eros bibendum sapien.</p>
+                            </div>
+                            <footer>
+                                <img src="../assets/img/avatars/avatar02.jpg" alt="">
+                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content dark">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>Great food and great atmosphere!</p>
+                            </div>
+                            <footer>
+                                <img src="../assets/img/avatars/avatar04.jpg" alt="">
+                                <span class="name">Kate Hudson<span class="text-muted">, LinkedIn</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg light" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>It’ was amazing feeling for may belly!</p>
+                            </div>
+                            <footer>
+                                <img src="../assets/img/avatars/avatar02.jpg" alt="">
+                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content dark">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+                                <p>The best paste I have ever ate in my entire life!</p>
+                            </div>
+                            <footer>
+                                <img src="../assets/img/avatars/avatar03.jpg" alt="">
+                                <span class="name">Kate Hudson<span class="text-muted">, LinkedIn</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg light" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>It’ was amazing feeling for may belly!</p>
+                            </div>
+                            <footer>
+                                <img src="../assets/img/avatars/avatar02.jpg" alt="">
+                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg light" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>Proin tincidunt, quam ut suscipit mollis, tortor eros bibendum sapien.</p>
+                            </div>
+                            <footer>
+                                <img src="../assets/img/avatars/avatar04.jpg" alt="">
+                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg light" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>It’ was amazing feeling for may belly!</p>
+                            </div>
+                            <footer>
+                                <img src="../assets/img/avatars/avatar02.jpg" alt="">
+                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                            </footer>
+                        </blockquote>
                     </div>
                 </div>
             </div>
-        </article>
+        </div>
+
+        <!-- Section -->
+        <section class="section section-lg dark bg-dark">
+
+            <div class="bg-image bg-parallax"><img src="../assets/img/photos/bg-review.jpg" alt=""></div>
+        
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-lg-8 push-lg-2">
+                        <h2 class="mb-3">Would you like to give Us a review?</h2>
+                        <h5 class="text-muted">Do not hesitate to do that!</h5>
+                        <button class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#reviewModal"><span>Write a review</span></button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
 
         <!-- Footer -->
         <footer id="footer" class="bg-dark dark">
@@ -242,7 +297,7 @@
                 <!-- Footer 1st Row -->
                 <div class="footer-first-row row">
                     <div class="col-lg-3 text-center">
-                        <a href="index.php"><img src="assets/img/logo-light.svg" alt="" width="88" class="mt-5 mb-5"></a>
+                        <a href="../index.php"><img src="../assets/img/logo-light.svg" alt="" width="88" class="mt-5 mb-5"></a>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-muted">Latest news</h5>
@@ -368,14 +423,14 @@
                 </div>
             </div>
         </div>
-        <a href="checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="../checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->
     <nav id="panel-mobile">
         <div class="module module-logo bg-dark dark">
             <a href="#">
-                <img src="assets/img/logo-light.svg" alt="" width="88">
+                <img src="../assets/img/logo-light.svg" alt="" width="88">
             </a>
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>
@@ -400,7 +455,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header modal-header-lg dark bg-dark">
-                <div class="bg-image"><img src="assets/img/photos/modal-add.jpg" alt=""></div>
+                <div class="bg-image"><img src="../assets/img/photos/modal-add.jpg" alt=""></div>
                 <h4 class="modal-title">Specify your dish</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>
             </div>
@@ -523,22 +578,53 @@
     </div>
 </div>
 
+<!-- Modal / Review -->
+<div class="modal fade" id="reviewModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header modal-header-lg dark bg-dark">
+                <div class="bg-image"><img src="../assets/img/photos/modal-review.jpg" alt=""></div>
+                <h4 class="modal-title">Write a review!</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>
+            </div>
+            <div class="modal-body">
+                <form action="#">
+                    <div class="form-group">
+                        <textarea cols="30" rows="6" class="form-control" placeholder="Write here your review..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Your rate:</label>
+                        <div class="rate rate-lg rating mb-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Your name:</label>
+                        <input type="text" class="form-control" placeholder="Your name">
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary">Add review</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- JS Plugins -->
-<script src="assets/plugins/jquery/dist/jquery.min.js"></script>
-<script src="assets/plugins/tether/dist/js/tether.min.js"></script>
-<script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="assets/plugins/slick-carousel/slick/slick.min.js"></script>
-<script src="assets/plugins/jquery.appear/jquery.appear.js"></script>
-<script src="assets/plugins/jquery.scrollto/jquery.scrollTo.min.js"></script>
-<script src="assets/plugins/jquery.localscroll/jquery.localScroll.min.js"></script>
-<script src="assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="assets/plugins/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
-<script src="assets/plugins/twitter-fetcher/js/twitterFetcher_min.js"></script>
-<script src="assets/plugins/skrollr/dist/skrollr.min.js"></script>
-<script src="assets/plugins/animsition/dist/js/animsition.min.js"></script>
+<script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
+<script src="../assets/plugins/tether/dist/js/tether.min.js"></script>
+<script src="../assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/slick-carousel/slick/slick.min.js"></script>
+<script src="../assets/plugins/jquery.appear/jquery.appear.js"></script>
+<script src="../assets/plugins/jquery.scrollto/jquery.scrollTo.min.js"></script>
+<script src="../assets/plugins/jquery.localscroll/jquery.localScroll.min.js"></script>
+<script src="../assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="../assets/plugins/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
+<script src="../assets/plugins/twitter-fetcher/js/twitterFetcher_min.js"></script>
+<script src="../assets/plugins/skrollr/dist/skrollr.min.js"></script>
+<script src="../assets/plugins/animsition/dist/js/animsition.min.js"></script>
 
 <!-- JS Core -->
-<script src="assets/js/core.js"></script>
+<script src="../assets/js/core.js"></script>
 
 </body>
 

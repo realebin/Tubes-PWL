@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- Title -->
-<title>Soup - Restaurant with Online Ordering System Template</title>
+<title>Mougs - ★★★★☆ Restaurant</title>
 
 <!-- Favicons -->
 <link rel="shortcut icon" href="assets/img/favicon.png">
@@ -45,7 +45,7 @@
                     <!-- Logo -->
                     <div class="module module-logo dark">
                         <a href="index.php">
-                            <img src="assets/img/logo-light.svg" alt="" width="88">
+                            <img src="assets/img/logoMougsPutih.png" alt="" width="200">
                         </a>
                     </div>
                 </div>
@@ -53,75 +53,23 @@
                     <!-- Navigation -->
                     <nav class="module module-navigation left mr-4">
                         <ul id="nav-main" class="nav nav-main">
-                            <li class="has-dropdown">
-                                <a href="#">Home</a>
-                                <div class="dropdown-container">
-                                    <ul>
-                                        <li><a href="index.php">Home Basic</a></li>
-                                        <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
-                                        <li><a href="index-video.php">Home Video</a></li>
-                                    </ul>
-                                </div>
+                            <li>
+                                <a href="index.php">Home</a>
                             </li>
-                            <li class="has-dropdown">
-                                <a href="#">About</a>
-                                <div class="dropdown-container">
-                                    <ul class="dropdown-mega">
-                                        <li><a href="page-about.php">About Us</a></li>
-                                        <li><a href="page-services.php">Services</a></li>
-                                        <li><a href="page-gallery.php">Gallery</a></li>
-                                        <li><a href="page-reviews.php">Reviews</a></li>
-                                        <li><a href="page-faq.php">FAQ</a></li>
-                                    </ul>
-                                    <div class="dropdown-image">
-                                        <img src="assets/img/photos/dropdown-about.jpg" alt="">
-                                    </div>
-                                </div>
+                            <li>
+                                <a href="index.php?menu=about">About</a>
                             </li>
-                            <li class="has-dropdown">
-                                <a href="#">Menu</a>
-                                <div class="dropdown-container">
-                                    <ul>
-                                        <li class="has-dropdown">
-                                            <a href="#">List</a>
-                                            <ul>
-                                                <li><a href="menu-list-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-list-collapse.php">Collapse</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="#">Grid</a>
-                                            <ul>
-                                                <li><a href="menu-grid-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-grid-collapse.php">Collapse</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <li>
+                                <a href="index.php?menu=order">Menu</a>
                             </li>
-                            <li><a href="page-offers.php">Offers</a></li>
-                            <li><a href="page-contact.php">Contact</a></li>
-                            <li class="has-dropdown">   
-                                <a href="#">More</a>
-                                <div class="dropdown-container">
-                                    <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.php">Book a table</a></li>
-                                        <li><a href="checkout.php">Checkout</a></li>
-                                        <li><a href="confirmation.php">Confirmation</a></li>
-                                        <li><a href="blog.php">Blog</a></li>
-                                        <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
-                                        <li><a href="blog-post.php">Blog Post</a></li>
-                                        <li><a href="documentation.php">Documentation</a></li>
-                                    </ul>
-                                    <div class="dropdown-image">
-                                        <img src="assets/img/photos/dropdown-more.jpg" alt="">
-                                    </div>
-                                </div>
+                            <li><a href="index.php?menu=contact">Contact</a></li>
+                            <li>
+                                <a href="index.php?menu=book">Book</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="module left">
-                        <a href="menu-list-navigation.php" class="btn btn-outline-secondary"><span>Order</span></a>
+                        <a href="index.php?menu=order" class="btn btn-outline-secondary"><span>Order</span></a>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -148,7 +96,7 @@
 
         <div class="module module-logo">
             <a href="index.php">
-                <img src="assets/img/logo-horizontal-dark.svg" alt="">
+                <img src="assets/img/logoMougsPutih.png" alt="">
             </a>
         </div>
 
@@ -329,21 +277,21 @@
                 <!-- Footer 1st Row -->
                 <div class="footer-first-row row">
                     <div class="col-lg-3 text-center">
-                        <a href="index.php"><img src="assets/img/logo-light.svg" alt="" width="88" class="mt-5 mb-5"></a>
+                        <a href="index.php"><img src="assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-muted">Latest news</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
+                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
+                                <a href="Unused/blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
+                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                         </ul>
@@ -455,14 +403,14 @@
                 </div>
             </div>
         </div>
-        <a href="checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="index.php?menu=checkout" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->
     <nav id="panel-mobile">
         <div class="module module-logo bg-dark dark">
             <a href="#">
-                <img src="assets/img/logo-light.svg" alt="" width="88">
+                <img src="assets/img/logoMougsPutih.png" alt="" width="200">
             </a>
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>

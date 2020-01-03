@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- Title -->
-<title>Soup - Restaurant with Online Ordering System Template</title>
+<title>Mougs - ★★★★☆ Restaurant</title>
 
 <!-- Favicons -->
 <link rel="shortcut icon" href="assets/img/favicon.png">
@@ -58,8 +58,8 @@
                                 <div class="dropdown-container">
                                     <ul>
                                         <li><a href="index.php">Home Basic</a></li>
-                                        <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
-                                        <li><a href="index-video.php">Home Video</a></li>
+                                        <li><a href="Unused/index-slider.php">Home Fullwidth Slider</a></li>
+                                        <li><a href="Unused/index-video.php">Home Video</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -68,10 +68,10 @@
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
                                         <li><a href="page-about.php">About Us</a></li>
-                                        <li><a href="page-services.php">Services</a></li>
-                                        <li><a href="page-gallery.php">Gallery</a></li>
-                                        <li><a href="page-reviews.php">Reviews</a></li>
-                                        <li><a href="page-faq.php">FAQ</a></li>
+                                        <li><a href="Unused/page-services.php">Services</a></li>
+                                        <li><a href="Unused/page-gallery.php">Gallery</a></li>
+                                        <li><a href="Unused/page-reviews.php">Reviews</a></li>
+                                        <li><a href="Unused/page-faq.php">FAQ</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-about.jpg" alt="">
@@ -86,20 +86,20 @@
                                             <a href="#">List</a>
                                             <ul>
                                                 <li><a href="menu-list-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-list-collapse.php">Collapse</a></li>
+                                                <li><a href="Unused/menu-list-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="#">Grid</a>
                                             <ul>
-                                                <li><a href="menu-grid-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-grid-collapse.php">Collapse</a></li>
+                                                <li><a href="Unused/menu-grid-navigation.php">Navigation</a></li>
+                                                <li><a href="Unused/menu-grid-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="page-offers.php">Offers</a></li>
+                            <li><a href="Unused/page-offers.php">Offers</a></li>
                             <li><a href="page-contact.php">Contact</a></li>
                             <li class="has-dropdown">   
                                 <a href="#">More</a>
@@ -108,10 +108,10 @@
                                         <li><a href="book-a-table.php">Book a table</a></li>
                                         <li><a href="checkout.php">Checkout</a></li>
                                         <li><a href="confirmation.php">Confirmation</a></li>
-                                        <li><a href="blog.php">Blog</a></li>
-                                        <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
-                                        <li><a href="blog-post.php">Blog Post</a></li>
-                                        <li><a href="documentation.php">Documentation</a></li>
+                                        <li><a href="Unused/blog.php">Blog</a></li>
+                                        <li><a href="Unused/blog-sidebar.php">Blog + Sidebar</a></li>
+                                        <li><a href="Unused/blog-post.php">Blog Post</a></li>
+                                        <li><a href="Unused/documentation.php">Documentation</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-more.jpg" alt="">
@@ -190,15 +190,15 @@
                         <h5 class="text-muted">Latest news</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
+                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
+                                <a href="Unused/blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
+                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                         </ul>

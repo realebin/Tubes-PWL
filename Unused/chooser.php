@@ -10,24 +10,24 @@
 <title>Soup - Restaurant with Online Ordering System Template</title>
 
 <!-- Favicons -->
-<link rel="shortcut icon" href="assets/img/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
+<link rel="shortcut icon" href="../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon_60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon_76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon_120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon_152x152.png">
 
 <!-- CSS Plugins -->
-<link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
-<link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
-<link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
+<link rel="stylesheet" href="../assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../assets/plugins/slick-carousel/slick/slick.css" />
+<link rel="stylesheet" href="../assets/plugins/animate.css/animate.min.css" />
+<link rel="stylesheet" href="../assets/plugins/animsition/dist/css/animsition.min.css" />
 
 <!-- CSS Icons -->
-<link rel="stylesheet" href="assets/css/themify-icons.css" />
-<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../assets/css/themify-icons.css" />
+<link rel="stylesheet" href="../assets/plugins/font-awesome/css/font-awesome.min.css" />
 
 <!-- CSS Theme -->
-<link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
+<link id="theme" rel="stylesheet" href="../assets/css/themes/theme-beige.min.css" />
 
 </head>
 
@@ -60,7 +60,7 @@
                                 <a href="#">Home</a>
                                 <div class="dropdown-container">
                                     <ul>
-                                        <li><a href="index.php">Home Basic</a></li>
+                                        <li><a href="../index.php">Home Basic</a></li>
                                         <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
                                         <li><a href="index-video.php">Home Video</a></li>
                                     </ul>
@@ -70,14 +70,14 @@
                                 <a href="#">About</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="page-about.php">About Us</a></li>
+                                        <li><a href="../page-about.php">About Us</a></li>
                                         <li><a href="page-services.php">Services</a></li>
                                         <li><a href="page-gallery.php">Gallery</a></li>
                                         <li><a href="page-reviews.php">Reviews</a></li>
                                         <li><a href="page-faq.php">FAQ</a></li>
                                     </ul>
                                     <div class="dropdown-image">
-                                        <img src="assets/img/photos/dropdown-about.jpg" alt="">
+                                        <img src="../assets/img/photos/dropdown-about.jpg" alt="">
                                     </div>
                                 </div>
                             </li>
@@ -88,7 +88,7 @@
                                         <li class="has-dropdown">
                                             <a href="#">List</a>
                                             <ul>
-                                                <li><a href="menu-list-navigation.php">Navigation</a></li>
+                                                <li><a href="../menu-list-navigation.php">Navigation</a></li>
                                                 <li><a href="menu-list-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
@@ -103,28 +103,28 @@
                                 </div>
                             </li>
                             <li><a href="page-offers.php">Offers</a></li>
-                            <li><a href="page-contact.php">Contact</a></li>
+                            <li><a href="../page-contact.php">Contact</a></li>
                             <li class="has-dropdown">   
                                 <a href="#">More</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.php">Book a table</a></li>
-                                        <li><a href="checkout.php">Checkout</a></li>
-                                        <li><a href="confirmation.php">Confirmation</a></li>
+                                        <li><a href="../book-a-table.php">Book a table</a></li>
+                                        <li><a href="../checkout.php">Checkout</a></li>
+                                        <li><a href="../confirmation.php">Confirmation</a></li>
                                         <li><a href="blog.php">Blog</a></li>
                                         <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
                                         <li><a href="blog-post.php">Blog Post</a></li>
                                         <li><a href="documentation.php">Documentation</a></li>
                                     </ul>
                                     <div class="dropdown-image">
-                                        <img src="assets/img/photos/dropdown-more.jpg" alt="">
+                                        <img src="../assets/img/photos/dropdown-more.jpg" alt="">
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </nav>
                     <div class="module">
-                        <a href="menu-list-navigation.php" class="btn btn-outline-primary"><span>Order</span></a>
+                        <a href="../menu-list-navigation.php" class="btn btn-outline-primary"><span>Order</span></a>
                     </div>
                 </div>
             </div>
@@ -141,8 +141,8 @@
         </div>    
 
         <div class="module module-logo">
-            <a href="index.php">
-                <img src="assets/img/logo-horizontal-dark.svg" alt="">
+            <a href="../index.php">
+                <img src="../assets/img/logo-horizontal-dark.svg" alt="">
             </a>
         </div>
 
@@ -160,10 +160,10 @@
         <!-- Section - Main -->
         <section class="section section-lg bg-dark dark">
 
-            <div class="bg-image zooming"><img src="assets/img/photos/bg-croissant.jpg" alt=""></div>
+            <div class="bg-image zooming"><img src="../assets/img/photos/bg-croissant.jpg" alt=""></div>
 
             <div class="container text-center" data-local-scroll>
-                <img src="assets/img/logo-light.svg" alt="" width="111" class="mb-5">
+                <img src="../assets/img/logo-light.svg" alt="" width="111" class="mb-5">
                 <h4 class="mb-5">Restaurant with Online Ordering System Template</h4>
                 <a href="#concepts" class="btn btn-outline-primary btn-lg"><span>Pick a concept</span></a>
             </div>
@@ -180,10 +180,10 @@
                         <!-- Image Box -->
                         <div class="image-box">
                             <div class="image">
-                                <a href="index.php" target="_blank"><img src="assets/img/screens/home-basic.jpg" alt=""></a>
+                                <a href="../index.php" target="_blank"><img src="../assets/img/screens/home-basic.jpg" alt=""></a>
                             </div>
                             <div class="title">
-                                <a href="index.php" target="_blank">
+                                <a href="../index.php" target="_blank">
                                     <h5 class="mb-0">Basic</h5>
                                     <span class="text-muted">Basic Slider</span>
                                 </a>
@@ -194,7 +194,7 @@
                         <!-- Image Box -->
                         <div class="image-box">
                             <div class="image">
-                                <a href="index-slider.php" target="_blank"><img src="assets/img/screens/home-slider.jpg" alt=""></a>
+                                <a href="index-slider.php" target="_blank"><img src="../assets/img/screens/home-slider.jpg" alt=""></a>
                             </div>
                             <div class="title">
                                 <a href="index-slider.php" target="_blank">
@@ -208,7 +208,7 @@
                         <!-- Image Box -->
                         <div class="image-box">
                             <div class="image">
-                                <a href="index-video.php" target="_blank"><img src="assets/img/screens/home-video.jpg" alt=""></a>
+                                <a href="index-video.php" target="_blank"><img src="../assets/img/screens/home-video.jpg" alt=""></a>
                             </div>
                             <div class="title">
                                 <a href="index-video.php" target="_blank">
@@ -222,7 +222,7 @@
                         <!-- Image Box -->
                         <div class="image-box">
                             <div class="image">
-                                <a href="https://www.facebook.com/suelopl" target="_blank"><img src="assets/img/screens/home-more.jpg" alt=""></a>
+                                <a href="https://www.facebook.com/suelopl" target="_blank"><img src="../assets/img/screens/home-more.jpg" alt=""></a>
                             </div>
                             <div class="title">
                                 <a href="https://www.facebook.com/suelopl" target="_blank">
@@ -250,7 +250,7 @@
                 <!-- Footer 1st Row -->
                 <div class="footer-first-row row">
                     <div class="col-lg-3 text-center">
-                        <a href="index.php"><img src="assets/img/logo-light.svg" alt="" width="88" class="mt-5 mb-5"></a>
+                        <a href="../index.php"><img src="../assets/img/logo-light.svg" alt="" width="88" class="mt-5 mb-5"></a>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-muted">Latest news</h5>
@@ -376,14 +376,14 @@
                 </div>
             </div>
         </div>
-        <a href="checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="../checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->
     <nav id="panel-mobile">
         <div class="module module-logo bg-dark dark">
             <a href="#">
-                <img src="assets/img/logo-light.svg" alt="" width="88">
+                <img src="../assets/img/logo-light.svg" alt="" width="88">
             </a>
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>
@@ -404,21 +404,21 @@
 </div>
 
 <!-- JS Plugins -->
-<script src="assets/plugins/jquery/dist/jquery.min.js"></script>
-<script src="assets/plugins/tether/dist/js/tether.min.js"></script>
-<script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="assets/plugins/slick-carousel/slick/slick.min.js"></script>
-<script src="assets/plugins/jquery.appear/jquery.appear.js"></script>
-<script src="assets/plugins/jquery.scrollto/jquery.scrollTo.min.js"></script>
-<script src="assets/plugins/jquery.localscroll/jquery.localScroll.min.js"></script>
-<script src="assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="assets/plugins/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
-<script src="assets/plugins/twitter-fetcher/js/twitterFetcher_min.js"></script>
-<script src="assets/plugins/skrollr/dist/skrollr.min.js"></script>
-<script src="assets/plugins/animsition/dist/js/animsition.min.js"></script>
+<script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
+<script src="../assets/plugins/tether/dist/js/tether.min.js"></script>
+<script src="../assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/slick-carousel/slick/slick.min.js"></script>
+<script src="../assets/plugins/jquery.appear/jquery.appear.js"></script>
+<script src="../assets/plugins/jquery.scrollto/jquery.scrollTo.min.js"></script>
+<script src="../assets/plugins/jquery.localscroll/jquery.localScroll.min.js"></script>
+<script src="../assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="../assets/plugins/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
+<script src="../assets/plugins/twitter-fetcher/js/twitterFetcher_min.js"></script>
+<script src="../assets/plugins/skrollr/dist/skrollr.min.js"></script>
+<script src="../assets/plugins/animsition/dist/js/animsition.min.js"></script>
 
 <!-- JS Core -->
-<script src="assets/js/core.js"></script>
+<script src="../assets/js/core.js"></script>
 
 </body>
 

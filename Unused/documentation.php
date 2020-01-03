@@ -10,27 +10,27 @@
 <title>Soup - Restaurant with Online Ordering System Template</title>
 
 <!-- Favicons -->
-<link rel="shortcut icon" href="assets/img/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
+<link rel="shortcut icon" href="../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon_60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon_76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon_120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon_152x152.png">
 
 <!-- CSS Plugins -->
-<link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
-<link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
-<link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
+<link rel="stylesheet" href="../assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../assets/plugins/slick-carousel/slick/slick.css" />
+<link rel="stylesheet" href="../assets/plugins/animate.css/animate.min.css" />
+<link rel="stylesheet" href="../assets/plugins/animsition/dist/css/animsition.min.css" />
 
 <!-- CSS Icons -->
-<link rel="stylesheet" href="assets/css/themify-icons.css" />
-<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../assets/css/themify-icons.css" />
+<link rel="stylesheet" href="../assets/plugins/font-awesome/css/font-awesome.min.css" />
 
 <!-- CSS Code HighLighter -->
-<link rel="stylesheet" href="assets/css/prettify.css" />
+<link rel="stylesheet" href="../assets/css/prettify.css" />
 
 <!-- CSS Theme -->
-<link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
+<link id="theme" rel="stylesheet" href="../assets/css/themes/theme-beige.min.css" />
 
 </head>
 
@@ -47,8 +47,8 @@
                 <div class="col-md-3">
                     <!-- Logo -->
                     <div class="module module-logo dark">
-                        <a href="index.php">
-                            <img src="assets/img/logo-light.svg" alt="" width="88">
+                        <a href="../index.php">
+                            <img src="../assets/img/logo-light.svg" alt="" width="88">
                         </a>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                                 <a href="#">Home</a>
                                 <div class="dropdown-container">
                                     <ul>
-                                        <li><a href="index.php">Home Basic</a></li>
+                                        <li><a href="../index.php">Home Basic</a></li>
                                         <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
                                         <li><a href="index-video.php">Home Video</a></li>
                                     </ul>
@@ -70,14 +70,14 @@
                                 <a href="#">About</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="page-about.php">About Us</a></li>
+                                        <li><a href="../page-about.php">About Us</a></li>
                                         <li><a href="page-services.php">Services</a></li>
                                         <li><a href="page-gallery.php">Gallery</a></li>
                                         <li><a href="page-reviews.php">Reviews</a></li>
                                         <li><a href="page-faq.php">FAQ</a></li>
                                     </ul>
                                     <div class="dropdown-image">
-                                        <img src="assets/img/photos/dropdown-about.jpg" alt="">
+                                        <img src="../assets/img/photos/dropdown-about.jpg" alt="">
                                     </div>
                                 </div>
                             </li>
@@ -88,7 +88,7 @@
                                         <li class="has-dropdown">
                                             <a href="#">List</a>
                                             <ul>
-                                                <li><a href="menu-list-navigation.php">Navigation</a></li>
+                                                <li><a href="../menu-list-navigation.php">Navigation</a></li>
                                                 <li><a href="menu-list-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
@@ -103,28 +103,28 @@
                                 </div>
                             </li>
                             <li><a href="page-offers.php">Offers</a></li>
-                            <li><a href="page-contact.php">Contact</a></li>
+                            <li><a href="../page-contact.php">Contact</a></li>
                             <li class="has-dropdown">   
                                 <a href="#">More</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.php">Book a table</a></li>
-                                        <li><a href="checkout.php">Checkout</a></li>
-                                        <li><a href="confirmation.php">Confirmation</a></li>
+                                        <li><a href="../book-a-table.php">Book a table</a></li>
+                                        <li><a href="../checkout.php">Checkout</a></li>
+                                        <li><a href="../confirmation.php">Confirmation</a></li>
                                         <li><a href="blog.php">Blog</a></li>
                                         <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
                                         <li><a href="blog-post.php">Blog Post</a></li>
                                         <li><a href="documentation.php">Documentation</a></li>
                                     </ul>
                                     <div class="dropdown-image">
-                                        <img src="assets/img/photos/dropdown-more.jpg" alt="">
+                                        <img src="../assets/img/photos/dropdown-more.jpg" alt="">
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </nav>
                     <div class="module left">
-                        <a href="menu-list-navigation.php" class="btn btn-outline-secondary"><span>Order</span></a>
+                        <a href="../menu-list-navigation.php" class="btn btn-outline-secondary"><span>Order</span></a>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -150,8 +150,8 @@
         </div>    
 
         <div class="module module-logo">
-            <a href="index.php">
-                <img src="assets/img/logo-horizontal-dark.svg" alt="">
+            <a href="../index.php">
+                <img src="../assets/img/logo-horizontal-dark.svg" alt="">
             </a>
         </div>
 
@@ -285,7 +285,7 @@
                                             <p>Great food and great atmosphere!</p>
                                         </div>
                                         <footer>
-                                            <img src="assets/img/avatars/avatar01.jpg" alt="">
+                                            <img src="../assets/img/avatars/avatar01.jpg" alt="">
                                             <span class="name">Kate Hudson<span class="text-muted">, LinkedIn</span></span>
                                         </footer>
                                     </blockquote>
@@ -345,8 +345,8 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
                         <div class="example-box">
                             <div class="example-box-title">Example</div>
                             <div class="example-box-content">
-                                <img src="assets/img/avatars/avatar01.jpg" alt="..." class="rounded">
-                                <img src="assets/img/avatars/avatar01.jpg" alt="..." class="img-thumbnail">
+                                <img src="../assets/img/avatars/avatar01.jpg" alt="..." class="rounded">
+                                <img src="../assets/img/avatars/avatar01.jpg" alt="..." class="img-thumbnail">
                             </div>
                         </div>
 <pre class="prettyprint">
@@ -849,16 +849,16 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
                                     ]
                                     }'>
                                     <div class="carousel-item">
-                                        <img src="assets/img/posts/post01.jpg" class="rounded" alt="">
+                                        <img src="../assets/img/posts/post01.jpg" class="rounded" alt="">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/img/posts/post02.jpg" class="rounded" alt="">
+                                        <img src="../assets/img/posts/post02.jpg" class="rounded" alt="">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/img/posts/post03.jpg" class="rounded" alt="">
+                                        <img src="../assets/img/posts/post03.jpg" class="rounded" alt="">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/img/posts/post04.jpg" class="rounded" alt="">
+                                        <img src="../assets/img/posts/post04.jpg" class="rounded" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -1152,17 +1152,17 @@ $emailTo = 'your@email.com';</pre>
                         <ol>
                             <li>Log into the <a href="http://mailchimp.com/" class="text-primary" target="_blank">Mailchimp</a> site.</li>
                             <li>Create subscribers list.
-                            <img src="assets/img/docs/signup01.png" alt="" class="block"></li>
+                            <img src="../assets/img/docs/signup01.png" alt="" class="block"></li>
                             <li>Get into the list and go to "Signup forms" tab.
-                            <img src="assets/img/docs/signup02.png" alt="" class="block"></li>
+                            <img src="../assets/img/docs/signup02.png" alt="" class="block"></li>
                             <li>Pick "Embedded forms".
-                            <img src="assets/img/docs/signup03.png" alt="" class="block"></li>
+                            <img src="../assets/img/docs/signup03.png" alt="" class="block"></li>
                             <li>Pick "Classic version" and copy / paste somewhere generated code (don't change anything).</li>
                             <li>Find <code>form</code> selector and copy <code>action</code> atribute valuse into your form. Remember to add <code>method="POST"</code> attribute.</li>
                             <li>Modify action URI by changing <code>.../post?...</code> to <code>.../post-json?...</code>. It should look like this <code>action="//suelo.us12.list-manage.com/subscribe/post-json?u=ed47dbfe167d906f2bc46a01b&amp;id=24ac8a22ad"</code></li>
                             <li>Find email input and copy <code>type</code>, <code>name</code> and <code>id</code> to your input - it should look like this: <code>&lt;input type="email" value="" name="EMAIL" class="form-control input-lg" id="mce-EMAIL"&gt;</code></li>
                             <li>Find input which prevents bot signups and paste it somewhere in the form - it should be hidden!
-                            <img src="assets/img/docs/signup04.png" alt="" class=" mt-20 mb-20 block"></li>
+                            <img src="../assets/img/docs/signup04.png" alt="" class=" mt-20 mb-20 block"></li>
                             <li>Add submit button and enjoy your working Sign Up form!</li>
                         </ol>
                     </div>
@@ -1534,7 +1534,7 @@ theme-teal.css
             <!-- Footer 1st Row -->
             <div class="footer-first-row row">
                 <div class="col-lg-3 text-center">
-                    <a href="index.php"><img src="assets/img/logo-light.svg" alt="" width="88" class="mt-5 mb-5"></a>
+                    <a href="../index.php"><img src="../assets/img/logo-light.svg" alt="" width="88" class="mt-5 mb-5"></a>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h5 class="text-muted">Latest news</h5>
@@ -1593,27 +1593,27 @@ theme-teal.css
 </div>
 
 <!-- JS Plugins -->
-<script src="assets/plugins/jquery/dist/jquery.min.js"></script>
-<script src="assets/plugins/tether/dist/js/tether.min.js"></script>
-<script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="assets/plugins/slick-carousel/slick/slick.min.js"></script>
-<script src="assets/plugins/jquery.appear/jquery.appear.js"></script>
-<script src="assets/plugins/jquery.scrollto/jquery.scrollTo.min.js"></script>
-<script src="assets/plugins/jquery.localscroll/jquery.localScroll.min.js"></script>
-<script src="assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="assets/plugins/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
-<script src="assets/plugins/twitter-fetcher/js/twitterFetcher_min.js"></script>
-<script src="assets/plugins/skrollr/dist/skrollr.min.js"></script>
-<script src="assets/plugins/animsition/dist/js/animsition.min.js"></script>
+<script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
+<script src="../assets/plugins/tether/dist/js/tether.min.js"></script>
+<script src="../assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/slick-carousel/slick/slick.min.js"></script>
+<script src="../assets/plugins/jquery.appear/jquery.appear.js"></script>
+<script src="../assets/plugins/jquery.scrollto/jquery.scrollTo.min.js"></script>
+<script src="../assets/plugins/jquery.localscroll/jquery.localScroll.min.js"></script>
+<script src="../assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="../assets/plugins/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
+<script src="../assets/plugins/twitter-fetcher/js/twitterFetcher_min.js"></script>
+<script src="../assets/plugins/skrollr/dist/skrollr.min.js"></script>
+<script src="../assets/plugins/animsition/dist/js/animsition.min.js"></script>
 
 <!-- JS Core -->
-<script src="assets/js/core.js"></script>
+<script src="../assets/js/core.js"></script>
 
 <!-- JS Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 
 <!-- JS CodeHighlighter -->
-<script src="assets/js/prettify.js"></script>
+<script src="../assets/js/prettify.js"></script>
 
 <!-- Additional Initializations -->
 <script>

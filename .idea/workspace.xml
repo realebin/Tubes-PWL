@@ -2,29 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27c346e-4f65-4a4e-b4ac-5bce5707ab9a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/jquery-3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-post.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-a-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-a-table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chooser.html" beforeDir="false" afterPath="$PROJECT_DIR$/chooser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/confirmation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index-slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-slider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index-video.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-video.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/blog-post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/blog-sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-a-table.php" beforeDir="false" afterPath="$PROJECT_DIR$/book-a-table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout.php" beforeDir="false" afterPath="$PROJECT_DIR$/checkout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chooser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/chooser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confirmation.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirmation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/documentation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/index-slider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-video.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/index-video.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-grid-collapse.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu-grid-collapse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-grid-navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu-grid-navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-list-collapse.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu-list-collapse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-grid-collapse.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/menu-grid-collapse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-grid-navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/menu-grid-navigation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-list-collapse.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/menu-list-collapse.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu-list-navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu-list-navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-about.html" beforeDir="false" afterPath="$PROJECT_DIR$/page-about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/page-contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/page-faq.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/page-gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-offers.html" beforeDir="false" afterPath="$PROJECT_DIR$/page-offers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-reviews.html" beforeDir="false" afterPath="$PROJECT_DIR$/page-reviews.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-services.html" beforeDir="false" afterPath="$PROJECT_DIR$/page-services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-faq.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/page-faq.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/page-gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-offers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/page-offers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-reviews.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/page-reviews.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-services.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/page-services.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,16 +51,19 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Tubes-PWL\Unused" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Tubes-PWL" />
       <recent name="C:\xampp\htdocs\Tubes-PWL\Controller" />
       <recent name="C:\xampp\htdocs\Tubes-PWL\assets\img" />
-      <recent name="C:\xampp\htdocs\Tubes-PWL" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -85,7 +92,7 @@
       <workItem from="1575975218460" duration="1266000" />
       <workItem from="1577888379398" duration="4738000" />
       <workItem from="1577944988743" duration="3693000" />
-      <workItem from="1578019487476" duration="17085000" />
+      <workItem from="1578019487476" duration="27509000" />
     </task>
     <servers />
   </component>

@@ -35,7 +35,7 @@ class UserController
             }
             header('location:index.php');
         }
-            require_once 'home.php';
+            require_once 'login.php';
 
     }
 }

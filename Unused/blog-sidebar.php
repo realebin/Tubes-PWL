@@ -7,118 +7,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- Title -->
-<title>Mougs - ★★★★☆ Restaurant</title>
+<title>Soup - Restaurant with Online Ordering System Template</title>
 
 <!-- Favicons -->
-<link rel="shortcut icon" href="assets/img/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
+<link rel="shortcut icon" href="../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon_60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon_76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon_120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon_152x152.png">
 
 <!-- CSS Plugins -->
-<link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
-<link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
-<link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
+<link rel="stylesheet" href="../assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../assets/plugins/slick-carousel/slick/slick.css" />
+<link rel="stylesheet" href="../assets/plugins/animate.css/animate.min.css" />
+<link rel="stylesheet" href="../assets/plugins/animsition/dist/css/animsition.min.css" />
 
 <!-- CSS Icons -->
-<link rel="stylesheet" href="assets/css/themify-icons.css" />
-<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../assets/css/themify-icons.css" />
+<link rel="stylesheet" href="../assets/plugins/font-awesome/css/font-awesome.min.css" />
 
 <!-- CSS Theme -->
-<link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
+<link id="theme" rel="stylesheet" href="../assets/css/themes/theme-beige.min.css" />
 
 </head>
 
 <body>
-<?php
-include_once "PDOUtility.php";
-//class entity tiap tabel database
-include_once "Entity/Kategori.php";
-include_once "Entity/User.php";
-include_once "Entity/Menu.php";
-include_once "Entity/Menu_Pesanan.php";
-include_once "Entity/Pembayaran.php";
-include_once "Entity/Pesanan.php";
-//class Daonya
-include_once "Dao/MenuDaoImpl.php";
-include_once "Dao/UserDaoImpl.php";
-include_once "Dao/PembayaranDaoImpl.php";
-include_once "Dao/PesananDaoImpl.php";
-include_once "Dao/KategoriDaoImpl.php";
-include_once "Dao/MenuPesanDaoImpl.php";
-
-include_once "Controller/MenuController.php";
-include_once "Controller/UserController.php";
-
-include_once "function.php";
-?>
-
-<!--            dari sini ubahnya-->
-<?php
-$nav = FILTER_INPUT(INPUT_GET, 'menu');
-$userControl = new UserController();
-$menuControl = new MenuController();
-switch ($nav)
-{
-    case 'home' :
-        $userControl->login();
-        break;
-    case 'logout' :
-        {
-            $_SESSION['approved_user'] = FALSE;
-            $_SESSION['userid'] = '';
-            $_SESSION['username'] = '';
-            $_SESSION['userrole'] = '';
-            $_SESSION['name'] = '';
-            session_unset();
-            session_destroy();
-            header('location:index.php');
-        }
-        break;
-    case 'about' : include_once 'page-about.php';
-        break;
-    case 'book' : include_once 'book-a-table.php';
-        break;
-    case 'checkout' : include_once 'checkout.php';
-        break;
-//    case 'service' : include_once 'page-services.php';
-//        break;
-//    case 'gallery' : include_once 'page-gallery.php';
-//        break;
-//    case 'review' : include_once 'page-reviews.php';
-//        break;
-//    case 'faq' : include_once 'page-faq.php';
-//        break;
-//    case 'offers' : include_once 'page-offers.php';
-//        break;
-    case 'contact' : include_once 'page-contact.php';
-        break;
-    case 'order' :
-        {
-            $commander = FILTER_INPUT(INPUT_GET, 'command');
-
-            $menuControl = new MenuController();
-            if(isset($commander) && $commander == 'edit' && $_SESSION['userrole'] == 'admin')
-            {
-                $menuControl->ubahMenu();
-            }
-            else{
-                $menuControl->olahMenu();
-            }
-        }
-        break;
-
-    default : $userControl->login();
-        break;
-}
-if(!isset($nav))
-{
-    $userControl->login();
-}
-?>
-<!--            sampe sini-->
 
 <!-- Body Wrapper -->
 <div id="body-wrapper" class="animsition">
@@ -131,8 +44,8 @@ if(!isset($nav))
                 <div class="col-md-3">
                     <!-- Logo -->
                     <div class="module module-logo dark">
-                        <a href="index.php">
-                            <img src="assets/img/logoMougsPutih.png" alt="" width="200">
+                        <a href="../index.php">
+                            <img src="../assets/img/logo-light.svg" alt="" width="88">
                         </a>
                     </div>
                 </div>
@@ -140,23 +53,75 @@ if(!isset($nav))
                     <!-- Navigation -->
                     <nav class="module module-navigation left mr-4">
                         <ul id="nav-main" class="nav nav-main">
-                            <li>
-                                <a href="index.php">Home</a>
+                            <li class="has-dropdown">
+                                <a href="#">Home</a>
+                                <div class="dropdown-container">
+                                    <ul>
+                                        <li><a href="../index.php">Home Basic</a></li>
+                                        <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
+                                        <li><a href="index-video.php">Home Video</a></li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li>
-                                <a href="index.php?menu=about">About</a>
+                            <li class="has-dropdown">
+                                <a href="#">About</a>
+                                <div class="dropdown-container">
+                                    <ul class="dropdown-mega">
+                                        <li><a href="../page-about.php">About Us</a></li>
+                                        <li><a href="page-services.php">Services</a></li>
+                                        <li><a href="page-gallery.php">Gallery</a></li>
+                                        <li><a href="page-reviews.php">Reviews</a></li>
+                                        <li><a href="page-faq.php">FAQ</a></li>
+                                    </ul>
+                                    <div class="dropdown-image">
+                                        <img src="../assets/img/photos/dropdown-about.jpg" alt="">
+                                    </div>
+                                </div>
                             </li>
-                            <li>
-                                <a href="index.php?menu=order">Menu</a>
+                            <li class="has-dropdown">
+                                <a href="#">Menu</a>
+                                <div class="dropdown-container">
+                                    <ul>
+                                        <li class="has-dropdown">
+                                            <a href="#">List</a>
+                                            <ul>
+                                                <li><a href="../menu-list-navigation.php">Navigation</a></li>
+                                                <li><a href="menu-list-collapse.php">Collapse</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a href="#">Grid</a>
+                                            <ul>
+                                                <li><a href="menu-grid-navigation.php">Navigation</a></li>
+                                                <li><a href="menu-grid-collapse.php">Collapse</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li><a href="index.php?menu=contact">Contact</a></li>
-                            <li>
-                                <a href="index.php?menu=book">Book</a>
+                            <li><a href="page-offers.php">Offers</a></li>
+                            <li><a href="../page-contact.php">Contact</a></li>
+                            <li class="has-dropdown">   
+                                <a href="#">More</a>
+                                <div class="dropdown-container">
+                                    <ul class="dropdown-mega">
+                                        <li><a href="../book-a-table.php">Book a table</a></li>
+                                        <li><a href="../checkout.php">Checkout</a></li>
+                                        <li><a href="../confirmation.php">Confirmation</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
+                                        <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
+                                        <li><a href="blog-post.php">Blog Post</a></li>
+                                        <li><a href="documentation.php">Documentation</a></li>
+                                    </ul>
+                                    <div class="dropdown-image">
+                                        <img src="../assets/img/photos/dropdown-more.jpg" alt="">
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </nav>
                     <div class="module left">
-                        <a href="index.php?menu=order" class="btn btn-outline-secondary"><span>Order</span></a>
+                        <a href="../menu-list-navigation.php" class="btn btn-outline-secondary"><span>Order</span></a>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -182,8 +147,8 @@ if(!isset($nav))
         </div>    
 
         <div class="module module-logo">
-            <a href="index.php">
-                <img src="assets/img/logoMougsPutih.png" alt="">
+            <a href="../index.php">
+                <img src="../assets/img/logo-horizontal-dark.svg" alt="">
             </a>
         </div>
 
@@ -203,48 +168,146 @@ if(!isset($nav))
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 push-lg-4">
-                        <h1 class="mb-0">Contact Us</h1>
+                        <h1 class="mb-0">Blog</h1>
                         <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Section -->
-        <section class="section">
-            
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 push-lg-1 col-md-6">
-                        <img src="assets/img/logoMougs.png" alt="" class="mb-5" width="200">
-                        <h4 class="mb-0">Mougs Restaurant</h4>
-                        <span class="text-muted">Green Street 22, New York</span>
-                        <hr class="hr-md">
-                        <div class="row">
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                                <h6 class="mb-1 text-muted">Phone:</h6>
-                                +48 21200 2122 221
-                            </div>
-                            <div class="col-sm-6">
-                                <h6 class="mb-1 text-muted">E-mail:</h6>
-                                <a href="#">hello@example.com</a>
-                            </div>
+        <!-- Page Content -->
+        <div class="page-content bg-light">
+
+            <div class="container clearfix">
+                <div class="main left">
+                    <!-- Post / Item -->
+                    <article class="post post-wide animated" data-animation="fadeIn">
+                        <div class="post-image"><img src="../assets/img/posts/post01.jpg" alt=""></div>
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li>24 July, 2016</li>
+                                <li>by Johnatan Doe</li>
+                            </ul>
+                            <h4><a href="blog-post.php">Delicious idea for your Sunday dessert</a></h4>
+                            <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
                         </div>
-                        <hr class="hr-md">
-                        <h6 class="mb-3 text-muted">Follow Us!</h6>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
+                    </article>
+                    <!-- Post / Item -->
+                    <article class="post post-wide animated" data-animation="fadeIn">
+                        <div class="post-image"><img src="../assets/img/posts/post02.jpg" alt=""></div>
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li>24 July, 2016</li>
+                                <li>by Johnatan Doe</li>
+                            </ul>
+                            <h4><a href="blog-post.php">How to make perfect Pasta?</a></h4>
+                            <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
+                        </div>
+                    </article>
+                    <!-- Post / Item -->
+                    <article class="post post-wide animated" data-animation="fadeIn">
+                        <div class="post-image"><img src="../assets/img/posts/post03.jpg" alt=""></div>
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li>24 July, 2016</li>
+                                <li>by Johnatan Doe</li>
+                            </ul>
+                            <h4><a href="blog-post.php">Delicious idea for your Sunday dessert</a></h4>
+                            <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
+                        </div>
+                    </article>
+                    <!-- Post / Item -->
+                    <article class="post post-wide animated" data-animation="fadeIn">
+                        <div class="post-image"><img src="../assets/img/posts/post04.jpg" alt=""></div>
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li>24 July, 2016</li>
+                                <li>by Johnatan Doe</li>
+                            </ul>
+                            <h4><a href="blog-post.php">How to make perfect Pasta?</a></h4>
+                            <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
+                        </div>
+                    </article>
+                    <!-- Post / Item -->
+                    <article class="post post-wide animated" data-animation="fadeIn">
+                        <div class="post-image"><img src="../assets/img/posts/post05.jpg" alt=""></div>
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li>24 July, 2016</li>
+                                <li>by Johnatan Doe</li>
+                            </ul>
+                            <h4><a href="blog-post.php">How to make perfect Pasta?</a></h4>
+                            <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
+                        </div>
+                    </article>
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <i class="ti-arrow-left"></i>
+                                    <span class="sr-only">Previous</span>
+                              </a>
+                            </li>
+                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <i class="ti-arrow-right"></i>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="sidebar right">
+                    <!-- Widget - Newsletter -->
+                    <div class="widget widget-newsletter">
+                        <h5>Subscribe Us</h5>
+                        <form action="//suelo.us12.list-manage.com/subscribe/post-json?u=ed47dbfe167d906f2bc46a01b&amp;id=24ac8a22ad" id="sign-up-form2" class="sign-up-form validate-form" method="POST"
+                            data-message-error="Opps... Something went wrong - please try again later"
+                            data-message-success="Yeah! You will recieve a confirmation email soon..."
+                        >
+                            <div class="form-group mb-0">
+                                <input type="email"  name="EMAIL" id="mce-EMAIL2" value="" class="form-control" placeholder="Your e-mail..." required>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-secondary btn-block">
+                                    <span>Subscribe!</span>
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="col-lg-5 push-lg-2 col-md-6">
-                        <div id="google-map" class="h-500 shadow"></div>
+                    <hr>
+                    <!-- Widget - Recent posts -->
+                    <div class="widget widget-recent-posts">
+                        <h5>Recent Posts</h5>
+                        <ul class="list-posts">
+                            <li>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
+                                <span class="date">February 14, 2015</span>
+                            </li>
+                            <li>
+                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
+                                <span class="date">February 14, 2015</span>
+                            </li>
+                            <li>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
+                                <span class="date">February 14, 2015</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <!-- Widget - Twitter -->
+                    <div class="widget widget-twitter">
+                        <h5>Latest Tweets</h5>
+                        <div id="twitter-feed" class="twitter-feed"></div>
                     </div>
                 </div>
             </div>
-
-        </section>
+            
+        </div>
 
         <!-- Footer -->
         <footer id="footer" class="bg-dark dark">
@@ -253,21 +316,21 @@ if(!isset($nav))
                 <!-- Footer 1st Row -->
                 <div class="footer-first-row row">
                     <div class="col-lg-3 text-center">
-                        <a href="index.php"><img src="assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
+                        <a href="../index.php"><img src="../assets/img/logo-light.svg" alt="" width="88" class="mt-5 mb-5"></a>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-muted">Latest news</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="Unused/blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
+                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                         </ul>
@@ -379,14 +442,14 @@ if(!isset($nav))
                 </div>
             </div>
         </div>
-        <a href="index.php?menu=checkout" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="../checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->
     <nav id="panel-mobile">
         <div class="module module-logo bg-dark dark">
             <a href="#">
-                <img src="assets/img/logoMougsPutih.png" alt="" width="200">
+                <img src="../assets/img/logo-light.svg" alt="" width="88">
             </a>
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>
@@ -411,7 +474,7 @@ if(!isset($nav))
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header modal-header-lg dark bg-dark">
-                <div class="bg-image"><img src="assets/img/photos/modal-add.jpg" alt=""></div>
+                <div class="bg-image"><img src="../assets/img/photos/modal-add.jpg" alt=""></div>
                 <h4 class="modal-title">Specify your dish</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>
             </div>
@@ -535,24 +598,21 @@ if(!isset($nav))
 </div>
 
 <!-- JS Plugins -->
-<script src="assets/plugins/jquery/dist/jquery.min.js"></script>
-<script src="assets/plugins/tether/dist/js/tether.min.js"></script>
-<script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="assets/plugins/slick-carousel/slick/slick.min.js"></script>
-<script src="assets/plugins/jquery.appear/jquery.appear.js"></script>
-<script src="assets/plugins/jquery.scrollto/jquery.scrollTo.min.js"></script>
-<script src="assets/plugins/jquery.localscroll/jquery.localScroll.min.js"></script>
-<script src="assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="assets/plugins/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
-<script src="assets/plugins/twitter-fetcher/js/twitterFetcher_min.js"></script>
-<script src="assets/plugins/skrollr/dist/skrollr.min.js"></script>
-<script src="assets/plugins/animsition/dist/js/animsition.min.js"></script>
+<script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
+<script src="../assets/plugins/tether/dist/js/tether.min.js"></script>
+<script src="../assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/slick-carousel/slick/slick.min.js"></script>
+<script src="../assets/plugins/jquery.appear/jquery.appear.js"></script>
+<script src="../assets/plugins/jquery.scrollto/jquery.scrollTo.min.js"></script>
+<script src="../assets/plugins/jquery.localscroll/jquery.localScroll.min.js"></script>
+<script src="../assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="../assets/plugins/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
+<script src="../assets/plugins/twitter-fetcher/js/twitterFetcher_min.js"></script>
+<script src="../assets/plugins/skrollr/dist/skrollr.min.js"></script>
+<script src="../assets/plugins/animsition/dist/js/animsition.min.js"></script>
 
 <!-- JS Core -->
-<script src="assets/js/core.js"></script>
-
-<!-- JS Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="../assets/js/core.js"></script>
 
 </body>
 

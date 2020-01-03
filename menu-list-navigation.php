@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- Title -->
-<title>Soup - Restaurant with Online Ordering System Template</title>
+<title>Mougs - ★★★★☆ Restaurant</title>
 
 <!-- Favicons -->
 <link rel="shortcut icon" href="assets/img/favicon.png">
@@ -32,7 +32,93 @@
 </head>
 
 <body>
+<?php
+include_once "PDOUtility.php";
+//class entity tiap tabel database
+include_once "Entity/Kategori.php";
+include_once "Entity/User.php";
+include_once "Entity/Menu.php";
+include_once "Entity/Menu_Pesanan.php";
+include_once "Entity/Pembayaran.php";
+include_once "Entity/Pesanan.php";
+//class Daonya
+include_once "Dao/MenuDaoImpl.php";
+include_once "Dao/UserDaoImpl.php";
+include_once "Dao/PembayaranDaoImpl.php";
+include_once "Dao/PesananDaoImpl.php";
+include_once "Dao/KategoriDaoImpl.php";
+include_once "Dao/MenuPesanDaoImpl.php";
 
+include_once "Controller/MenuController.php";
+include_once "Controller/UserController.php";
+
+include_once "function.php";
+?>
+
+<!--            dari sini ubahnya-->
+<?php
+$nav = FILTER_INPUT(INPUT_GET, 'menu');
+$userControl = new UserController();
+$menuControl = new MenuController();
+switch ($nav)
+{
+    case 'home' :
+        $userControl->login();
+        break;
+    case 'logout' :
+        {
+            $_SESSION['approved_user'] = FALSE;
+            $_SESSION['userid'] = '';
+            $_SESSION['username'] = '';
+            $_SESSION['userrole'] = '';
+            $_SESSION['name'] = '';
+            session_unset();
+            session_destroy();
+            header('location:index.php');
+        }
+        break;
+    case 'about' : include_once 'page-about.php';
+        break;
+    case 'book' : include_once 'book-a-table.php';
+        break;
+    case 'checkout' : include_once 'checkout.php';
+        break;
+//    case 'service' : include_once 'page-services.php';
+//        break;
+//    case 'gallery' : include_once 'page-gallery.php';
+//        break;
+//    case 'review' : include_once 'page-reviews.php';
+//        break;
+//    case 'faq' : include_once 'page-faq.php';
+//        break;
+//    case 'offers' : include_once 'page-offers.php';
+//        break;
+    case 'contact' : include_once 'page-contact.php';
+        break;
+    case 'order' :
+        {
+            $commander = FILTER_INPUT(INPUT_GET, 'command');
+
+            $menuControl = new MenuController();
+            if(isset($commander) && $commander == 'edit' && $_SESSION['userrole'] == 'admin')
+            {
+                $menuControl->ubahMenu();
+            }
+            else{
+                $menuControl->olahMenu();
+            }
+        }
+        break;
+
+    default : $userControl->login();
+        break;
+}
+if(!isset($nav))
+{
+    $userControl->login();
+}
+?>
+<!--            sampe sini-->
 <!-- Body Wrapper -->
 <div id="body-wrapper" class="animsition">
 
@@ -53,75 +139,23 @@
                     <!-- Navigation -->
                     <nav class="module module-navigation left mr-4">
                         <ul id="nav-main" class="nav nav-main">
-                            <li class="has-dropdown">
-                                <a href="#">Home</a>
-                                <div class="dropdown-container">
-                                    <ul>
-                                        <li><a href="index.php">Home Basic</a></li>
-                                        <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
-                                        <li><a href="index-video.php">Home Video</a></li>
-                                    </ul>
-                                </div>
+                            <li>
+                                <a href="index.php">Home</a>
                             </li>
-                            <li class="has-dropdown">
-                                <a href="#">About</a>
-                                <div class="dropdown-container">
-                                    <ul class="dropdown-mega">
-                                        <li><a href="page-about.php">About Us</a></li>
-                                        <li><a href="page-services.php">Services</a></li>
-                                        <li><a href="page-gallery.php">Gallery</a></li>
-                                        <li><a href="page-reviews.php">Reviews</a></li>
-                                        <li><a href="page-faq.php">FAQ</a></li>
-                                    </ul>
-                                    <div class="dropdown-image">
-                                        <img src="assets/img/photos/dropdown-about.jpg" alt="">
-                                    </div>
-                                </div>
+                            <li>
+                                <a href="index.php?menu=about">About</a>
                             </li>
-                            <li class="has-dropdown">
-                                <a href="#">Menu</a>
-                                <div class="dropdown-container">
-                                    <ul>
-                                        <li class="has-dropdown">
-                                            <a href="#">List</a>
-                                            <ul>
-                                                <li><a href="menu-list-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-list-collapse.php">Collapse</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="#">Grid</a>
-                                            <ul>
-                                                <li><a href="menu-grid-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-grid-collapse.php">Collapse</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <li>
+                                <a href="index.php?menu=menu">Menu</a>
                             </li>
-                            <li><a href="page-offers.php">Offers</a></li>
-                            <li><a href="page-contact.php">Contact</a></li>
-                            <li class="has-dropdown">   
-                                <a href="#">More</a>
-                                <div class="dropdown-container">
-                                    <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.php">Book a table</a></li>
-                                        <li><a href="checkout.php">Checkout</a></li>
-                                        <li><a href="confirmation.php">Confirmation</a></li>
-                                        <li><a href="blog.php">Blog</a></li>
-                                        <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
-                                        <li><a href="blog-post.php">Blog Post</a></li>
-                                        <li><a href="documentation.php">Documentation</a></li>
-                                    </ul>
-                                    <div class="dropdown-image">
-                                        <img src="assets/img/photos/dropdown-more.jpg" alt="">
-                                    </div>
-                                </div>
+                            <li><a href="index.php?contact">Contact</a></li>
+                            <li >
+                                <a href="index.php?menu=book">Book</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="module left">
-                        <a href="menu-list-navigation.php" class="btn btn-outline-secondary"><span>Order</span></a>
+                        <a href="index.php?menu=order" class="btn btn-outline-secondary"><span>Order</span></a>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -577,15 +611,15 @@
                         <h5 class="text-muted">Latest news</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
+                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
+                                <a href="Unused/blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
+                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                         </ul>
@@ -686,7 +720,7 @@
                         <div class="col-5"><strong>$21.02</strong></div>
                     </div>
                     <div class="row">
-                        <div class="col-7 text-right text-muted">Devliery:</div>
+                        <div class="col-7 text-right text-muted">Delivery:</div>
                         <div class="col-5"><strong>$3.99</strong></div>
                     </div>
                     <hr class="hr-sm">
@@ -697,7 +731,7 @@
                 </div>
             </div>
         </div>
-        <a href="checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="index.php?menu=checkout" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->
