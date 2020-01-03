@@ -152,7 +152,7 @@
                         </ul>
                     </nav>
                     <div class="module left">
-                        <a href="menu-list-navigation.html" class="btn btn-outline-secondary"><span>Order</span></a>
+                        <a href="menu-list-navigation.php" class="btn btn-outline-secondary"><span>Order</span></a>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -347,42 +347,42 @@
             }'>
                 <!-- Menu Sample -->
                 <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Burgers">
+                    <a href="menu-list-navigation.php#Burgers">
                         <img src="assets/img/photos/menu-sample-burgers.jpg" alt="" class="image">
                         <h3 class="title">Burgers</h3>
                     </a>
                 </div>
                 <!-- Menu Sample -->
                 <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Pizza">
+                    <a href="menu-list-navigation.php#Pizza">
                         <img src="assets/img/photos/menu-sample-pizza.jpg" alt="" class="image">
                         <h3 class="title">Pizza</h3>
                     </a>
                 </div>
                 <!-- Menu Sample -->
                 <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Sushi">
+                    <a href="menu-list-navigation.php#Sushi">
                         <img src="assets/img/photos/menu-sample-sushi.jpg" alt="" class="image">
                         <h3 class="title">Sushi</h3>
                     </a>
                 </div>
                 <!-- Menu Sample -->
                 <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Pasta">
+                    <a href="menu-list-navigation.php#Pasta">
                         <img src="assets/img/photos/menu-sample-pasta.jpg" alt="" class="image">
                         <h3 class="title">Pasta</h3>
                     </a>
                 </div>
                 <!-- Menu Sample -->
                 <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Desserts">
+                    <a href="menu-list-navigation.php#Desserts">
                         <img src="assets/img/photos/menu-sample-dessert.jpg" alt="" class="image">
                         <h3 class="title">Desserts</h3>
                     </a>
                 </div>
                 <!-- Menu Sample -->
                 <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Drinks">
+                    <a href="menu-list-navigation.php#Drinks">
                         <img src="assets/img/photos/menu-sample-drinks.jpg" alt="" class="image">
                         <h3 class="title">Drinks</h3>
                     </a>
