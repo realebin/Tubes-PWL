@@ -1,5 +1,5 @@
 <?php
-Class Pesanan{
+class Pesanan{
     private $idPesanan;
     private $no_meja;
     private $sub_total;

@@ -1,10 +1,26 @@
 <?php
-Class Pembayaran{
+class Pembayaran{
     private $idPembayaran;
     private $metode_bayar;
     private $total;
-    private $pesanan;
     private $user;
+    private $menu_pesanan;
+
+    /**
+     * @return Menu_Pesanan
+     */
+    public function getMenuPesanan()
+    {
+        return $this->menu_pesanan;
+    }
+
+    /**
+     * @param Menu_Pesanan $menu_pesanan
+     */
+    public function setMenuPesanan($menu_id)
+    {
+        $this->menu_pesanan = $menu_id;
+    }
 
     /**
      * Pembayaran constructor.
@@ -15,6 +31,7 @@ Class Pembayaran{
     {
         $this->pesanan = new Pesanan();
         $this->user = new User();
+        $this->menu_pesanan = new Menu_Pesanan();
     }
 
     /**
@@ -66,21 +83,6 @@ Class Pembayaran{
         $this->total = $total;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPesanan()
-    {
-        return $this->pesanan;
-    }
-
-    /**
-     * @param mixed $pesanan
-     */
-    public function setPesanan($pesanan_id)
-    {
-        $this->pesanan = $pesanan_id;
-    }
 
     /**
      * @return mixed
@@ -100,18 +102,15 @@ Class Pembayaran{
 
     public function __set($name, $value)
     {
-        if(!isset($this->pesanan_id)){
-            $this->pesanan = new Pesanan();
-        }
 
         if(!isset($this->user_id)){
             $this->user = new User();
         }
+        if(!isset($this->menu_id)){
+            $this->menu_pesanan = new Menu_Pesanan();
+        }
         if(isset($value)){
             switch($name){
-                case 'pesanan_id' :
-                    $this->pesanan->setIdPesanan($value);
-                    break;
                 case 'user_id' :
                     $this->user->setIdUser($value);
                     break;
@@ -121,8 +120,13 @@ Class Pembayaran{
                 case 'role_user' :
                     $this->user->setRole($value);
                     break;
-                default :
+                case 'menu_id':
+                    $this->menu_pesanan->setMenu($value);
                     break;
+                case 'pesanan_id':
+                    $this->menu_pesanan->setPesanan($value);
+                    break;
+                default : break;
 
             }
         }

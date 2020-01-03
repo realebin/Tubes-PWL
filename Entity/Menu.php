@@ -1,5 +1,5 @@
 <?php
-Class Menu{
+class Menu{
     private $idMenu;
     private $nama;
     private $harga;

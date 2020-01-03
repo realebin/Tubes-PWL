@@ -1,7 +1,24 @@
 <?php
-Class Kategori{
+class Kategori{
     private $idKategory;
     private $menu;
+    private $nama;
+
+    /**
+     * @return mixed
+     */
+    public function getNama()
+    {
+        return $this->nama;
+    }
+
+    /**
+     * @param mixed $nama
+     */
+    public function setNama($nama)
+    {
+        $this->nama = $nama;
+    }
 
     /**
      * Kategori constructor.

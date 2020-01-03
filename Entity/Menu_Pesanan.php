@@ -4,6 +4,23 @@ class Menu_Pesanan{
     private $pesanan;
     private $qty;
     private $harga_jual;
+    private $status;
+
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
 
     /**
      * Menu_Pesanan constructor.
