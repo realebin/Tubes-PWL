@@ -33,17 +33,6 @@
 
 <body>
 
-<!-- Facebook Button / Root -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
 <!-- Body Wrapper -->
 <div id="body-wrapper" class="animsition">
 
@@ -52,17 +41,25 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-8 push-md-2 text-center">
+                <div class="col-md-3">
+                    <!-- Logo -->
+                    <div class="module module-logo dark">
+                        <a href="index.php">
+                            <img src="assets/img/logo-light.svg" alt="" width="88">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-7">
                     <!-- Navigation -->
-                    <nav class="module module-navigation mr-4">
+                    <nav class="module module-navigation left mr-4">
                         <ul id="nav-main" class="nav nav-main">
                             <li class="has-dropdown">
                                 <a href="#">Home</a>
                                 <div class="dropdown-container">
                                     <ul>
                                         <li><a href="index.php">Home Basic</a></li>
-                                        <li><a href="index-slider.html">Home Fullwidth Slider</a></li>
-                                        <li><a href="index-video.html">Home Video</a></li>
+                                        <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
+                                        <li><a href="index-video.php">Home Video</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -70,11 +67,11 @@
                                 <a href="#">About</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="page-about.html">About Us</a></li>
-                                        <li><a href="page-services.html">Services</a></li>
-                                        <li><a href="page-gallery.html">Gallery</a></li>
-                                        <li><a href="page-reviews.html">Reviews</a></li>
-                                        <li><a href="page-faq.html">FAQ</a></li>
+                                        <li><a href="page-about.php">About Us</a></li>
+                                        <li><a href="page-services.php">Services</a></li>
+                                        <li><a href="page-gallery.php">Gallery</a></li>
+                                        <li><a href="page-reviews.php">Reviews</a></li>
+                                        <li><a href="page-faq.php">FAQ</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-about.jpg" alt="">
@@ -89,32 +86,32 @@
                                             <a href="#">List</a>
                                             <ul>
                                                 <li><a href="menu-list-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-list-collapse.html">Collapse</a></li>
+                                                <li><a href="menu-list-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="#">Grid</a>
                                             <ul>
-                                                <li><a href="menu-grid-navigation.html">Navigation</a></li>
-                                                <li><a href="menu-grid-collapse.html">Collapse</a></li>
+                                                <li><a href="menu-grid-navigation.php">Navigation</a></li>
+                                                <li><a href="menu-grid-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="page-offers.html">Offers</a></li>
-                            <li><a href="page-contact.html">Contact</a></li>
+                            <li><a href="page-offers.php">Offers</a></li>
+                            <li><a href="page-contact.php">Contact</a></li>
                             <li class="has-dropdown">   
                                 <a href="#">More</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.html">Book a table</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="confirmation.html">Confirmation</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-sidebar.html">Blog + Sidebar</a></li>
-                                        <li><a href="blog-post.html">Blog Post</a></li>
-                                        <li><a href="documentation.html">Documentation</a></li>
+                                        <li><a href="book-a-table.php">Book a table</a></li>
+                                        <li><a href="checkout.php">Checkout</a></li>
+                                        <li><a href="confirmation.php">Confirmation</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
+                                        <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
+                                        <li><a href="blog-post.php">Blog Post</a></li>
+                                        <li><a href="documentation.php">Documentation</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-more.jpg" alt="">
@@ -123,9 +120,18 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="module">
-                        <a href="menu-list-navigation.php" class="btn btn-outline-primary"><span>Order</span></a>
+                    <div class="module left">
+                        <a href="menu-list-navigation.php" class="btn btn-outline-secondary"><span>Order</span></a>
                     </div>
+                </div>
+                <div class="col-md-2">
+                    <a href="#" class="module module-cart right" data-toggle="panel-cart">
+                        <span class="cart-icon">
+                            <i class="ti ti-shopping-cart"></i>
+                            <span class="notification">2</span>
+                        </span>
+                        <span class="cart-value">$32.98</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -157,88 +163,41 @@
     <!-- Content -->
     <div id="content">
 
-        <!-- Section - Main -->
-        <section class="section section-lg bg-dark dark">
-
-            <div class="bg-image zooming"><img src="assets/img/photos/bg-croissant.jpg" alt=""></div>
-
-            <div class="container text-center" data-local-scroll>
-                <img src="assets/img/logo-light.svg" alt="" width="111" class="mb-5">
-                <h4 class="mb-5">Restaurant with Online Ordering System Template</h4>
-                <a href="#concepts" class="btn btn-outline-primary btn-lg"><span>Pick a concept</span></a>
-            </div>
-
-        </section>
-
-        <!-- Section -->
-        <section id="concepts" class="section bg-light">
-            
+        <!-- Page Title -->
+        <div class="page-title border-top dark bg-dark">
             <div class="container">
-                <h4 class="mb-5 text-center">Pick a concept</h4>
                 <div class="row">
-                    <div class="col-sm-6">
-                        <!-- Image Box -->
-                        <div class="image-box">
-                            <div class="image">
-                                <a href="index.php" target="_blank"><img src="assets/img/screens/home-basic.jpg" alt=""></a>
-                            </div>
-                            <div class="title">
-                                <a href="index.php" target="_blank">
-                                    <h5 class="mb-0">Basic</h5>
-                                    <span class="text-muted">Basic Slider</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <!-- Image Box -->
-                        <div class="image-box">
-                            <div class="image">
-                                <a href="index-slider.html" target="_blank"><img src="assets/img/screens/home-slider.jpg" alt=""></a>
-                            </div>
-                            <div class="title">
-                                <a href="index-slider.html" target="_blank">
-                                    <h5 class="mb-0">Slider</h5>
-                                    <span class="text-muted">Fullwidth Slider</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <!-- Image Box -->
-                        <div class="image-box">
-                            <div class="image">
-                                <a href="index-video.html" target="_blank"><img src="assets/img/screens/home-video.jpg" alt=""></a>
-                            </div>
-                            <div class="title">
-                                <a href="index-video.html" target="_blank">
-                                    <h5 class="mb-0">Video</h5>
-                                    <span class="text-muted">Video Background</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <!-- Image Box -->
-                        <div class="image-box">
-                            <div class="image">
-                                <a href="https://www.facebook.com/suelopl" target="_blank"><img src="assets/img/screens/home-more.jpg" alt=""></a>
-                            </div>
-                            <div class="title">
-                                <a href="https://www.facebook.com/suelopl" target="_blank">
-                                    <h5 class="mb-0">Cooming Soon</h5>
-                                    <span class="text-muted">Follow me!</span>
-                                </a>
-                            </div>
-                        </div>
+                    <div class="col-lg-7 push-lg-4">
+                        <h1 class="mb-0">Gallery</h1>
+                        <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="text-center mt-5">
-                <h4>Follow me!</h4>
-                <!-- Facebook Button -->
-                <div class="fb-follow" data-href="https://www.facebook.com/suelopl" data-layout="button_count" data-size="small" data-show-faces="true"></div>
+        <!-- Section -->
+        <section id="gallery" class="section section-gallery cover">
+        
+            <!-- Gallery Carousel -->
+            <div class="gallery-carousel inner-controls">
+                <div class="slide"><div class="bg-image bg-parallax"><img src="assets/img/gallery/gallery01.jpg" alt=""></div></div>
+                <div class="slide"><div class="bg-image bg-parallax"><img src="assets/img/gallery/gallery02.jpg" alt=""></div></div>
+                <div class="slide"><div class="bg-image bg-parallax"><img src="assets/img/gallery/gallery03.jpg" alt=""></div></div>
+                <div class="slide"><div class="bg-image bg-parallax"><img src="assets/img/gallery/gallery04.jpg" alt=""></div></div>
+                <div class="slide"><div class="bg-image bg-parallax"><img src="assets/img/gallery/gallery05.jpg" alt=""></div></div>
+            </div>
+
+            <!-- Gallery Carousel Nav -->
+            <div class="gallery-nav">
+                <img src="assets/img/gallery/gallery01-min.jpg" alt="">
+                <img src="assets/img/gallery/gallery02-min.jpg" alt="">
+                <img src="assets/img/gallery/gallery03-min.jpg" alt="">
+                <img src="assets/img/gallery/gallery04-min.jpg" alt="">
+                <img src="assets/img/gallery/gallery05-min.jpg" alt="">
+            </div>
+
+            <div class="set-fullscreen">
+                <a href="#gallery"><i class="ti ti-fullscreen"></i></a>
             </div>
 
         </section>
@@ -256,15 +215,15 @@
                         <h5 class="text-muted">Latest news</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">Awesome weekend in Polish mountains!</a>
+                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                         </ul>
@@ -376,7 +335,7 @@
                 </div>
             </div>
         </div>
-        <a href="checkout.html" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->
@@ -401,6 +360,134 @@
     <!-- Body Overlay -->
     <div id="body-overlay"></div>
 
+</div>
+
+<!-- Modal / Product -->
+<div class="modal fade" id="productModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header modal-header-lg dark bg-dark">
+                <div class="bg-image"><img src="assets/img/photos/modal-add.jpg" alt=""></div>
+                <h4 class="modal-title">Specify your dish</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>
+            </div>
+            <div class="modal-product-details">
+                <div class="row align-items-center">
+                    <div class="col-9">
+                        <h6 class="mb-0">Boscaiola Pasta</h6>
+                        <span class="text-muted">Pasta, Cheese, Tomatoes, Olives</span>
+                    </div>
+                    <div class="col-3 text-lg text-right">$9.00</div>
+                </div>
+            </div>
+            <div class="modal-body panel-details-container">
+                <!-- Panel Details / Size -->
+                <div class="panel-details">
+                    <h5 class="panel-details-title">
+                        <label class="custom-control custom-radio">
+                            <input name="radio_title_size" type="radio" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                        <a href="#panelDetailsSize" data-toggle="collapse">Size</a>
+                    </h5>
+                    <div id="panelDetailsSize" class="collapse show">
+                        <div class="panel-details-content">
+                            <div class="form-group">
+                                <label class="custom-control custom-radio">
+                                    <input name="radio_size" type="radio" class="custom-control-input" checked>
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Small - 100g ($9.99)</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="custom-control custom-radio">
+                                    <input name="radio_size" type="radio" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Medium - 200g ($14.99)</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="custom-control custom-radio">
+                                    <input name="radio_size" type="radio" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Large - 350g ($21.99)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Panel Details / Additions -->
+                <div class="panel-details">
+                    <h5 class="panel-details-title">
+                        <label class="custom-control custom-radio">
+                            <input name="radio_title_additions" type="radio" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                        <a href="#panelDetailsAdditions" data-toggle="collapse">Additions</a>
+                    </h5>
+                    <div id="panelDetailsAdditions" class="collapse">
+                        <div class="panel-details-content">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Tomato ($1.29)</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Ham ($1.29)</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Chicken ($1.29)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Cheese($1.29)</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Bacon ($1.29)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Panel Details / Other -->
+                <div class="panel-details">
+                    <h5 class="panel-details-title">
+                        <label class="custom-control custom-radio">
+                            <input name="radio_title_other" type="radio" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                        <a href="#panelDetailsOther" data-toggle="collapse">Other</a>
+                    </h5>
+                    <div id="panelDetailsOther" class="collapse">
+                        <textarea cols="30" rows="4" class="form-control" placeholder="Put this any other informations..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal-btn btn btn-secondary btn-block btn-lg" data-dismiss="modal"><span>Add to Cart</span></button>
+        </div>
+    </div>
 </div>
 
 <!-- JS Plugins -->

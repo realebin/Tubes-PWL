@@ -58,8 +58,8 @@
                                 <div class="dropdown-container">
                                     <ul>
                                         <li><a href="index.php">Home Basic</a></li>
-                                        <li><a href="index-slider.html">Home Fullwidth Slider</a></li>
-                                        <li><a href="index-video.html">Home Video</a></li>
+                                        <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
+                                        <li><a href="index-video.php">Home Video</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -67,11 +67,11 @@
                                 <a href="#">About</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="page-about.html">About Us</a></li>
-                                        <li><a href="page-services.html">Services</a></li>
-                                        <li><a href="page-gallery.html">Gallery</a></li>
-                                        <li><a href="page-reviews.html">Reviews</a></li>
-                                        <li><a href="page-faq.html">FAQ</a></li>
+                                        <li><a href="page-about.php">About Us</a></li>
+                                        <li><a href="page-services.php">Services</a></li>
+                                        <li><a href="page-gallery.php">Gallery</a></li>
+                                        <li><a href="page-reviews.php">Reviews</a></li>
+                                        <li><a href="page-faq.php">FAQ</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-about.jpg" alt="">
@@ -86,32 +86,32 @@
                                             <a href="#">List</a>
                                             <ul>
                                                 <li><a href="menu-list-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-list-collapse.html">Collapse</a></li>
+                                                <li><a href="menu-list-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="#">Grid</a>
                                             <ul>
-                                                <li><a href="menu-grid-navigation.html">Navigation</a></li>
-                                                <li><a href="menu-grid-collapse.html">Collapse</a></li>
+                                                <li><a href="menu-grid-navigation.php">Navigation</a></li>
+                                                <li><a href="menu-grid-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="page-offers.html">Offers</a></li>
-                            <li><a href="page-contact.html">Contact</a></li>
+                            <li><a href="page-offers.php">Offers</a></li>
+                            <li><a href="page-contact.php">Contact</a></li>
                             <li class="has-dropdown">   
                                 <a href="#">More</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.html">Book a table</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="confirmation.html">Confirmation</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-sidebar.html">Blog + Sidebar</a></li>
-                                        <li><a href="blog-post.html">Blog Post</a></li>
-                                        <li><a href="documentation.html">Documentation</a></li>
+                                        <li><a href="book-a-table.php">Book a table</a></li>
+                                        <li><a href="checkout.php">Checkout</a></li>
+                                        <li><a href="confirmation.php">Confirmation</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
+                                        <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
+                                        <li><a href="blog-post.php">Blog Post</a></li>
+                                        <li><a href="documentation.php">Documentation</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-more.jpg" alt="">
@@ -168,7 +168,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 push-lg-4">
-                        <h1 class="mb-0">Blog</h1>
+                        <h1 class="mb-0">Special Offers</h1>
                         <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
                     </div>
                 </div>
@@ -177,136 +177,46 @@
 
         <!-- Page Content -->
         <div class="page-content bg-light">
-
-            <div class="container clearfix">
-                <div class="main left">
-                    <!-- Post / Item -->
-                    <article class="post post-wide animated" data-animation="fadeIn">
-                        <div class="post-image"><img src="assets/img/posts/post01.jpg" alt=""></div>
-                        <div class="post-content">
-                            <ul class="post-meta">
-                                <li>24 July, 2016</li>
-                                <li>by Johnatan Doe</li>
-                            </ul>
-                            <h4><a href="blog-post.html">Delicious idea for your Sunday dessert</a></h4>
-                            <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
-                        </div>
-                    </article>
-                    <!-- Post / Item -->
-                    <article class="post post-wide animated" data-animation="fadeIn">
-                        <div class="post-image"><img src="assets/img/posts/post02.jpg" alt=""></div>
-                        <div class="post-content">
-                            <ul class="post-meta">
-                                <li>24 July, 2016</li>
-                                <li>by Johnatan Doe</li>
-                            </ul>
-                            <h4><a href="blog-post.html">How to make perfect Pasta?</a></h4>
-                            <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
-                        </div>
-                    </article>
-                    <!-- Post / Item -->
-                    <article class="post post-wide animated" data-animation="fadeIn">
-                        <div class="post-image"><img src="assets/img/posts/post03.jpg" alt=""></div>
-                        <div class="post-content">
-                            <ul class="post-meta">
-                                <li>24 July, 2016</li>
-                                <li>by Johnatan Doe</li>
-                            </ul>
-                            <h4><a href="blog-post.html">Delicious idea for your Sunday dessert</a></h4>
-                            <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
-                        </div>
-                    </article>
-                    <!-- Post / Item -->
-                    <article class="post post-wide animated" data-animation="fadeIn">
-                        <div class="post-image"><img src="assets/img/posts/post04.jpg" alt=""></div>
-                        <div class="post-content">
-                            <ul class="post-meta">
-                                <li>24 July, 2016</li>
-                                <li>by Johnatan Doe</li>
-                            </ul>
-                            <h4><a href="blog-post.html">How to make perfect Pasta?</a></h4>
-                            <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
-                        </div>
-                    </article>
-                    <!-- Post / Item -->
-                    <article class="post post-wide animated" data-animation="fadeIn">
-                        <div class="post-image"><img src="assets/img/posts/post05.jpg" alt=""></div>
-                        <div class="post-content">
-                            <ul class="post-meta">
-                                <li>24 July, 2016</li>
-                                <li>by Johnatan Doe</li>
-                            </ul>
-                            <h4><a href="blog-post.html">How to make perfect Pasta?</a></h4>
-                            <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
-                        </div>
-                    </article>
-                    <!-- Pagination -->
-                    <nav aria-label="Page navigation" class="mt-5">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <i class="ti-arrow-left"></i>
-                                    <span class="sr-only">Previous</span>
-                              </a>
-                            </li>
-                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <i class="ti-arrow-right"></i>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </li>
+            <div class="container">
+                <!-- Special Offer -->
+                <div class="special-offer mb-5 animated" data-animation="fadeIn">
+                    <img src="assets/img/photos/special-burger.jpg" alt="" class="special-offer-image">
+                    <div class="special-offer-content">
+                        <h2 class="mb-2">Free Burger</h2>
+                        <h5 class="text-muted mb-5">Get free burger from orders higher that $40!</h5>
+                        <ul class="list-check text-lg mb-0">
+                            <li>Only on Tuesdays</li>
+                            <li class="false">Order higher that $40</li>
+                            <li>Unless one burger ordered</li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
-                <div class="sidebar right">
-                    <!-- Widget - Newsletter -->
-                    <div class="widget widget-newsletter">
-                        <h5>Subscribe Us</h5>
-                        <form action="//suelo.us12.list-manage.com/subscribe/post-json?u=ed47dbfe167d906f2bc46a01b&amp;id=24ac8a22ad" id="sign-up-form2" class="sign-up-form validate-form" method="POST"
-                            data-message-error="Opps... Something went wrong - please try again later"
-                            data-message-success="Yeah! You will recieve a confirmation email soon..."
-                        >
-                            <div class="form-group mb-0">
-                                <input type="email"  name="EMAIL" id="mce-EMAIL2" value="" class="form-control" placeholder="Your e-mail..." required>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-secondary btn-block">
-                                    <span>Subscribe!</span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <hr>
-                    <!-- Widget - Recent posts -->
-                    <div class="widget widget-recent-posts">
-                        <h5>Recent Posts</h5>
-                        <ul class="list-posts">
-                            <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
-                                <span class="date">February 14, 2015</span>
-                            </li>
-                            <li>
-                                <a href="blog-post.html" class="title">Awesome weekend in Polish mountains!</a>
-                                <span class="date">February 14, 2015</span>
-                            </li>
-                            <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
-                                <span class="date">February 14, 2015</span>
-                            </li>
+                <!-- Special Offer -->
+                <div class="special-offer mb-5 animated" data-animation="fadeIn">
+                    <img src="assets/img/photos/special-pizza.jpg" alt="" class="special-offer-image">
+                    <div class="special-offer-content">
+                        <h2 class="mb-2">Free Small Pizza</h2>
+                        <h5 class="text-muted mb-5">Get free burger from orders higher that $40!</h5>
+                        <ul class="list-check text-lg mb-0">
+                            <li>Only on Weekends</li>
+                            <li class="false">Order higher that $40</li>
                         </ul>
                     </div>
-                    <hr>
-                    <!-- Widget - Twitter -->
-                    <div class="widget widget-twitter">
-                        <h5>Latest Tweets</h5>
-                        <div id="twitter-feed" class="twitter-feed"></div>
+                </div>
+                <!-- Special Offer -->
+                <div class="special-offer mb-5 animated" data-animation="fadeIn">
+                    <img src="assets/img/photos/special-dish.jpg" alt="" class="special-offer-image">
+                    <div class="special-offer-content">
+                        <h2 class="mb-2">Chip Friday</h2>
+                        <h5 class="text-muted mb-5">10% Off for all dishes!</h5>
+                        <ul class="list-check text-lg mb-0">
+                            <li>Only on Friday</li>
+                            <li>All products</li>
+                            <li>Online order</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            
         </div>
 
         <!-- Footer -->
@@ -322,15 +232,15 @@
                         <h5 class="text-muted">Latest news</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">Awesome weekend in Polish mountains!</a>
+                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                         </ul>
@@ -442,7 +352,7 @@
                 </div>
             </div>
         </div>
-        <a href="checkout.html" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->

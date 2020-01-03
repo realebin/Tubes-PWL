@@ -58,8 +58,8 @@
                                 <div class="dropdown-container">
                                     <ul>
                                         <li><a href="index.php">Home Basic</a></li>
-                                        <li><a href="index-slider.html">Home Fullwidth Slider</a></li>
-                                        <li><a href="index-video.html">Home Video</a></li>
+                                        <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
+                                        <li><a href="index-video.php">Home Video</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -67,11 +67,11 @@
                                 <a href="#">About</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="page-about.html">About Us</a></li>
-                                        <li><a href="page-services.html">Services</a></li>
-                                        <li><a href="page-gallery.html">Gallery</a></li>
-                                        <li><a href="page-reviews.html">Reviews</a></li>
-                                        <li><a href="page-faq.html">FAQ</a></li>
+                                        <li><a href="page-about.php">About Us</a></li>
+                                        <li><a href="page-services.php">Services</a></li>
+                                        <li><a href="page-gallery.php">Gallery</a></li>
+                                        <li><a href="page-reviews.php">Reviews</a></li>
+                                        <li><a href="page-faq.php">FAQ</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-about.jpg" alt="">
@@ -86,32 +86,32 @@
                                             <a href="#">List</a>
                                             <ul>
                                                 <li><a href="menu-list-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-list-collapse.html">Collapse</a></li>
+                                                <li><a href="menu-list-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="#">Grid</a>
                                             <ul>
-                                                <li><a href="menu-grid-navigation.html">Navigation</a></li>
-                                                <li><a href="menu-grid-collapse.html">Collapse</a></li>
+                                                <li><a href="menu-grid-navigation.php">Navigation</a></li>
+                                                <li><a href="menu-grid-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="page-offers.html">Offers</a></li>
-                            <li><a href="page-contact.html">Contact</a></li>
+                            <li><a href="page-offers.php">Offers</a></li>
+                            <li><a href="page-contact.php">Contact</a></li>
                             <li class="has-dropdown">   
                                 <a href="#">More</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.html">Book a table</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="confirmation.html">Confirmation</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-sidebar.html">Blog + Sidebar</a></li>
-                                        <li><a href="blog-post.html">Blog Post</a></li>
-                                        <li><a href="documentation.html">Documentation</a></li>
+                                        <li><a href="book-a-table.php">Book a table</a></li>
+                                        <li><a href="checkout.php">Checkout</a></li>
+                                        <li><a href="confirmation.php">Confirmation</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
+                                        <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
+                                        <li><a href="blog-post.php">Blog Post</a></li>
+                                        <li><a href="documentation.php">Documentation</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-more.jpg" alt="">
@@ -164,11 +164,11 @@
     <div id="content">
 
         <!-- Page Title -->
-        <div class="page-title border-top dark bg-dark">
+        <div class="page-title border-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7 push-lg-4">
-                        <h1 class="mb-0">Gallery</h1>
+                    <div class="col-lg-7 push-lg-5">
+                        <h1 class="mb-0">About Us</h1>
                         <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
                     </div>
                 </div>
@@ -176,28 +176,40 @@
         </div>
 
         <!-- Section -->
-        <section id="gallery" class="section section-gallery cover">
+        <section class="section section-bg-edge">
+
+            <div class="image left bottom col-md-7">
+                <div class="bg-image"><img src="assets/img/photos/bg-chef.jpg" alt=""></div>
+            </div>
         
-            <!-- Gallery Carousel -->
-            <div class="gallery-carousel inner-controls">
-                <div class="slide"><div class="bg-image bg-parallax"><img src="assets/img/gallery/gallery01.jpg" alt=""></div></div>
-                <div class="slide"><div class="bg-image bg-parallax"><img src="assets/img/gallery/gallery02.jpg" alt=""></div></div>
-                <div class="slide"><div class="bg-image bg-parallax"><img src="assets/img/gallery/gallery03.jpg" alt=""></div></div>
-                <div class="slide"><div class="bg-image bg-parallax"><img src="assets/img/gallery/gallery04.jpg" alt=""></div></div>
-                <div class="slide"><div class="bg-image bg-parallax"><img src="assets/img/gallery/gallery05.jpg" alt=""></div></div>
+            <div class="container">
+                <div class="col-lg-5 push-lg-5 col-md-9 push-md-3">
+                    <div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                    <h2>The best food in London!</h2>
+                    <p class="lead">Donec a eros metus. Vivamus volutpat leo dictum risus ullamcorper condimentum. Cras sollicitudin varius condimentum. Praesent a dolor sem....</p>
+                    <p>Nam eleifend elementum sapien et bibendum. Nunc ac diam efficitur, ultrices lorem quis, consectetur odio. Nullam vulputate, eros quis accumsan cursus, elit lectus bibendum nulla, sed dapibus ligula tellus at purus. Fusce id eros id mi cursus semper. Quisque efficitur bibendum nunc a consectetur. Maecenas vitae quam iaculis, scelerisque purus nec, varius purus. Nullam eget varius elit. Donec eget facilisis nunc, non rutrum lorem.</p>
+                    <h6>Mark Johnson, Chef</h6>
+                    <img src="assets/img/svg/sign.svg" alt="" class="mb-5">
+                    <h4>What people say about Us?</h4>
+                    <a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>
+                </div>
             </div>
 
-            <!-- Gallery Carousel Nav -->
-            <div class="gallery-nav">
-                <img src="assets/img/gallery/gallery01-min.jpg" alt="">
-                <img src="assets/img/gallery/gallery02-min.jpg" alt="">
-                <img src="assets/img/gallery/gallery03-min.jpg" alt="">
-                <img src="assets/img/gallery/gallery04-min.jpg" alt="">
-                <img src="assets/img/gallery/gallery05-min.jpg" alt="">
-            </div>
+        </section>
 
-            <div class="set-fullscreen">
-                <a href="#gallery"><i class="ti ti-fullscreen"></i></a>
+        <!-- Section -->
+        <section class="section section-lg dark bg-dark">
+
+            <!-- BG Image -->
+            <div class="bg-image bg-parallax"><img src="assets/img/photos/bg-croissant.jpg" alt=""></div>
+        
+            <div class="container text-center">
+                <div class="col-lg-8 push-lg-2">
+                    <h2 class="mb-3">Would you like to visit Us?</h2>
+                    <h5 class="text-muted">Book a table even right now or make an online order!</h5>
+                    <a href="menu-list-navigation.php" class="btn btn-primary"><span>Order Online</span></a>
+                    <a href="book-a-table.php" class="btn btn-outline-primary"><span>Book a table</span></a>
+                </div>
             </div>
 
         </section>
@@ -215,15 +227,15 @@
                         <h5 class="text-muted">Latest news</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">Awesome weekend in Polish mountains!</a>
+                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                         </ul>
@@ -335,7 +347,7 @@
                 </div>
             </div>
         </div>
-        <a href="checkout.html" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->

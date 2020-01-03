@@ -58,8 +58,8 @@
                                 <div class="dropdown-container">
                                     <ul>
                                         <li><a href="index.php">Home Basic</a></li>
-                                        <li><a href="index-slider.html">Home Fullwidth Slider</a></li>
-                                        <li><a href="index-video.html">Home Video</a></li>
+                                        <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
+                                        <li><a href="index-video.php">Home Video</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -67,11 +67,11 @@
                                 <a href="#">About</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="page-about.html">About Us</a></li>
-                                        <li><a href="page-services.html">Services</a></li>
-                                        <li><a href="page-gallery.html">Gallery</a></li>
-                                        <li><a href="page-reviews.html">Reviews</a></li>
-                                        <li><a href="page-faq.html">FAQ</a></li>
+                                        <li><a href="page-about.php">About Us</a></li>
+                                        <li><a href="page-services.php">Services</a></li>
+                                        <li><a href="page-gallery.php">Gallery</a></li>
+                                        <li><a href="page-reviews.php">Reviews</a></li>
+                                        <li><a href="page-faq.php">FAQ</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-about.jpg" alt="">
@@ -86,32 +86,33 @@
                                             <a href="#">List</a>
                                             <ul>
                                                 <li><a href="menu-list-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-list-collapse.html">Collapse</a></li>
+                                                <li><a href="menu-list-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="#">Grid</a>
                                             <ul>
-                                                <li><a href="menu-grid-navigation.html">Navigation</a></li>
-                                                <li><a href="menu-grid-collapse.html">Collapse</a></li>
+                                                <li><a href="menu-grid-navigation.php">Navigation</a></li>
+                                                <li><a href="menu-grid-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="page-offers.html">Offers</a></li>
-                            <li><a href="page-contact.html">Contact</a></li>
+                            <li><a href="page-offers.php">Offers</a></li>
+                            <li><a href="page-contact.php">Contact</a></li>
                             <li class="has-dropdown">   
                                 <a href="#">More</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.html">Book a table</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="confirmation.html">Confirmation</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-sidebar.html">Blog + Sidebar</a></li>
-                                        <li><a href="blog-post.html">Blog Post</a></li>
-                                        <li><a href="documentation.html">Documentation</a></li>
+                                        <li><a href="book-a-table.php">Book a table</a></li>
+                                        <li><a href="checkout.php">Checkout</a></li>
+                                        <li><a href="confirmation.php">Confirmation</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
+                                        <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
+                                        <li><a href="blog-post.php">Blog Post</a></li>
+                                        <li><a href="blog-post-sidebar.html">Blog Post + Sidebar</a></li>
+                                        <li><a href="documentation.php">Documentation</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-more.jpg" alt="">
@@ -164,70 +165,126 @@
     <div id="content">
 
         <!-- Page Title -->
-        <div class="page-title bg-light">
+        <div class="page-title page-title-lg bg-dark dark">
+            <div class="bg-image bg-parallax"><img src="assets/img/photos/bg-croissant.jpg" alt=""></div>
+            <div class="row">
+                <div class="col-lg-4 push-lg-4 text-center">
+                    <h1 class="mb-2">Reviews</h1>
+                    <h5 class="text-muted mb-0">Some informations about our restaurant</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="page-content pt-0 pull-up-30 protrude">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 push-lg-4">
-                        <h1 class="mb-0">Services</h1>
-                        <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
+                <div class="row mb-5">
+                    <div class="col-xl-8 push-xl-2">
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg light" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>It’ was amazing feeling for may belly!</p>
+                            </div>
+                            <footer>
+                                <img src="assets/img/avatars/avatar01.jpg" alt="">
+                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg light" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>Proin tincidunt, quam ut suscipit mollis, tortor eros bibendum sapien.</p>
+                            </div>
+                            <footer>
+                                <img src="assets/img/avatars/avatar02.jpg" alt="">
+                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content dark">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>Great food and great atmosphere!</p>
+                            </div>
+                            <footer>
+                                <img src="assets/img/avatars/avatar04.jpg" alt="">
+                                <span class="name">Kate Hudson<span class="text-muted">, LinkedIn</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg light" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>It’ was amazing feeling for may belly!</p>
+                            </div>
+                            <footer>
+                                <img src="assets/img/avatars/avatar02.jpg" alt="">
+                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content dark">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+                                <p>The best paste I have ever ate in my entire life!</p>
+                            </div>
+                            <footer>
+                                <img src="assets/img/avatars/avatar03.jpg" alt="">
+                                <span class="name">Kate Hudson<span class="text-muted">, LinkedIn</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg light" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>It’ was amazing feeling for may belly!</p>
+                            </div>
+                            <footer>
+                                <img src="assets/img/avatars/avatar02.jpg" alt="">
+                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg light" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>Proin tincidunt, quam ut suscipit mollis, tortor eros bibendum sapien.</p>
+                            </div>
+                            <footer>
+                                <img src="assets/img/avatars/avatar04.jpg" alt="">
+                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                            </footer>
+                        </blockquote>
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote blockquote-lg light" data-center-top="filter: blur(0); transform: scale(1);" data-bottom-top="transform: scale(0.9);">
+                            <div class="blockquote-content">
+                                <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
+                                <p>It’ was amazing feeling for may belly!</p>
+                            </div>
+                            <footer>
+                                <img src="assets/img/avatars/avatar02.jpg" alt="">
+                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                            </footer>
+                        </blockquote>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Section -->
-        <section class="section section-double">
-            <div class="row no-gutters">
-                <div class="content col-xl-4 col-md-5">
-                    <h2>Weddings</h2>
-                    <p class="lead text-muted">Praesent scelerisque mi ac bibendum tristique. Cras in magna a quam molestie tincidunt nec vitae diam.</p>
-                    <a href="page-contact.html" class="btn btn-outline-primary btn-lg"><span>Get a quote</span></a>
-                </div>
-                <div class="image col-xl-8 col-md-7">
-                    <div class="bg-image"><img src="assets/img/photos/service-weddings.jpg" alt=""></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section -->
-        <section class="section section-double">
-            <div class="row no-gutters">
-                <div class="content col-xl-4 col-md-5 push-xl-8 push-md-7">
-                    <h2>Engagement Parties</h2>
-                    <p class="lead text-muted">Praesent scelerisque mi ac bibendum tristique. Cras in magna a quam molestie tincidunt nec vitae diam.</p>
-                    <a href="page-contact.html" class="btn btn-outline-primary btn-lg"><span>Get a quote</span></a>
-                </div>
-                <div class="image col-xl-8 col-md-7 pull-xl-4 pull-md-5">
-                    <div class="bg-image"><img src="assets/img/photos/service-engagement.jpg" alt=""></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section -->
-        <section class="section section-double">
-            <div class="row no-gutters">
-                <div class="content col-xl-4 col-md-5">
-                    <h2>Birthday Parties</h2>
-                    <p class="lead text-muted">Praesent scelerisque mi ac bibendum tristique. Cras in magna a quam molestie tincidunt nec vitae diam.</p>
-                    <a href="page-contact.html" class="btn btn-outline-primary btn-lg"><span>Get a quote</span></a>
-                </div>
-                <div class="image col-xl-8 col-md-7">
-                    <div class="bg-image"><img src="assets/img/photos/service-birthday.jpg" alt=""></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section -->
         <section class="section section-lg dark bg-dark">
 
-            <div class="bg-image bg-parallax"><img src="assets/img/photos/bg-croissant.jpg" alt=""></div>
+            <div class="bg-image bg-parallax"><img src="assets/img/photos/bg-review.jpg" alt=""></div>
         
             <div class="container text-center">
-                <div class="col-lg-8 push-lg-2">
-                    <h2 class="mb-3">Would you like to visit Us?</h2>
-                    <h5 class="text-muted">Book a table even right now or make an online order!</h5>
-                    <a href="menu-list-navigation.php" class="btn btn-primary"><span>Order Online</span></a>
-                    <a href="book-a-table.html" class="btn btn-outline-primary"><span>Book a table</span></a>
+                <div class="row">
+                    <div class="col-lg-8 push-lg-2">
+                        <h2 class="mb-3">Would you like to give Us a review?</h2>
+                        <h5 class="text-muted">Do not hesitate to do that!</h5>
+                        <button class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#reviewModal"><span>Write a review</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -246,15 +303,15 @@
                         <h5 class="text-muted">Latest news</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">Awesome weekend in Polish mountains!</a>
+                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                         </ul>
@@ -366,7 +423,7 @@
                 </div>
             </div>
         </div>
-        <a href="checkout.html" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->
@@ -517,6 +574,37 @@
                 </div>
             </div>
             <button type="button" class="modal-btn btn btn-secondary btn-block btn-lg" data-dismiss="modal"><span>Add to Cart</span></button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal / Review -->
+<div class="modal fade" id="reviewModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header modal-header-lg dark bg-dark">
+                <div class="bg-image"><img src="assets/img/photos/modal-review.jpg" alt=""></div>
+                <h4 class="modal-title">Write a review!</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>
+            </div>
+            <div class="modal-body">
+                <form action="#">
+                    <div class="form-group">
+                        <textarea cols="30" rows="6" class="form-control" placeholder="Write here your review..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Your rate:</label>
+                        <div class="rate rate-lg rating mb-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Your name:</label>
+                        <input type="text" class="form-control" placeholder="Your name">
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary">Add review</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
 
-<!-- Meta -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- Title -->
-<title>Mougs - Delicious Restaurant</title>
+    <!-- Title -->
+    <title>Mougs - ★★★★☆ Restaurant</title>
 
-<!-- Favicons -->
-<link rel="shortcut icon" href="assets/img/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
 
-<!-- CSS Plugins -->
-<link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
-<link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
-<link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
 
-<!-- CSS Icons -->
-<link rel="stylesheet" href="assets/css/themify-icons.css" />
-<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <!-- CSS Icons -->
+    <link rel="stylesheet" href="assets/css/themify-icons.css" />
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
 
-<!-- CSS Theme -->
-<link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
+    <!-- CSS Theme -->
+    <link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
 
 </head>
 
@@ -45,7 +45,7 @@
                     <!-- Logo -->
                     <div class="module module-logo dark">
                         <a href="index.php">
-                            <img src="assets/img/logoMougsPutih.png" alt="" width="200">
+                            <img src="assets/img/logo-light.svg" alt="" width="88">
                         </a>
                     </div>
                 </div>
@@ -53,96 +53,56 @@
                     <!-- Navigation -->
                     <nav class="module module-navigation left mr-4">
                         <ul id="nav-main" class="nav nav-main">
-                            <li>
-                                <a href="index.php">Home</a>
-<!--                                <div class="dropdown-container">-->
-<!--                                    <ul>-->
-
-<!--                                        <li><a href="index.php">Home Basic</a></li>-->
-<!--                                        <li><a href="index-slider.html">Home Fullwidth Slider</a></li>-->
-<!--                                        <li><a href="index-video.html">Home Video</a></li>-->
-<!--                                    </ul>-->
-<!--                                </div>-->
-                            </li>
+                            <li><a href="index.php">Home</a></li>
                             <li class="has-dropdown">
                                 <a href="#">About</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="index.php?page=about">About Us</a></li>
-                                        <li><a href="index.php?page=service">Services</a></li>
-                                        <li><a href="index.php?page=gallery">Gallery</a></li>
-                                        <li><a href="index.php?page=review">Reviews</a></li>
-                                        <li><a href="index.php?page=faq">FAQ</a></li>
-                                        <?php
-                                        $page = FILTER_INPUT(INPUT_GET, "page");
-                                        switch ($page) {
-                                            case 'about' : include_once 'page-about.html';
-                                                break;
-                                            case 'service' : include_once 'page-services.html';
-                                                break;
-                                            case 'gallery' : include_once 'page-gallery.html';
-                                                break;
-                                            case 'review' : include_once 'page-reviews.html';
-                                                break;
-                                            case 'faq' : include_once 'page-faq.html';
-                                                break;
-                                            case 'offers' : include_once 'page-offers.html';
-                                                break;
-                                            case 'contact' : include_once 'page-contact.html';
-                                                break;
-                                            default : include_once 'index.php';
-                                                break;
-                                        }
-                                        ?>
+                                        <li><a href="page-about.php">About Us</a></li>
+                                        <li><a href="page-services.php">Services</a></li>
+                                        <li><a href="page-gallery.php">Gallery</a></li>
+                                        <li><a href="page-reviews.php">Reviews</a></li>
+                                        <li><a href="page-faq.php">FAQ</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-about.jpg" alt="">
                                     </div>
                                 </div>
                             </li>
-<!--                            <li class="has-dropdown">-->
-<!---->
-<!--                           --><?php
-////                            $page = FILTER_INPUT(INPUT_GET, "page");
-////                            switch ($page) {
-////                                case 'menu' : include_once 'menu-grid-navigation.html';
-////                                    break;
-////                                default: include_once 'index.php';
-////                            }
-////                            ?>
-<!--                            <a href="#">Menu</a>-->
-<!--                                <div class="dropdown-container">-->
-<!--                                    <ul>-->
-<!--                                        <li class="has-dropdown">-->
-<!--                                            <a href="#">List</a>-->
-<!--                                            <ul>-->
-<!--                                                <li><a href="menu-list-navigation.html">Navigation</a></li>-->
-<!--                                                <li><a href="menu-list-collapse.html">Collapse</a></li>-->
-<!--                                            </ul>-->
-<!--                                        </li>-->
-<!--                                        <li class="has-dropdown">-->
-<!--                                            <a href="#">Grid</a>-->
-<!--                                            <ul>-->
-<!--                                                <li><a href="menu-grid-navigation.html">Navigation</a></li>-->
-<!--                                                <li><a href="menu-grid-collapse.html">Collapse</a></li>-->
-<!--                                            </ul>-->
-<!--                                        </li>-->
-<!--                                    </ul>-->
-<!--                                </div>-->
-<!--                            </li>-->
-                            <li><a href="index.php?page=offers">Offers</a></li>
-                            <li><a href="index.php?page=contact">Contact</a></li>
-                            <li class="has-dropdown">   
+                            <li class="has-dropdown">
+                                <a href="#">Menu</a>
+                                <div class="dropdown-container">
+                                    <ul>
+                                        <li class="has-dropdown">
+                                            <a href="#">List</a>
+                                            <ul>
+                                                <li><a href="menu-list-navigation.php">Navigation</a></li>
+                                                <li><a href="menu-list-collapse.php">Collapse</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a href="#">Grid</a>
+                                            <ul>
+                                                <li><a href="menu-grid-navigation.php">Navigation</a></li>
+                                                <li><a href="menu-grid-collapse.php">Collapse</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="page-offers.php">Offers</a></li>
+                            <li><a href="page-contact.php">Contact</a></li>
+                            <li class="has-dropdown">
                                 <a href="#">More</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.html">Book a table</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="confirmation.html">Confirmation</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-sidebar.html">Blog + Sidebar</a></li>
-                                        <li><a href="blog-post.html">Blog Post</a></li>
-                                        <li><a href="documentation.html">Documentation</a></li>
+                                        <li><a href="book-a-table.php">Book a table</a></li>
+                                        <li><a href="checkout.php">Checkout</a></li>
+                                        <li><a href="confirmation.php">Confirmation</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
+                                        <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
+                                        <li><a href="blog-post.php">Blog Post</a></li>
+                                        <li><a href="documentation.php">Documentation</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-more.jpg" alt="">
@@ -175,11 +135,11 @@
 
         <div class="module module-nav-toggle">
             <a href="#" id="nav-toggle" data-toggle="panel-mobile"><span></span><span></span><span></span><span></span></a>
-        </div>    
+        </div>
 
         <div class="module module-logo">
             <a href="index.php">
-                <img src="assets/img/logoMougsPutih.png" alt="">
+                <img src="assets/img/logo-horizontal-dark.svg" alt="">
             </a>
         </div>
 
@@ -196,7 +156,7 @@
 
         <!-- Section - Main -->
         <section class="section section-main section-main-1 bg-light">
-            
+
             <div class="container dark">
                 <div class="slide-container">
                     <div id="section-main-1-carousel-image" class="image inner-controls">
@@ -217,12 +177,12 @@
                             <div class="content-inner">
                                 <h1>Get 10% off coupon</h1>
                                 <h5 class="text-muted mb-5">and use it with your next order!</h5>
-                                <a href="page-offers.html" class="btn btn-outline-primary btn-lg"><span>Get it now!</span></a>
+                                <a href="page-offers.php" class="btn btn-outline-primary btn-lg"><span>Get it now!</span></a>
                             </div>
                             <div class="content-inner">
                                 <h1>Delicious Desserts</h1>
                                 <h5 class="text-muted mb-5">Order it online even now!</h5>
-                                <a href="menu-list-collapse.html" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
+                                <a href="menu-list-collapse.php" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
                             </div>
                         </div>
                         <nav class="content-nav">
@@ -241,7 +201,7 @@
             <div class="image right col-md-6 push-md-6">
                 <div class="bg-image"><img src="assets/img/photos/bg-food.jpg" alt=""></div>
             </div>
-        
+
             <div class="container">
                 <div class="col-lg-5 col-md-9">
                     <div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
@@ -286,7 +246,7 @@
                         <div class="feature feature-1 mb-md-0">
                             <div class="feature-icon icon icon-primary"><i class="ti ti-shopping-cart"></i></div>
                             <div class="feature-content">
-                                <h4 class="mb-2"><a href="menu-list-collapse.html">Pick a dish</a></h4>
+                                <h4 class="mb-2"><a href="menu-list-collapse.php">Pick a dish</a></h4>
                                 <p class="text-muted mb-0">Vivamus volutpat leo dictum risus ullamcorper condimentum.</p>
                             </div>
                         </div>
@@ -445,7 +405,7 @@
 
             <!-- BG Image -->
             <div class="bg-image bg-parallax"><img src="assets/img/photos/bg-croissant.jpg" alt=""></div>
-        
+
             <div class="container text-center">
                 <div class="col-lg-8 push-lg-2">
                     <h2 class="mb-3">Check our promo video!</h2>
@@ -459,26 +419,26 @@
 
         <!-- Footer -->
         <footer id="footer" class="bg-dark dark">
-            
+
             <div class="container">
                 <!-- Footer 1st Row -->
                 <div class="footer-first-row row">
                     <div class="col-lg-3 text-center">
-                        <a href="index.php"><img src="assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
+                        <a href="index.php"><img src="assets/img/logo-light.svg" alt="" width="88" class="mt-5 mb-5"></a>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-muted">Latest news</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">Awesome weekend in Polish mountains!</a>
+                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                         </ul>
@@ -590,7 +550,7 @@
                 </div>
             </div>
         </div>
-        <a href="checkout.html" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->

@@ -58,8 +58,8 @@
                                 <div class="dropdown-container">
                                     <ul>
                                         <li><a href="index.php">Home Basic</a></li>
-                                        <li><a href="index-slider.html">Home Fullwidth Slider</a></li>
-                                        <li><a href="index-video.html">Home Video</a></li>
+                                        <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
+                                        <li><a href="index-video.php">Home Video</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -67,11 +67,11 @@
                                 <a href="#">About</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="page-about.html">About Us</a></li>
-                                        <li><a href="page-services.html">Services</a></li>
-                                        <li><a href="page-gallery.html">Gallery</a></li>
-                                        <li><a href="page-reviews.html">Reviews</a></li>
-                                        <li><a href="page-faq.html">FAQ</a></li>
+                                        <li><a href="page-about.php">About Us</a></li>
+                                        <li><a href="page-services.php">Services</a></li>
+                                        <li><a href="page-gallery.php">Gallery</a></li>
+                                        <li><a href="page-reviews.php">Reviews</a></li>
+                                        <li><a href="page-faq.php">FAQ</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-about.jpg" alt="">
@@ -86,32 +86,32 @@
                                             <a href="#">List</a>
                                             <ul>
                                                 <li><a href="menu-list-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-list-collapse.html">Collapse</a></li>
+                                                <li><a href="menu-list-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="#">Grid</a>
                                             <ul>
-                                                <li><a href="menu-grid-navigation.html">Navigation</a></li>
-                                                <li><a href="menu-grid-collapse.html">Collapse</a></li>
+                                                <li><a href="menu-grid-navigation.php">Navigation</a></li>
+                                                <li><a href="menu-grid-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="page-offers.html">Offers</a></li>
-                            <li><a href="page-contact.html">Contact</a></li>
+                            <li><a href="page-offers.php">Offers</a></li>
+                            <li><a href="page-contact.php">Contact</a></li>
                             <li class="has-dropdown">   
                                 <a href="#">More</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.html">Book a table</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="confirmation.html">Confirmation</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-sidebar.html">Blog + Sidebar</a></li>
-                                        <li><a href="blog-post.html">Blog Post</a></li>
-                                        <li><a href="documentation.html">Documentation</a></li>
+                                        <li><a href="book-a-table.php">Book a table</a></li>
+                                        <li><a href="checkout.php">Checkout</a></li>
+                                        <li><a href="confirmation.php">Confirmation</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
+                                        <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
+                                        <li><a href="blog-post.php">Blog Post</a></li>
+                                        <li><a href="documentation.php">Documentation</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-more.jpg" alt="">
@@ -161,58 +161,79 @@
     <!-- Header / End -->
 
     <!-- Content -->
-    <div id="content">
+    <div id="content" class="bg-light">
 
-        <!-- Page Title -->
-        <div class="page-title border-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 push-lg-5">
-                        <h1 class="mb-0">About Us</h1>
-                        <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
+        <!-- Post / Single -->
+        <article class="post single">
+            <div class="post-image bg-parallax"><img src="assets/img/posts/post01_lg.jpg" alt=""></div>
+            <div class="container container-md">
+                <div class="post-content">
+                    <ul class="post-meta">
+                        <li>24 July, 2016</li>
+                        <li>by Johnatan Doe</li>
+                    </ul>
+                    <h1 class="post-title">Delicious idea for your Sunday dessert</h1>
+                    <hr>
+                    <p class="lead">Integer commodo nisi nec hendrerit volutpat. Ut semper lacus felis, vitae malesuada orci dapibus at. Etiam bibendum sed quam vitae scelerisque. Mauris aliquet vulputate lorem ultrices porttitor. Vivamus lobortis nisl felis, laoreet tincidunt lectus bibendum id. </p>
+                    <p>Etiam et lobortis turpis, blandit vestibulum nisl. Sed vel enim sit amet lectus mollis feugiat eget et augue. Nunc eu felis dignissim, malesuada mi at, tempor ex. Quisque quis elit non sem vehicula dictum at sed turpis. In dignissim sodales leo nec pharetra. Fusce a lectus quis lorem condimentum consectetur ac at turpis. Nunc pulvinar non nisl tempor blandit.</p>
+                    <p>Cras non placerat mi. Sed condimentum tristique gravida. In egestas malesuada tempus. In quis orci eros. Sed risus ligula, scelerisque nec lacinia eu, rutrum a est. Cras sodales libero libero, sagittis tempor augue sollicitudin ut. In tortor nibh, aliquet sed rutrum sit amet, scelerisque sit amet odio. Nulla facilisi. Ut hendrerit justo eu eleifend volutpat.</p>
+                    <p>Proin eu faucibus ante. Nunc euismod purus vel neque porta egestas. Nunc pellentesque enim felis, at egestas libero semper quis. Nullam non tristique metus. Cras ipsum justo, dignissim eu euismod id, fermentum eu lectus. Praesent malesuada dolor eu magna posuere, non pharetra est semper. Curabitur interdum lacinia justo ac posuere. Phasellus auctor tempus est, a tempor odio dictum id. Nulla at ullamcorper est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur pulvinar tristique justo, sit amet rutrum lectus posuere et. Donec quis facilisis dolor, et molestie elit.</p>
+                    <hr>
+                    <div class="post-comments post-module">
+                        <h4><i class="ti ti-comments mr-3 text-primary"></i>Comments</h4>
+                        <div class="content">
+                            <ul class="comments">
+                                <li>
+                                    <div class="avatar"><img src="assets/img/avatars/avatar01.jpg" alt=""></div>
+                                    <div class="content">
+                                        <span class="details">Jessica Biel on September 20,  <a href="#" class="text-primary">Reply</a></span>
+                                        <p>Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus.</p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <div class="avatar"><img src="assets/img/avatars/avatar02.jpg" alt=""></div>
+                                            <div class="content">
+                                                <span class="details">Jessica Biel on September 20</span>
+                                                <p>Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus, nec dapibus felis tempus in. Quisque eget elementum sem, cursus tristique orci. Donec velit nisi, auctor ac pharetra in, maximus eu justo.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="avatar"><img src="assets/img/avatars/avatar03.jpg" alt=""></div>
+                                    <div class="content">
+                                        <span class="details">Jessica Biel on September 20,  <a href="#" class="text-primary">Reply</a></span>
+                                        <p>Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="post-add-comment post-module">
+                        <h4><i class="ti ti-pencil mr-3 text-primary"></i>Write a comment</h4>
+                        <div class="content">
+                            <form action="#" id="add-comment" class="validate-form">
+                                <div class="row gutters-sm">
+                                    <div class="col-md-6 form-group">
+                                        <input type="text" class="form-control" placeholder="Name" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input type="email" class="form-control" placeholder="E-mail" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="comment" cols="30" rows="4" class="form-control" placeholder="Comment" required></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-primary"><span>Send a comment</span></button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Section -->
-        <section class="section section-bg-edge">
-
-            <div class="image left bottom col-md-7">
-                <div class="bg-image"><img src="assets/img/photos/bg-chef.jpg" alt=""></div>
-            </div>
-        
-            <div class="container">
-                <div class="col-lg-5 push-lg-5 col-md-9 push-md-3">
-                    <div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
-                    <h2>The best food in London!</h2>
-                    <p class="lead">Donec a eros metus. Vivamus volutpat leo dictum risus ullamcorper condimentum. Cras sollicitudin varius condimentum. Praesent a dolor sem....</p>
-                    <p>Nam eleifend elementum sapien et bibendum. Nunc ac diam efficitur, ultrices lorem quis, consectetur odio. Nullam vulputate, eros quis accumsan cursus, elit lectus bibendum nulla, sed dapibus ligula tellus at purus. Fusce id eros id mi cursus semper. Quisque efficitur bibendum nunc a consectetur. Maecenas vitae quam iaculis, scelerisque purus nec, varius purus. Nullam eget varius elit. Donec eget facilisis nunc, non rutrum lorem.</p>
-                    <h6>Mark Johnson, Chef</h6>
-                    <img src="assets/img/svg/sign.svg" alt="" class="mb-5">
-                    <h4>What people say about Us?</h4>
-                    <a href="page-reviews.html" class="btn btn-outline-primary"><span>Check our reviews</span></a>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Section -->
-        <section class="section section-lg dark bg-dark">
-
-            <!-- BG Image -->
-            <div class="bg-image bg-parallax"><img src="assets/img/photos/bg-croissant.jpg" alt=""></div>
-        
-            <div class="container text-center">
-                <div class="col-lg-8 push-lg-2">
-                    <h2 class="mb-3">Would you like to visit Us?</h2>
-                    <h5 class="text-muted">Book a table even right now or make an online order!</h5>
-                    <a href="menu-list-navigation.php" class="btn btn-primary"><span>Order Online</span></a>
-                    <a href="book-a-table.html" class="btn btn-outline-primary"><span>Book a table</span></a>
-                </div>
-            </div>
-
-        </section>
+        </article>
 
         <!-- Footer -->
         <footer id="footer" class="bg-dark dark">
@@ -227,15 +248,15 @@
                         <h5 class="text-muted">Latest news</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">Awesome weekend in Polish mountains!</a>
+                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                         </ul>
@@ -347,7 +368,7 @@
                 </div>
             </div>
         </div>
-        <a href="checkout.html" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->

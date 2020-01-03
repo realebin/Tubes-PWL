@@ -31,7 +31,7 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#side-navigation" data-offset="70">
 
 <!-- Body Wrapper -->
 <div id="body-wrapper" class="animsition">
@@ -58,8 +58,8 @@
                                 <div class="dropdown-container">
                                     <ul>
                                         <li><a href="index.php">Home Basic</a></li>
-                                        <li><a href="index-slider.html">Home Fullwidth Slider</a></li>
-                                        <li><a href="index-video.html">Home Video</a></li>
+                                        <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
+                                        <li><a href="index-video.php">Home Video</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -67,11 +67,11 @@
                                 <a href="#">About</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="page-about.html">About Us</a></li>
-                                        <li><a href="page-services.html">Services</a></li>
-                                        <li><a href="page-gallery.html">Gallery</a></li>
-                                        <li><a href="page-reviews.html">Reviews</a></li>
-                                        <li><a href="page-faq.html">FAQ</a></li>
+                                        <li><a href="page-about.php">About Us</a></li>
+                                        <li><a href="page-services.php">Services</a></li>
+                                        <li><a href="page-gallery.php">Gallery</a></li>
+                                        <li><a href="page-reviews.php">Reviews</a></li>
+                                        <li><a href="page-faq.php">FAQ</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-about.jpg" alt="">
@@ -86,32 +86,32 @@
                                             <a href="#">List</a>
                                             <ul>
                                                 <li><a href="menu-list-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-list-collapse.html">Collapse</a></li>
+                                                <li><a href="menu-list-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="#">Grid</a>
                                             <ul>
-                                                <li><a href="menu-grid-navigation.html">Navigation</a></li>
-                                                <li><a href="menu-grid-collapse.html">Collapse</a></li>
+                                                <li><a href="menu-grid-navigation.php">Navigation</a></li>
+                                                <li><a href="menu-grid-collapse.php">Collapse</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="page-offers.html">Offers</a></li>
-                            <li><a href="page-contact.html">Contact</a></li>
+                            <li><a href="page-offers.php">Offers</a></li>
+                            <li><a href="page-contact.php">Contact</a></li>
                             <li class="has-dropdown">   
                                 <a href="#">More</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.html">Book a table</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="confirmation.html">Confirmation</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-sidebar.html">Blog + Sidebar</a></li>
-                                        <li><a href="blog-post.html">Blog Post</a></li>
-                                        <li><a href="documentation.html">Documentation</a></li>
+                                        <li><a href="book-a-table.php">Book a table</a></li>
+                                        <li><a href="checkout.php">Checkout</a></li>
+                                        <li><a href="confirmation.php">Confirmation</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
+                                        <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
+                                        <li><a href="blog-post.php">Blog Post</a></li>
+                                        <li><a href="documentation.php">Documentation</a></li>
                                     </ul>
                                     <div class="dropdown-image">
                                         <img src="assets/img/photos/dropdown-more.jpg" alt="">
@@ -161,79 +161,103 @@
     <!-- Header / End -->
 
     <!-- Content -->
-    <div id="content" class="bg-light">
+    <div id="content">
 
-        <!-- Post / Single -->
-        <article class="post single">
-            <div class="post-image bg-parallax"><img src="assets/img/posts/post01_lg.jpg" alt=""></div>
-            <div class="container container-md">
-                <div class="post-content">
-                    <ul class="post-meta">
-                        <li>24 July, 2016</li>
-                        <li>by Johnatan Doe</li>
-                    </ul>
-                    <h1 class="post-title">Delicious idea for your Sunday dessert</h1>
-                    <hr>
-                    <p class="lead">Integer commodo nisi nec hendrerit volutpat. Ut semper lacus felis, vitae malesuada orci dapibus at. Etiam bibendum sed quam vitae scelerisque. Mauris aliquet vulputate lorem ultrices porttitor. Vivamus lobortis nisl felis, laoreet tincidunt lectus bibendum id. </p>
-                    <p>Etiam et lobortis turpis, blandit vestibulum nisl. Sed vel enim sit amet lectus mollis feugiat eget et augue. Nunc eu felis dignissim, malesuada mi at, tempor ex. Quisque quis elit non sem vehicula dictum at sed turpis. In dignissim sodales leo nec pharetra. Fusce a lectus quis lorem condimentum consectetur ac at turpis. Nunc pulvinar non nisl tempor blandit.</p>
-                    <p>Cras non placerat mi. Sed condimentum tristique gravida. In egestas malesuada tempus. In quis orci eros. Sed risus ligula, scelerisque nec lacinia eu, rutrum a est. Cras sodales libero libero, sagittis tempor augue sollicitudin ut. In tortor nibh, aliquet sed rutrum sit amet, scelerisque sit amet odio. Nulla facilisi. Ut hendrerit justo eu eleifend volutpat.</p>
-                    <p>Proin eu faucibus ante. Nunc euismod purus vel neque porta egestas. Nunc pellentesque enim felis, at egestas libero semper quis. Nullam non tristique metus. Cras ipsum justo, dignissim eu euismod id, fermentum eu lectus. Praesent malesuada dolor eu magna posuere, non pharetra est semper. Curabitur interdum lacinia justo ac posuere. Phasellus auctor tempus est, a tempor odio dictum id. Nulla at ullamcorper est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur pulvinar tristique justo, sit amet rutrum lectus posuere et. Donec quis facilisis dolor, et molestie elit.</p>
-                    <hr>
-                    <div class="post-comments post-module">
-                        <h4><i class="ti ti-comments mr-3 text-primary"></i>Comments</h4>
-                        <div class="content">
-                            <ul class="comments">
-                                <li>
-                                    <div class="avatar"><img src="assets/img/avatars/avatar01.jpg" alt=""></div>
-                                    <div class="content">
-                                        <span class="details">Jessica Biel on September 20,  <a href="#" class="text-primary">Reply</a></span>
-                                        <p>Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus.</p>
-                                    </div>
+        <!-- Page Title -->
+        <div class="page-title bg-light">
+            <div class="bg-image bg-parallax"><img src="assets/img/photos/bg-desk.jpg" alt=""></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 push-lg-4">
+                        <h1 class="mb-0">FAQ</h1>
+                        <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section -->
+        <section class="section">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!-- Side Navigation -->
+                        <nav id="side-navigation" class="stick-to-content pt-4" data-local-scroll>
+                            <h5 class="mb-3"><i class="ti ti-align-justify mr-3 text-muted"></i>Pick a content:</h5>
+                            <ul class="nav nav-vertical">
+                                <li class="nav-item">
+                                    <a href="#faq1" class="nav-link">General</a>
                                     <ul>
-                                        <li>
-                                            <div class="avatar"><img src="assets/img/avatars/avatar02.jpg" alt=""></div>
-                                            <div class="content">
-                                                <span class="details">Jessica Biel on September 20</span>
-                                                <p>Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus, nec dapibus felis tempus in. Quisque eget elementum sem, cursus tristique orci. Donec velit nisi, auctor ac pharetra in, maximus eu justo.</p>
-                                            </div>
-                                        </li>
+                                        <li class="nav-item"><a href="#faq1_1" class="nav-link">How does it work?</a></li>
+                                        <li class="nav-item"><a href="#faq1_2" class="nav-link">How long does it take?</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <div class="avatar"><img src="assets/img/avatars/avatar03.jpg" alt=""></div>
-                                    <div class="content">
-                                        <span class="details">Jessica Biel on September 20,  <a href="#" class="text-primary">Reply</a></span>
-                                        <p>Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus.</p>
-                                    </div>
+                                <li class="nav-item">
+                                    <a href="#faq2" class="nav-link">Delivery</a>
+                                    <ul>
+                                        <li class="nav-item"><a href="#faq2_1" class="nav-link">How does it work?</a></li>
+                                        <li class="nav-item"><a href="#faq2_2" class="nav-link">How long does it take?</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#faq3" class="nav-link">Payments</a>
+                                    <ul>
+                                        <li class="nav-item"><a href="#faq3_1" class="nav-link">How does it work?</a></li>
+                                        <li class="nav-item"><a href="#faq3_2" class="nav-link">How long does it take?</a></li>
+                                    </ul>
                                 </li>
                             </ul>
-                        </div>
+                        </nav>
                     </div>
-                    <hr>
-                    <div class="post-add-comment post-module">
-                        <h4><i class="ti ti-pencil mr-3 text-primary"></i>Write a comment</h4>
-                        <div class="content">
-                            <form action="#" id="add-comment" class="validate-form">
-                                <div class="row gutters-sm">
-                                    <div class="col-md-6 form-group">
-                                        <input type="text" class="form-control" placeholder="Name" required>
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <input type="email" class="form-control" placeholder="E-mail" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <textarea id="comment" cols="30" rows="4" class="form-control" placeholder="Comment" required></textarea>
-                                </div>
-                                <div class="text-center">
-                                    <button class="btn btn-primary"><span>Send a comment</span></button>
-                                </div>
-                            </form>
+                    <div class="col-md-8 push-md-1">
+                        <div id="faq1">
+                            <h3><i class="ti ti-file mr-4 text-primary"></i>General info</h3>
+                            <hr>
+                            <div id="faq1_1" class="pb-5">
+                                <h4>How does it work?</h4>
+                                <p class="lead">Vivamus non euismod dui. Curabitur rhoncus massa sit amet nisi molestie lobortis. Nam quis neque nec odio vestibulum pulvinar sit amet sed enim.</p>
+                                <p>Sed lacus lacus, tincidunt a posuere sed, varius ut sapien. Vivamus nulla odio, scelerisque eu orci ut, tincidunt consequat ligula. Etiam ante felis, consequat vel accumsan vitae, gravida nec mauris. Maecenas vitae lobortis nisl. Donec lorem libero, vulputate sed arcu nec, sollicitudin vestibulum nisi.</p>
+                            </div>
+                            <div id="faq1_2" class="pb-5">
+                                <h4>How long does it take?</h4>
+                                <p class="lead">Vivamus non euismod dui. Curabitur rhoncus massa sit amet nisi molestie lobortis. Nam quis neque nec odio vestibulum pulvinar sit amet sed enim.</p>
+                                <p> Vivamus nulla odio, scelerisque eu orci ut, tincidunt consequat ligula. Etiam ante felis, consequat vel accumsan vitae, gravida nec mauris. Maecenas vitae lobortis nisl. Donec lorem libero, vulputate sed arcu nec, sollicitudin vestibulum nisi.</p>
+                            </div>
+                        </div>
+                        <div id="faq2">
+                            <h3><i class="ti ti-package mr-4 text-primary"></i>Delivery</h3>
+                            <hr>
+                            <div id="faq2_1" class="pb-5">
+                                <h4>How does it work?</h4>
+                                <p class="lead">Vivamus non euismod dui. Curabitur rhoncus massa sit amet nisi molestie lobortis. Nam quis neque nec odio vestibulum pulvinar sit amet sed enim.</p>
+                                <p>Sed lacus lacus, tincidunt a posuere sed, varius ut sapien. Vivamus nulla odio, scelerisque eu orci ut, tincidunt consequat ligula. Etiam ante felis, consequat vel accumsan vitae, gravida nec mauris. Maecenas vitae lobortis nisl. Donec lorem libero, vulputate sed arcu nec, sollicitudin vestibulum nisi.</p>
+                            </div>
+                            <div id="faq2_2" class="pb-5">
+                                <h4>How long does it take?</h4>
+                                <p class="lead">Vivamus non euismod dui. Curabitur rhoncus massa sit amet nisi molestie lobortis. Nam quis neque nec odio vestibulum pulvinar sit amet sed enim.</p>
+                                <p> Vivamus nulla odio, scelerisque eu orci ut, tincidunt consequat ligula. Etiam ante felis, consequat vel accumsan vitae, gravida nec mauris. Maecenas vitae lobortis nisl. Donec lorem libero, vulputate sed arcu nec, sollicitudin vestibulum nisi.</p>
+                            </div>
+                        </div>
+                        <div id="faq3">
+                            <h3><i class="ti ti-wallet mr-4 text-primary"></i>Payments</h3>
+                            <hr>
+                            <div id="faq3_1" class="pb-5">
+                                <h4>How does it work?</h4>
+                                <p class="lead">Vivamus non euismod dui. Curabitur rhoncus massa sit amet nisi molestie lobortis. Nam quis neque nec odio vestibulum pulvinar sit amet sed enim.</p>
+                                <p>Sed lacus lacus, tincidunt a posuere sed, varius ut sapien. Vivamus nulla odio, scelerisque eu orci ut, tincidunt consequat ligula. Etiam ante felis, consequat vel accumsan vitae, gravida nec mauris. Maecenas vitae lobortis nisl. Donec lorem libero, vulputate sed arcu nec, sollicitudin vestibulum nisi.</p>
+                            </div>
+                            <div id="faq3_2" class="pb-5">
+                                <h4>How long does it take?</h4>
+                                <p class="lead">Vivamus non euismod dui. Curabitur rhoncus massa sit amet nisi molestie lobortis. Nam quis neque nec odio vestibulum pulvinar sit amet sed enim.</p>
+                                <p> Vivamus nulla odio, scelerisque eu orci ut, tincidunt consequat ligula. Etiam ante felis, consequat vel accumsan vitae, gravida nec mauris. Maecenas vitae lobortis nisl. Donec lorem libero, vulputate sed arcu nec, sollicitudin vestibulum nisi.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </article>
+
+        </section>
 
         <!-- Footer -->
         <footer id="footer" class="bg-dark dark">
@@ -248,15 +272,15 @@
                         <h5 class="text-muted">Latest news</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">Awesome weekend in Polish mountains!</a>
+                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                         </ul>
@@ -368,7 +392,7 @@
                 </div>
             </div>
         </div>
-        <a href="checkout.html" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->
