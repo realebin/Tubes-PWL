@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f27c346e-4f65-4a4e-b4ac-5bce5707ab9a" name="Default Changelist" comment="" />
+    <list default="true" id="f27c346e-4f65-4a4e-b4ac-5bce5707ab9a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dao/KategoriDaoImpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/Dao/KategoriDaoImpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dao/MenuDaoImpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/Dao/MenuDaoImpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entity/Kategori.php" beforeDir="false" afterPath="$PROJECT_DIR$/Entity/Kategori.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entity/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Entity/Menu.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +71,7 @@
       <workItem from="1577888379398" duration="4738000" />
       <workItem from="1577944988743" duration="3693000" />
       <workItem from="1578019487476" duration="27921000" />
+      <workItem from="1578109123530" duration="1198000" />
     </task>
     <servers />
   </component>

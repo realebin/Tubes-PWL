@@ -4,6 +4,32 @@ class Menu{
     private $nama;
     private $harga;
     private $status;
+    private $kategori;
+
+    /**
+     * Menu constructor.
+     * @param $kategori
+     */
+    public function __construct($kategori)
+    {
+        $this->kategori = $kategori;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getKategori()
+    {
+        return $this->kategori;
+    }
+
+    /**
+     * @param mixed $kategori
+     */
+    public function setKategori($kategori_id)
+    {
+        $this->kategori = $kategori_id;
+    }
 
     /**
      * @return mixed
@@ -67,6 +93,22 @@ class Menu{
     public function setStatus($status)
     {
         $this->status = $status;
+    }
+    public function __set($name, $value)
+    {
+        if(!isset($this->kategori_id)){
+            $this->kategori = new Kategori();
+        }
+        if(isset($value)){
+            switch ($name){
+                case 'nama_kategori' :
+                    $this->kategori->setNama($value);
+                    break;
+                case 'kategori_id':
+                    $this->kategori->setIdKategory($value);
+                    break;
+            }
+        }
     }
 
 

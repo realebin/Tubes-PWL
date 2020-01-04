@@ -3,8 +3,7 @@ Class KategoriDaoImpl{
     public function getAllKategori(Kategori $kategori){
         $link = PDOUtility::get_koneksi();
         try{
-            $sql = "SELECT k.*, m.idMenu AS menu_id FROM kategori k 
-JOIN menu m ON k.menu_id = m.id_menu";
+            $sql = "SELECT * FROM kategori ORDER BY idKategori ASC";
             $stmt = $link->prepare($sql);
             $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE ,'Kategori');
             //execute
@@ -39,10 +38,9 @@ JOIN menu m ON k.menu_id = m.id_menu";
         $msg = 'gagal';
         try{
             $link->beginTransaction();
-            $sql = "INSERT INTO kategori(nama, menu_id) VALUES(?,?)";
+            $sql = "INSERT INTO kategori(nama) VALUES(?)";
             $stmt = $link->prepare($sql);
             $stmt->bindValue(1,$kategori->getNama(),PDO::PARAM_STR);
-            $stmt->bindValue(2,$kategori->getMenu(),PDO::PARAM_INT);
             $stmt->execute();
         }
         catch (PDOException $err){
@@ -83,11 +81,10 @@ JOIN menu m ON k.menu_id = m.id_menu";
         $link = PDOUtility::get_koneksi();
         try {
             $link->beginTransaction();
-            $query = "UPDATE kategori SET menu_id = ?, nama=? WHERE idKategori = ?";
+            $query = "UPDATE kategori SET nama=? WHERE idKategori = ?";
             $stmt = $link->prepare($query);
-            $stmt->bindValue(1, $kategori->getMenu(), PDO::PARAM_INT);
-            $stmt->bindValue(2, $kategori->getNama(), PDO::PARAM_STR);
-            $stmt->bindValue(3, $kategori->getIdKategory(), PDO::PARAM_INT);
+            $stmt->bindValue(1, $kategori->getNama(), PDO::PARAM_STR);
+            $stmt->bindValue(2, $kategori->getIdKategory(), PDO::PARAM_INT);
             $stmt->execute();
             $link->commit();
             $msg = 'suksesu';
