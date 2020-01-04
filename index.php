@@ -96,7 +96,7 @@ $menuControl = new MenuController();
 switch ($nav)
 {
     case 'login' :
-        include_once 'home.php';
+        include_once 'login.php';
         $userControl->login();
         break;
     case 'logout' :
