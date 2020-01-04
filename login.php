@@ -225,7 +225,7 @@ if($_SESSION['approved_user'] == FALSE) {
                                         <p class="lead text-muted mb-0">This login only for staff</p>
                                     </div>
                                 </div>
-                                <form>
+                                <form action="" method="POST">
                                     <div class="utility-box-content">
                                         <div class="form-group">
                                             <label>Username :</label>
@@ -265,7 +265,7 @@ if($_SESSION['approved_user'] == FALSE) {
                             <h5 class="text-muted">Latest news</h5>
                             <ul class="list-posts">
                                 <li>
-                                    <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
+                                    <a href="Unused/blog-post.php" class="title">How to create effective webdesign?</a>
                                     <span class="date">February 14, 2015</span>
                                 </li>
                                 <li>
@@ -274,7 +274,7 @@ if($_SESSION['approved_user'] == FALSE) {
                                     <span class="date">February 14, 2015</span>
                                 </li>
                                 <li>
-                                    <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
+                                    <a href="Unused/blog-post.php" class="title">How to create effective webdesign?</a>
                                     <span class="date">February 14, 2015</span>
                                 </li>
                             </ul>
@@ -584,6 +584,5 @@ if($_SESSION['approved_user'] == FALSE) {
 }
 else{
     include_once 'index.php';
-
 }
-    ?>
+?>

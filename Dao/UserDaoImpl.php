@@ -6,7 +6,7 @@ class UserDaoImpl
         $link = PDOUtility::get_koneksi();
         try{
             //query
-            $sql = "SELECT * FROM user where username = ? AND password = MD5(?)";
+            $sql = "SELECT * FROM user WHERE username = ? AND password = MD5(?)";
             //prepare
             $stmt = $link -> prepare($sql);
             $stmt->bindValue(1, $user->getUsername(), PDO::PARAM_STR);

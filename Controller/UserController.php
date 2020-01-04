@@ -25,12 +25,13 @@ class UserController
             $data = $this->userDao->masuk($pengguna);
 
             $result = $data->fetch();
-            if (isset($result) && $result['id_user'] > 0) {
+
+            if (isset($result) && $result['idUser'] > 0) {
                 $_SESSION['approved_user'] = TRUE;
-                $_SESSION['userid'] = $result['id_user'];
+                $_SESSION['userid'] = $result['idUser'];
                 $_SESSION['username'] = $result['username'];
                 $_SESSION['userrole'] = $result['role'];
-                $_SESSION['name'] = $result['name'];
+                $_SESSION['name'] = $result['nama'];
             }
             header('location:index.php');
         }
