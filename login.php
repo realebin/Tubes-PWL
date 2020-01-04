@@ -1,6 +1,5 @@
 <?php
 if($_SESSION['approved_user'] == FALSE) {
-
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -230,11 +229,11 @@ if($_SESSION['approved_user'] == FALSE) {
                                     <div class="utility-box-content">
                                         <div class="form-group">
                                             <label>Username :</label>
-                                            <input type="text" name="uname" class="form-control" required>
+                                            <input type="text" name="uname" class="form-control" required/>
                                         </div>
                                         <div class="form-group">
                                             <label>Password :</label>
-                                            <input type="password" name="pwd" class="form-control" required>
+                                            <input type="password" name="pwd" class="form-control" required/>
                                         </div>
                                         <button class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit"
                                                 type="submit" name="btnLogin">
