@@ -275,21 +275,20 @@ if(!isset($nav))
                 <div class="slide-container">
                     <div id="section-main-1-carousel-image" class="image inner-controls">
                         <div class="slide"><div class="bg-image"><img src="assets/img/photos/slider-pasta.jpg" alt=""></div></div>
-                        <div class="slide"><div class="bg-image"><img src="assets/img/photos/slider-dr.jpg" alt=""></div></div>
+                        <div class="slide"><div class="bg-image"><img src="assets/img/photos/slider-burger.jpg" alt=""></div></div>
                         <div class="slide"><div class="bg-image"><img src="assets/img/photos/slider-dessert.jpg" alt=""></div></div>
                     </div>
                     <div class="content dark">
                         <div id="section-main-1-carousel-content">
                             <div class="content-inner">
                                 <h4 class="text-muted">New product!</h4>
-                                <h1>Creste di Galli</h1>
+                                <h1>Delicious Pasta</h1>
                                 <div class="btn-group">
-                                    <a href="#productModal" data-toggle="modal" class="btn btn-outline-primary btn-lg"><span>Add to cart</span></a>
-                                    <span class="price price-lg">from Rp.38000</span>
+                                    <a href="index.php?menu=order" data-toggle="modal" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
                                 </div>
                             </div>
                             <div class="content-inner">
-                                <h1>Fresh Drinks</h1>
+                                <h1>Delicious Burger</h1>
                                 <h5 class="text-muted mb-5">Order it online even now!</h5>
                                 <a href="index.php?menu=order" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
                             </div>
@@ -360,7 +359,7 @@ if(!isset($nav))
                         <div class="feature feature-1 mb-md-0">
                             <div class="feature-icon icon icon-primary"><i class="ti ti-shopping-cart"></i></div>
                             <div class="feature-content">
-                                <h4 class="mb-2"><a href="Unused/menu-list-collapse.php">Pick a dish</a></h4>
+                                <h4 class="mb-2">Pick a dish</h4>
                                 <p class="text-muted mb-0">Vivamus volutpat leo dictum risus ullamcorper condimentum.</p>
                             </div>
                         </div>
