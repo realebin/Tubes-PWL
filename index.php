@@ -245,28 +245,28 @@ if(!isset($nav))
                 <div class="slide-container">
                     <div id="section-main-1-carousel-image" class="image inner-controls">
                         <div class="slide"><div class="bg-image"><img src="assets/img/photos/slider-pasta.jpg" alt=""></div></div>
-                        <div class="slide"><div class="bg-image"><img src="assets/img/photos/slider-burger.jpg" alt=""></div></div>
+                        <div class="slide"><div class="bg-image"><img src="assets/img/photos/slider-dr.jpg" alt=""></div></div>
                         <div class="slide"><div class="bg-image"><img src="assets/img/photos/slider-dessert.jpg" alt=""></div></div>
                     </div>
                     <div class="content dark">
                         <div id="section-main-1-carousel-content">
                             <div class="content-inner">
                                 <h4 class="text-muted">New product!</h4>
-                                <h1>Boscaiola Pasta</h1>
+                                <h1>Creste di Galli</h1>
                                 <div class="btn-group">
                                     <a href="#productModal" data-toggle="modal" class="btn btn-outline-primary btn-lg"><span>Add to cart</span></a>
-                                    <span class="price price-lg">from $9.98</span>
+                                    <span class="price price-lg">from Rp.38000</span>
                                 </div>
                             </div>
                             <div class="content-inner">
-                                <h1>Get 10% off coupon</h1>
-                                <h5 class="text-muted mb-5">and use it with your next order!</h5>
-                                <a href="Unused/page-offers.php" class="btn btn-outline-primary btn-lg"><span>Get it now!</span></a>
+                                <h1>Fresh Drinks</h1>
+                                <h5 class="text-muted mb-5">Order it online even now!</h5>
+                                <a href="index.php?menu=order" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
                             </div>
                             <div class="content-inner">
                                 <h1>Delicious Desserts</h1>
                                 <h5 class="text-muted mb-5">Order it online even now!</h5>
-                                <a href="Unused/menu-list-collapse.php" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
+                                <a href="index.php?menu=order" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
                             </div>
                         </div>
                         <nav class="content-nav">
@@ -391,42 +391,42 @@ if(!isset($nav))
             }'>
                 <!-- Menu Sample -->
                 <div class="menu-sample">
-                    <a href="menu-list-navigation.php#Burgers">
-                        <img src="assets/img/photos/menu-sample-burgers.jpg" alt="" class="image">
+                    <a href="index.php?menu=order">
+                        <img src="assets/img/photos/menu-sample-burgers.jpg"  alt="" class="image">
                         <h3 class="title">Burgers</h3>
                     </a>
                 </div>
                 <!-- Menu Sample -->
                 <div class="menu-sample">
-                    <a href="menu-list-navigation.php#Pizza">
+                    <a href="index.php?menu=order">
                         <img src="assets/img/photos/menu-sample-pizza.jpg" alt="" class="image">
                         <h3 class="title">Pizza</h3>
                     </a>
                 </div>
                 <!-- Menu Sample -->
                 <div class="menu-sample">
-                    <a href="menu-list-navigation.php#Sushi">
+                    <a href="index.php?menu=order">
                         <img src="assets/img/photos/menu-sample-sushi.jpg" alt="" class="image">
                         <h3 class="title">Sushi</h3>
                     </a>
                 </div>
                 <!-- Menu Sample -->
                 <div class="menu-sample">
-                    <a href="menu-list-navigation.php#Pasta">
+                    <a href="index.php?menu=order">
                         <img src="assets/img/photos/menu-sample-pasta.jpg" alt="" class="image">
                         <h3 class="title">Pasta</h3>
                     </a>
                 </div>
                 <!-- Menu Sample -->
                 <div class="menu-sample">
-                    <a href="menu-list-navigation.php#Desserts">
+                    <a href="index.php?menu=order">
                         <img src="assets/img/photos/menu-sample-dessert.jpg" alt="" class="image">
                         <h3 class="title">Desserts</h3>
                     </a>
                 </div>
                 <!-- Menu Sample -->
                 <div class="menu-sample">
-                    <a href="menu-list-navigation.php#Drinks">
+                    <a href="index.php?menu=order">
                         <img src="assets/img/photos/menu-sample-drinks.jpg" alt="" class="image">
                         <h3 class="title">Drinks</h3>
                     </a>
@@ -437,50 +437,6 @@ if(!isset($nav))
 
         <!-- Section - Offers -->
         <section class="section bg-light">
-
-            <div class="container">
-                <h1 class="text-center mb-6">Special offers</h1>
-                <div class="carousel" data-slick='{"dots": true}'>
-                    <!-- Special Offer -->
-                    <div class="special-offer">
-                        <img src="assets/img/photos/special-burger.jpg" alt="" class="special-offer-image">
-                        <div class="special-offer-content">
-                            <h2 class="mb-2">Free Burger</h2>
-                            <h5 class="text-muted mb-5">Get free burger from orders higher that $40!</h5>
-                            <ul class="list-check text-lg mb-0">
-                                <li>Only on Tuesdays</li>
-                                <li class="false">Order higher that $40</li>
-                                <li>Unless one burger ordered</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Special Offer -->
-                    <div class="special-offer">
-                        <img src="assets/img/photos/special-pizza.jpg" alt="" class="special-offer-image">
-                        <div class="special-offer-content">
-                            <h2 class="mb-2">Free Small Pizza</h2>
-                            <h5 class="text-muted mb-5">Get free burger from orders higher that $40!</h5>
-                            <ul class="list-check text-lg mb-0">
-                                <li>Only on Weekends</li>
-                                <li class="false">Order higher that $40</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Special Offer -->
-                    <div class="special-offer">
-                        <img src="assets/img/photos/special-dish.jpg" alt="" class="special-offer-image">
-                        <div class="special-offer-content">
-                            <h2 class="mb-2">Chip Friday</h2>
-                            <h5 class="text-muted mb-5">10% Off for all dishes!</h5>
-                            <ul class="list-check text-lg mb-0">
-                                <li>Only on Friday</li>
-                                <li>All products</li>
-                                <li>Online order</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
 

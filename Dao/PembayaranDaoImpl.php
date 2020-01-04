@@ -59,7 +59,7 @@ class PembayaranDaoImpl{
         return $stmt;
     }
 
-    public function deleteMenuPesan(Pembayaran $pembayaran)
+    public function deletePembayaran(Pembayaran $pembayaran)
     {
         $link = PDOUtility::get_koneksi();
         $msg = 'gagalx';
@@ -85,7 +85,7 @@ class PembayaranDaoImpl{
         return $msg;
     }
 
-    public function updateMenuPesan(Pembayaran $pembayaran)
+    public function updatePembayaran(Pembayaran $pembayaran)
     {
         $msg = 'gagalu';
         $link = PDOUtility::get_koneksi();

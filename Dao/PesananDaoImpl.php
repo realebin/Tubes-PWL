@@ -49,7 +49,7 @@ class PesananDaoImpl{
         return $stmt;
     }
 
-    public function deleteMenu(Pesanan $pesanan)
+    public function deletePesanan(Pesanan $pesanan)
     {
         $link = PDOUtility::get_koneksi();
         $msg = 'gagalx';
