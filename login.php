@@ -225,7 +225,7 @@ if($_SESSION['approved_user'] == FALSE) {
                                         <p class="lead text-muted mb-0">This login only for staff</p>
                                     </div>
                                 </div>
-                                <form action="#" id="booking-form" data-validate>
+                                <form>
                                     <div class="utility-box-content">
                                         <div class="form-group">
                                             <label>Username :</label>
@@ -302,17 +302,17 @@ if($_SESSION['approved_user'] == FALSE) {
                                 </span>
                                 </div>
                             </form>
-                            <h5 class="text-muted mb-3">Social Media</h5>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i
-                                        class="fa fa-facebook"></i></a>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i
-                                        class="fa fa-google"></i></a>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i
-                                        class="fa fa-twitter"></i></a>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i
-                                        class="fa fa-youtube"></i></a>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i
-                                        class="fa fa-instagram"></i></a>
+<!--                            <h5 class="text-muted mb-3">Social Media</h5>-->
+<!--                            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i-->
+<!--                                        class="fa fa-facebook"></i></a>-->
+<!--                            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i-->
+<!--                                        class="fa fa-google"></i></a>-->
+<!--                            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i-->
+<!--                                        class="fa fa-twitter"></i></a>-->
+<!--                            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i-->
+<!--                                        class="fa fa-youtube"></i></a>-->
+<!--                            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i-->
+<!--                                        class="fa fa-instagram"></i></a>-->
                         </div>
                     </div>
                     <!-- Footer 2nd Row -->
