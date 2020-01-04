@@ -22,6 +22,23 @@ if (!isset($_SESSION['approved_user'])) {
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<!--nambah nyobain-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style5.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+<!--sampe sini uy-->
+
     <!-- Title -->
     <title>Mougs - ★★★★☆ Restaurant</title>
 
@@ -67,11 +84,12 @@ include_once "Dao/MenuPesanDaoImpl.php";
 
 include_once "Controller/MenuController.php";
 include_once "Controller/UserController.php";
+include_once "Controller/KategoriController.php";
 
 include_once "function.php";
 ?>
 
-<!--            dari sini ubahnya-->
+<!-- dari sini ubahnya-->
 <?php
 $nav = FILTER_INPUT(INPUT_GET, 'menu');
 $userControl = new UserController();
@@ -79,7 +97,7 @@ $menuControl = new MenuController();
 switch ($nav)
 {
     case 'login' :
-        include_once 'login.php';
+        include_once 'home.php';
         $userControl->login();
         break;
     case 'logout' :
@@ -117,7 +135,7 @@ switch ($nav)
             $commander = FILTER_INPUT(INPUT_GET, 'command');
 
             $menuControl = new MenuController();
-            if(isset($commander) && $commander == 'edit' && $_SESSION['userrole'] == 'admin')
+            if(isset($commander) && $commander == 'edit' && $_SESSION['userrole'] == 'Admin')
             {
                 $menuControl->ubahMenu();
             }
@@ -152,7 +170,7 @@ if(!isset($nav))
                     </div>
                 </div>
                 <div class="col-md-7">
-                    <!-- Navigation -->
+<!--                     Navigation-->
                     <nav class="module module-navigation left mr-4">
                         <ul id="nav-main" class="nav nav-main">
                             <li><a href="index.php">Home</a></li>
@@ -169,7 +187,7 @@ if(!isset($nav))
                                 <a href="index.php?menu=book">Book</a>
                             </li>
                             <?php
-                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'admin'){
+                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){
                                 ?>
                                 <li>
                                     <a href="index.php?menu=management">Book</a>
@@ -199,15 +217,26 @@ if(!isset($nav))
                         <a href="index.php?menu=order" class="btn btn-outline-secondary"><span>Order</span></a>
                     </div>
                 </div>
+
                 <div class="col-md-2">
                     <a href="#" class="module module-cart right" data-toggle="panel-cart">
                         <span class="cart-icon">
+
                             <i class="ti ti-shopping-cart"></i>
                             <span class="notification">2</span>
                         </span>
                         <span class="cart-value">$32.98</span>
                     </a>
+
+                    <a href="#" class="module module-cart right" data-toggle="panel-cart1">
+                        <span class="login-icon">
+                            <i class="ti ti-shift-right"></i>
+                            <span>&#160;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </span>
+                    </a>
+
                 </div>
+
             </div>
         </div>
 
@@ -227,10 +256,12 @@ if(!isset($nav))
             </a>
         </div>
 
+
         <a href="#" class="module module-cart" data-toggle="panel-cart">
             <i class="ti ti-shopping-cart"></i>
             <span class="notification">2</span>
         </a>
+
 
     </header>
     <!-- Header / End -->
@@ -592,6 +623,7 @@ if(!isset($nav))
         </div>
         <a href="index.php?menu=checkout" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
+
 
     <!-- Panel Mobile -->
     <nav id="panel-mobile">
