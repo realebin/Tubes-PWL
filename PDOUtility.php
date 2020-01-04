@@ -5,7 +5,7 @@ class PDOUtility
 {
     public static function get_koneksi(){
         try{
-            $db = "mysql:host=localhost;dbname=Restaurant";
+            $db = "mysql:host=localhost;dbname=restaurant";
             $db_handler = new PDO($db,"root", "");
             $db_handler -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }

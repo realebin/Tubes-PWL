@@ -12,7 +12,6 @@ class UserController
 }
     public function login()
     {
-
         $btnLogin = FILTER_INPUT(INPUT_POST, 'btnLogin');
         if (isset($btnLogin)) {
             $username = FILTER_INPUT(INPUT_POST, 'uname');
