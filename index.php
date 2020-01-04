@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 if (!isset($_SESSION['approved_user'])) {
     $_SESSION['approved_user'] = FALSE;
@@ -203,11 +204,11 @@ if(!isset($nav))
                                     ?>
                                     <li>
                                     <a href="index.php?menu=login">Login</a>
+<!--                                        <p>--><?php //echo $_SESSION['nama']?><!--</p>-->
+
                                 </li>
                             <?php
                                 }
-
-
                             ?>
                         </ul>
                     </nav>
@@ -227,12 +228,12 @@ if(!isset($nav))
                         <span class="cart-value">$32.98</span>
                     </a>
 
-                    <a href="#" class="module module-cart right" data-toggle="panel-cart1">
-                        <span class="login-icon">
-                            <i class="ti ti-shift-right"></i>
-                            <span>&#160;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                        </span>
-                    </a>
+<!--                    <a href="#" class="module module-cart right" data-toggle="panel-cart1">-->
+<!--                        <span class="login-icon">-->
+<!--                            <i class="ti ti-shift-right"></i>-->
+<!--                            <span>&#160;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+<!--                        </span>-->
+<!--                    </a>-->
 
                 </div>
 
