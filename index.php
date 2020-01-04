@@ -78,7 +78,8 @@ $userControl = new UserController();
 $menuControl = new MenuController();
 switch ($nav)
 {
-    case 'home' :
+    case 'login' :
+        include_once 'login.php';
         $userControl->login();
         break;
     case 'logout' :
@@ -184,7 +185,7 @@ if(!isset($nav))
                                 else{
                                     ?>
                                     <li>
-                                    <a href="index.php?menu=home">Login</a>
+                                    <a href="index.php?menu=login">Login</a>
                                 </li>
                             <?php
                                 }
