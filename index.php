@@ -1,5 +1,5 @@
 <?php
-ob_start();
+//ob_start();
 session_start();
 if (!isset($_SESSION['approved_user'])) {
     $_SESSION['approved_user'] = FALSE;
