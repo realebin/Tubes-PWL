@@ -213,19 +213,19 @@ if(!isset($nav))
         <section class="section section-bg-edge">
 
             <div class="image left bottom col-md-7">
-                <div class="bg-image"><img src="assets/img/photos/bg-chef.jpg" alt=""></div>
+                <div class="bg-image"><img src="assets/img/photos/chef.png" alt=""></div>
             </div>
         
             <div class="container">
                 <div class="col-lg-5 push-lg-5 col-md-9 push-md-3">
                     <div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
-                    <h2>The best food in London!</h2>
-                    <p class="lead">Donec a eros metus. Vivamus volutpat leo dictum risus ullamcorper condimentum. Cras sollicitudin varius condimentum. Praesent a dolor sem....</p>
-                    <p>Nam eleifend elementum sapien et bibendum. Nunc ac diam efficitur, ultrices lorem quis, consectetur odio. Nullam vulputate, eros quis accumsan cursus, elit lectus bibendum nulla, sed dapibus ligula tellus at purus. Fusce id eros id mi cursus semper. Quisque efficitur bibendum nunc a consectetur. Maecenas vitae quam iaculis, scelerisque purus nec, varius purus. Nullam eget varius elit. Donec eget facilisis nunc, non rutrum lorem.</p>
-                    <h6>Mark Johnson, Chef</h6>
+                    <h2>The best western food in Indonesia!</h2>
+                    <p class="lead">Mougs is the best western restaurant in Indonesia and serve so many fantastic food that you will never find in other place.</p>
+                    <p>In 2020 Mougs started make some delicious food cathering and the owner promote it in Instagram, and wow so amazing because day by day people really love the food of Mougs and now a days Mougs become the best restaurant full field with Michelin Star Rewards at 2025.</p>
+                    <h6>Princess Anastasia, Chef</h6>
                     <img src="assets/img/svg/sign.svg" alt="" class="mb-5">
-                    <h4>What people say about Us?</h4>
-                    <a href="Unused/page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>
+                    <h4>What people like about Us?</h4>
+                    <a href="menu-list-navigation.php" class="btn btn-outline-primary"><span>Check our menus</span></a>
                 </div>
             </div>
 
@@ -242,7 +242,7 @@ if(!isset($nav))
                     <h2 class="mb-3">Would you like to visit Us?</h2>
                     <h5 class="text-muted">Book a table even right now or make an online order!</h5>
                     <a href="menu-list-navigation.php" class="btn btn-primary"><span>Order Online</span></a>
-                    <a href="book-a-table.php" class="btn btn-outline-primary"><span>Book a table</span></a>
+<!--                    <a href="book-a-table.php" class="btn btn-outline-primary"><span>Book a table</span></a>-->
                 </div>
             </div>
 
@@ -258,19 +258,16 @@ if(!isset($nav))
                         <a href="index.php"><img src="assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <h5 class="text-muted">Latest news</h5>
+                        <h5 class="text-muted">Latest News About Mougs</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
-                                <span class="date">February 14, 2015</span>
+                                <a class="title">Mougs get Michellin Star Rewards at 2025.</a>
                             </li>
                             <li>
-                                <a href="Unused/blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
-                                <span class="date">February 14, 2015</span>
+                                <a class="title">The best Western Restaurant in Town.</a>
                             </li>
                             <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
-                                <span class="date">February 14, 2015</span>
+                                <a class="title">Specialitation of Burger.</a>
                             </li>
                         </ul>
                     </div>
@@ -291,12 +288,12 @@ if(!isset($nav))
                                 </span>
                             </div>
                         </form>
-                        <h5 class="text-muted mb-3">Social Media</h5>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
+<!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
                     </div>
                 </div>
                 <!-- Footer 2nd Row -->
@@ -393,14 +390,14 @@ if(!isset($nav))
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>
         <nav class="module module-navigation"></nav>
-        <div class="module module-social">
-            <h6 class="text-sm mb-3">Follow Us!</h6>
-            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
-            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
-        </div>
+<!--        <div class="module module-social">-->
+<!--            <h6 class="text-sm mb-3">Follow Us!</h6>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
+<!--        </div>-->
     </nav>
 
     <!-- Body Overlay -->
