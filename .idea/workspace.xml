@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27c346e-4f65-4a4e-b4ac-5bce5707ab9a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/img/a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/photos/chef.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/photos/chef.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unused/documentation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Unused/documentation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/location-pin.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/location-pin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-contact.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +79,6 @@
       <workItem from="1578109123530" duration="1198000" />
       <workItem from="1578113056535" duration="15743000" />
       <workItem from="1578197837214" duration="13066000" />
-      <workItem from="1578224527957" duration="1829000" />
     </task>
     <servers />
   </component>

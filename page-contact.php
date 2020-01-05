@@ -218,25 +218,25 @@ if(!isset($nav))
                     <div class="col-lg-4 push-lg-1 col-md-6">
                         <img src="assets/img/logoMougs.png" alt="" class="mb-5" width="200">
                         <h4 class="mb-0">Mougs Restaurant</h4>
-                        <span class="text-muted">Green Street 22, New York</span>
+                        <span class="text-muted">Komp. Setra Duta 10, Indonesia</span>
                         <hr class="hr-md">
                         <div class="row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
                                 <h6 class="mb-1 text-muted">Phone:</h6>
-                                +48 21200 2122 221
+                                +622 85318078808
                             </div>
                             <div class="col-sm-6">
                                 <h6 class="mb-1 text-muted">E-mail:</h6>
-                                <a href="#">hello@example.com</a>
+                                <a href="#">mougslovers@gmail.com</a>
                             </div>
                         </div>
-                        <hr class="hr-md">
-                        <h6 class="mb-3 text-muted">Follow Us!</h6>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
+<!--                        <hr class="hr-md">-->
+<!--                        <h6 class="mb-3 text-muted">Follow Us!</h6>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
                     </div>
                     <div class="col-lg-5 push-lg-2 col-md-6">
                         <div id="google-map" class="h-500 shadow"></div>
@@ -256,19 +256,16 @@ if(!isset($nav))
                         <a href="index.php"><img src="assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <h5 class="text-muted">Latest news</h5>
+                        <h5 class="text-muted">Latest News About Mougs</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
-                                <span class="date">February 14, 2015</span>
+                                <a class="title">Mougs get Michellin Star Rewards at 2025.</a>
                             </li>
                             <li>
-                                <a href="Unused/blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
-                                <span class="date">February 14, 2015</span>
+                                <a class="title">The best Western Restaurant in Town.</a>
                             </li>
                             <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
-                                <span class="date">February 14, 2015</span>
+                                <a class="title">Specialitation of Burger.</a>
                             </li>
                         </ul>
                     </div>
@@ -289,12 +286,12 @@ if(!isset($nav))
                                 </span>
                             </div>
                         </form>
-                        <h5 class="text-muted mb-3">Social Media</h5>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
+<!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
                     </div>
                 </div>
                 <!-- Footer 2nd Row -->
@@ -391,14 +388,14 @@ if(!isset($nav))
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>
         <nav class="module module-navigation"></nav>
-        <div class="module module-social">
-            <h6 class="text-sm mb-3">Follow Us!</h6>
-            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
-            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
-        </div>
+<!--        <div class="module module-social">-->
+<!--            <h6 class="text-sm mb-3">Follow Us!</h6>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
+<!--        </div>-->
     </nav>
 
     <!-- Body Overlay -->
