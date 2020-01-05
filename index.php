@@ -88,6 +88,56 @@ include_once "Controller/KategoriController.php";
 
 include_once "function.php";
 ?>
+<!-- nyoba cart -->
+<?php
+//$link = PDOUtility::get_koneksi();
+//if(!empty($_GET["action"])) {
+//    switch($_GET["action"]) {
+//        case "add":
+//            if(!empty($_POST["quantity"])) {
+//                    $productByCode = PDOUtility::->runQuery("SELECT * FROM tblproduct WHERE code='" . $_GET["code"] . "'");
+//$itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"], 'image'=>$productByCode[0]["image"]));
+//
+//if(!empty($_SESSION["cart_item"])) {
+//if(in_array($productByCode[0]["code"],array_keys($_SESSION["cart_item"]))) {
+//foreach($_SESSION["cart_item"] as $k => $v) {
+//if($productByCode[0]["code"] == $k) {
+//if(empty($_SESSION["cart_item"][$k]["quantity"])) {
+//$_SESSION["cart_item"][$k]["quantity"] = 0;
+//}
+//$_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
+//}
+//}
+//} else {
+//$_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
+//}
+//} else {
+//$_SESSION["cart_item"] = $itemArray;
+//}
+//}
+//break;
+//case "remove":
+//if(!empty($_SESSION["cart_item"])) {
+//foreach($_SESSION["cart_item"] as $k => $v) {
+//if($_GET["code"] == $k)
+//unset($_SESSION["cart_item"][$k]);
+//if(empty($_SESSION["cart_item"]))
+//unset($_SESSION["cart_item"]);
+//}
+//}
+//break;
+//case "empty":
+//unset($_SESSION["cart_item"]);
+//break;
+//}
+//}
+//?>
+<!---->
+<!--sampe sini-->
+
+
+
+
 
 <!-- dari sini ubahnya-->
 <?php
@@ -97,8 +147,10 @@ $menuControl = new MenuController();
 switch ($nav)
 {
     case 'login' :
-        include_once 'login.php';
+    {
+//        include_once 'login.php';
         $userControl->login();
+        }
         break;
     case 'logout' :
         {
@@ -114,8 +166,8 @@ switch ($nav)
         break;
     case 'about' : include_once 'page-about.php';
         break;
-    case 'book' : include_once 'book-a-table.php';
-        break;
+//    case 'book' : include_once 'book-a-table.php';
+//        break;
     case 'checkout' : include_once 'checkout.php';
         break;
 //    case 'service' : include_once 'page-services.php';
@@ -183,9 +235,9 @@ if(!isset($nav))
                             </li>
 <!--                            <li><a href="page-offers.php">Offers</a></li>-->
                             <li><a href="index.php?menu=contact">Contact</a></li>
-                            <li>
-                                <a href="index.php?menu=book">Book</a>
-                            </li>
+<!--                            <li>-->
+<!--                                <a href="index.php?menu=book">Book</a>-->
+<!--                            </li>-->
                             <?php
                             if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){
                                 ?>

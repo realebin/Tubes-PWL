@@ -79,8 +79,8 @@ switch ($nav)
         break;
     case 'about' : include_once 'page-about.php';
         break;
-    case 'book' : include_once 'book-a-table.php';
-        break;
+//    case 'book' : include_once 'book-a-table.php';
+//        break;
     case 'checkout' : include_once 'checkout.php';
         break;
 //    case 'service' : include_once 'page-services.php';
@@ -149,9 +149,9 @@ if(!isset($nav))
                                 <a href="index.php?menu=order">Menu</a>
                             </li>
                             <li><a href="index.php?menu=contact">Contact</a></li>
-                            <li>
-                                <a href="index.php?menu=book">Book</a>
-                            </li>
+<!--                            <li>-->
+<!--                                <a href="index.php?menu=book">Book</a>-->
+<!--                            </li>-->
                         </ul>
                     </nav>
                     <div class="module left">
