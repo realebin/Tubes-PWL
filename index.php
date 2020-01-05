@@ -1,5 +1,5 @@
 <?php
-//ob_start();
+ob_start();
 session_start();
 if (!isset($_SESSION['approved_user'])) {
     $_SESSION['approved_user'] = FALSE;
@@ -148,7 +148,7 @@ switch ($nav)
 {
     case 'login' :
     {
-//        include_once 'login.php';
+        include_once 'login.php';
         $userControl->login();
         }
         break;

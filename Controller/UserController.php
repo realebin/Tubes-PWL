@@ -26,6 +26,8 @@ class UserController
 
             $result = $data->fetch();
 
+            var_dump($result);
+            exit();
             if (isset($result) && $result['idUser'] > 0) {
                 $_SESSION['approved_user'] = TRUE;
                 $_SESSION['userid'] = $result['idUser'];
