@@ -184,9 +184,9 @@ switch ($nav)
         break;
     case 'order' :
         {
-            $commander = FILTER_INPUT(INPUT_GET, 'command');
 
             $menuControl = new MenuController();
+            $commander = FILTER_INPUT(INPUT_GET, 'command');
             if(isset($commander) && $commander == 'edit' && $_SESSION['userrole'] == 'Admin')
             {
                 $menuControl->ubahMenu();
@@ -334,8 +334,8 @@ if(!isset($nav))
                     <div class="content dark">
                         <div id="section-main-1-carousel-content">
                             <div class="content-inner">
-                                <h4 class="text-muted">New product!</h4>
                                 <h1>Delicious Pasta</h1>
+                                <h5 class="text-muted mb-5">Order it online even now!</h5>
                                 <div class="btn-group">
                                     <a href="index.php?menu=order" data-toggle="modal" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
                                 </div>

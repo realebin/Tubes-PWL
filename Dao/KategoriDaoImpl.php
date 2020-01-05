@@ -1,22 +1,25 @@
 <?php
 Class KategoriDaoImpl{
-    public function getAllKategori(Kategori $kategori){
+    public function getAllKategori(){
         $link = PDOUtility::get_koneksi();
         try{
-            $sql = "SELECT * FROM kategori ORDER BY idKategori ASC";
-            $stmt = $link->prepare($sql);
+            //query
+            $sql = "SELECT * FROM kategori";
+            //prepare
+            $stmt = $link -> prepare($sql);
             $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE ,'Kategori');
             //execute
             $stmt->execute();
-        }
-        catch(PDOException $err){
-            echo $err->getMessage();
-            die();
 
+        } catch (PDOException $err){
+            echo $err -> getMessage();
+            die();
         }
         PDOUtility::close_koneksi($link);
         return $stmt;
     }
+
+
     public function getOneKategori(Kategori $kategori){
         $link = PDOUtility::get_koneksi();
         try{

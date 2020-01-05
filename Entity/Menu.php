@@ -10,9 +10,9 @@ class Menu{
      * Menu constructor.
      * @param $kategori
      */
-    public function __construct($kategori)
+    public function __construct()
     {
-        $this->kategori = $kategori;
+        $this->kategori = new Kategori();
     }
 
     /**
@@ -104,7 +104,7 @@ class Menu{
                 case 'nama_kategori' :
                     $this->kategori->setNama($value);
                     break;
-                case 'kategori_id':
+                case 'id_kategori':
                     $this->kategori->setIdKategory($value);
                     break;
             }

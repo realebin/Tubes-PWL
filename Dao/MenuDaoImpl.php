@@ -3,7 +3,7 @@ class MenuDaoImpl{
     public function getAllMenu(){
         $link = PDOUtility::get_koneksi();
         try{
-            $sql = "SELECT m.*, k.nama as nama_kategori FROM menu m JOIN kategori k ON k.idKategori = m.kategori_id ORDER BY m.nama ASC";
+            $sql = "SELECT m.*, k.idKategori as id_kategori FROM menu m JOIN kategori k ON k.idKategori = m.kategori_id";
             $stmt = $link->query($sql);
             $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE ,'Menu');
         }
@@ -100,5 +100,24 @@ class MenuDaoImpl{
 
     }
 
+
+// TODO: bikin function getALlMenuKategori
+// fungsinya untuk mendapatkan kategori berdasarkan id Kategori, semacam get One tapi semua menu yang dikembalikan bukan hanya satu
+    public function getAllMenuKategori(Kategori $kategori){
+        $link = PDOUtility::get_koneksi();
+        try{
+            $sql = "SELECT * FROM menu WHERE kategori_id=?";
+            $stmt = $link->query($sql);
+            $stmt->bindValue(1,$kategori->getIdKategory(),PDO::PARAM_INT);
+            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE ,'Menu');
+            $stmt->execute();
+        }
+        catch (PDOException $err){
+            echo $err ->getMessage();
+            die();
+        }
+        PDOUtility::close_koneksi($link);
+        return $stmt;
+    }
 }
 ?>
