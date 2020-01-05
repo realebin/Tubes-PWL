@@ -371,29 +371,29 @@ if(!isset($nav))
             <div class="container">
                 <div class="col-lg-5 col-md-9">
                     <div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
-                    <h1>The best food in London!</h1>
-                    <p class="lead text-muted mb-5">Donec a eros metus. Vivamus volutpat leo dictum risus ullamcorper condimentum. Cras sollicitudin varius condimentum. Praesent a dolor sem....</p>
+                    <h1>The best western food in Indonesia!</h1>
+                    <p class="lead text-muted mb-5">Many Asians are very fascinated with western cuisine. Taste may be subjective but what makes them really attractive is probably due to the inception of the fast food industry – though today, we crave something more substantial. Mougs is the places in Indonesia that you, as an Asian, can enjoy really wholesome western meals.</p>
                     <div class="blockquotes">
                         <!-- Blockquote -->
                         <blockquote class="blockquote light animated" data-animation="fadeInLeft">
                             <div class="blockquote-content">
                                 <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
-                                <p>It’ was amazing feeling for may belly!</p>
+                                <p>It’ was super duper amazing feeling for may belly!</p>
                             </div>
                             <footer>
-                                <img src="assets/img/avatars/avatar02.jpg" alt="">
-                                <span class="name">Mark Johnson<span class="text-muted">, Google</span></span>
+                                <img src="assets/img/avatars/lele.jpg" alt="">
+                                <span class="name">Anastasia Levina<span class="text-muted">, Google</span></span>
                             </footer>
                         </blockquote>
                         <!-- Blockquote -->
                         <blockquote class="blockquote animated" data-animation="fadeInRight" data-animation-delay="300">
                             <div class="blockquote-content dark">
                                 <div class="rate rate-sm mb-3"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>
-                                <p>Great food and great atmosphere!</p>
+                                <p>Great food and great experience!</p>
                             </div>
                             <footer>
-                                <img src="assets/img/avatars/avatar01.jpg" alt="">
-                                <span class="name">Kate Hudson<span class="text-muted">, LinkedIn</span></span>
+                                <img src="assets/img/avatars/ebin.PNG" alt="">
+                                <span class="name">Febrina Anastasha<span class="text-muted">, LinkedIn</span></span>
                             </footer>
                         </blockquote>
                     </div>
@@ -413,7 +413,7 @@ if(!isset($nav))
                             <div class="feature-icon icon icon-primary"><i class="ti ti-shopping-cart"></i></div>
                             <div class="feature-content">
                                 <h4 class="mb-2">Pick a dish</h4>
-                                <p class="text-muted mb-0">Vivamus volutpat leo dictum risus ullamcorper condimentum.</p>
+                                <p class="text-muted mb-0">Choose your favorite meal and order it as many as you want.</p>
                             </div>
                         </div>
                     </div>
@@ -423,7 +423,7 @@ if(!isset($nav))
                             <div class="feature-icon icon icon-primary"><i class="ti ti-wallet"></i></div>
                             <div class="feature-content">
                                 <h4 class="mb-2">Make a payment</h4>
-                                <p class="text-muted mb-0">Vivamus volutpat leo dictum risus ullamcorper condimentum.</p>
+                                <p class="text-muted mb-0">Go to order cart check the bill, and if that's right then pay your order. </p>
                             </div>
                         </div>
                     </div>
@@ -433,7 +433,7 @@ if(!isset($nav))
                             <div class="feature-icon icon icon-primary"><i class="ti ti-package"></i></div>
                             <div class="feature-content">
                                 <h4 class="mb-2">Recieve your food!</h4>
-                                <p class="text-muted mb-3">Vivamus volutpat leo dictum risus ullamcorper condimentum.</p>
+                                <p class="text-muted mb-3">Wait your food with happy feelings and your food will come to you as soon as posible.</p>
                             </div>
                         </div>
                     </div>
@@ -549,19 +549,16 @@ if(!isset($nav))
                         <a href="index.php"><img src="assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <h5 class="text-muted">Latest news</h5>
+                        <h5 class="text-muted">Latest News About Mougs</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
-                                <span class="date">February 14, 2015</span>
+                                <a class="title">Mougs get Michellin Star Rewards at 2025.</a>
                             </li>
                             <li>
-                                <a href="Unused/blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
-                                <span class="date">February 14, 2015</span>
+                                <a class="title">The best Western Restaurant in Town.</a>
                             </li>
                             <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
-                                <span class="date">February 14, 2015</span>
+                                <a class="title">Specialitation of Burger.</a>
                             </li>
                         </ul>
                     </div>
@@ -597,7 +594,14 @@ if(!isset($nav))
             </div>
 
             <!-- Back To Top -->
-            <a href="#" id="back-to-top"><i class="ti ti-angle-up"></i></a>
+            <a onclick="topFunction()" id="back-to-top"><i class="ti ti-angle-up"></i></a>
+            <script>
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
+
 
         </footer>
         <!-- Footer / End -->
