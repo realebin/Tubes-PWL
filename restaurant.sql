@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Jan 2020 pada 13.37
+-- Waktu pembuatan: 05 Jan 2020 pada 16.02
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.1.32
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `restaurant`
 --
+CREATE DATABASE IF NOT EXISTS `restaurant` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `restaurant`;
 
 -- --------------------------------------------------------
 
@@ -28,6 +30,7 @@ SET time_zone = "+00:00";
 -- Struktur dari tabel `kategori`
 --
 
+DROP TABLE IF EXISTS `kategori`;
 CREATE TABLE `kategori` (
   `idKategori` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL
@@ -51,6 +54,7 @@ INSERT INTO `kategori` (`idKategori`, `nama`) VALUES
 -- Struktur dari tabel `menu`
 --
 
+DROP TABLE IF EXISTS `menu`;
 CREATE TABLE `menu` (
   `idMenu` int(11) NOT NULL,
   `nama` varchar(45) NOT NULL,
@@ -95,6 +99,7 @@ INSERT INTO `menu` (`idMenu`, `nama`, `harga`, `status`, `kategori_id`) VALUES
 -- Struktur dari tabel `menu_pesanan`
 --
 
+DROP TABLE IF EXISTS `menu_pesanan`;
 CREATE TABLE `menu_pesanan` (
   `pesanan_id` int(11) NOT NULL,
   `menu_id` int(11) NOT NULL,
@@ -109,6 +114,7 @@ CREATE TABLE `menu_pesanan` (
 -- Struktur dari tabel `pembayaran`
 --
 
+DROP TABLE IF EXISTS `pembayaran`;
 CREATE TABLE `pembayaran` (
   `idPembayaran` int(11) NOT NULL,
   `metode_bayar` varchar(45) NOT NULL,
@@ -125,6 +131,7 @@ CREATE TABLE `pembayaran` (
 -- Struktur dari tabel `pesanan`
 --
 
+DROP TABLE IF EXISTS `pesanan`;
 CREATE TABLE `pesanan` (
   `idPesanan` int(11) NOT NULL,
   `no_meja` int(3) DEFAULT NULL,
@@ -138,6 +145,7 @@ CREATE TABLE `pesanan` (
 -- Struktur dari tabel `user`
 --
 
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `idUser` int(11) NOT NULL,
   `role` varchar(45) NOT NULL,
