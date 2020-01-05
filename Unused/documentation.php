@@ -1118,11 +1118,11 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
                         <div class="example-box">
                             <div class="example-box-title">Example</div>
                             <div class="example-box-content">
-                                <div id="google-map" class="h-400" data-latitude="40.758895" data-longitude="-73.985131" data-style="apple"></div>
+                                <div id="google-map" class="h-400" data-latitude="-6.875009" data-longitude="107.568773" data-style="apple"></div>
                             </div>
                         </div>
 <pre class="prettyprint">
-&lt;div id="google-map" class="h-400" data-latitude="40.758895" data-longitude="-73.985131" data-style="dream"&gt;&lt;/div&gt;</pre>
+&lt;div id="google-map" class="h-400" data-latitude="-6.875009" data-longitude="107.568773" data-style="dream"&gt;&lt;/div&gt;</pre>
                         <p>Map supports few color themes - to set it please use <code>data-style</code> attribute.</p>
                         <h5>Available Themes</h5>
                         <ul>
