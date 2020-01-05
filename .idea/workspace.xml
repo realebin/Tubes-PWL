@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f27c346e-4f65-4a4e-b4ac-5bce5707ab9a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cobacoba.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/MenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/MenuController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dao/KategoriDaoImpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/Dao/KategoriDaoImpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dao/MenuDaoImpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/Dao/MenuDaoImpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entity/Kategori.php" beforeDir="false" afterPath="$PROJECT_DIR$/Entity/Kategori.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entity/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Entity/Menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-list-navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu-list-navigation.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,10 +33,11 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pw2_praktikum_week4_1772052" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -69,7 +77,14 @@
       <workItem from="1577944988743" duration="3693000" />
       <workItem from="1578019487476" duration="27921000" />
       <workItem from="1578109123530" duration="1198000" />
+
       <workItem from="1578113056535" duration="15743000" />
+      <workItem from="1578197837214" duration="9218000" />
+      <workItem from="1578209403271" duration="4637000" />
+      <workItem from="1578224021289" duration="2096000" />
+<<<<<<< HEAD
+>>>>>>> 3f05de2876b27d156e38c19fc960311ec341d350
+=======
     </task>
     <servers />
   </component>

@@ -1,6 +1,8 @@
 <?php
 class MenuController{
     private $menuDao;
+    private $kategoriDao;
+
 
     /**
      * MenuController constructor.
@@ -9,6 +11,7 @@ class MenuController{
     public function __construct()
     {
         $this->menuDao = new MenuDaoImpl();
+        $this->kategoriDao = new KategoriDaoImpl();
     }
 
     public function olahMenu(){
@@ -42,8 +45,18 @@ class MenuController{
         }
         //panggil hlmn viewnya
         // $ catDao ganti jdi $this->>catDao
+        // TODO : bikin getall kategori
+//        $data_kategori = $this->kategoriDao->getAllKategori();
+
+
         $hasil = $this->menuDao->getAllMenu();
+        $hasil2 = $this->menuDao->getAllMenu();
+        $hasil3 = $this->menuDao->getAllMenu();
+        $hasil4 = $this->menuDao->getAllMenu();
+        $hasil5 = $this->menuDao->getAllMenu();
+        $hasil6 = $this->menuDao->getAllMenu();
         require_once 'menu-list-navigation.php';
+//        require_once 'cobacoba.php';
     }
 
     public function ubahMenu(){

@@ -63,9 +63,9 @@
                                 <a href="index.php?menu=order">Menu</a>
                             </li>
                             <li><a href="index.php?menu=contact">Contact</a></li>
-                            <li>
-                                <a href="index.php?menu=book">Book</a>
-                            </li>
+<!--                            <li>-->
+<!--                                <a href="index.php?menu=book">Book</a>-->
+<!--                            </li>-->
                         </ul>
                     </nav>
                     <div class="module left">

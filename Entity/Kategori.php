@@ -6,23 +6,6 @@ class Kategori{
     /**
      * @return mixed
      */
-    public function getNama()
-    {
-        return $this->nama;
-    }
-
-    /**
-     * @param mixed $nama
-     */
-    public function setNama($nama)
-    {
-        $this->nama = $nama;
-    }
-
-
-    /**
-     * @return mixed
-     */
     public function getIdKategory()
     {
         return $this->idKategory;
@@ -34,6 +17,22 @@ class Kategori{
     public function setIdKategory($idKategory)
     {
         $this->idKategory = $idKategory;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNama()
+    {
+        return $this->nama;
+    }
+
+    /**
+     * @param mixed $nama
+     */
+    public function setNama($nama)
+    {
+        $this->nama = $nama;
     }
 
 
