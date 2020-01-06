@@ -33,7 +33,7 @@ class KategoriController
         if($commandBtn == 'delete'){
             $id = FILTER_INPUT(INPUT_GET, 'id');
             $kat = new Kategori();
-            $kat->setIdKategory($id);
+            $kat->setIdKategori($id);
             $msg = $this->katDao->deleteKategori($kat);
             header('location:index.php?menu=kat&msg='.$msg);
         }
@@ -41,6 +41,8 @@ class KategoriController
         // $ catDao ganti jdi $this->>catDao
         $hasil = $this->katDao->getAllKategori();
         require_once 'menu-list-navigation.php';
+
+        $hasilkat = $this->katDao->getAllKategori();
     }
 
     public function ubahKat(){
@@ -48,7 +50,7 @@ class KategoriController
         $id = FILTER_INPUT(INPUT_GET, 'id');
         if(isset($id)){
             $kat = new Kategori();
-            $kat->setIdKategory($id);
+            $kat->setIdKategori($id);
 
 
             $data = $this->katDao->getOneKategori($kat);
@@ -57,7 +59,7 @@ class KategoriController
             if($btnUpdateKat){
                 $name = FILTER_INPUT(INPUT_POST,'nama');
                 $kat = new Kategori();
-                $kat->setIdKategory($id);
+                $kat->setIdKategori($id);
                 $kat->setNama($name);
 
                 $msg = $this->katDao->updateKategori($kat);
@@ -66,7 +68,7 @@ class KategoriController
 
         }
         //panggil hlmnview
-        require_once 'update_kat.php';
+//        require_once 'update_kat.php';
     }
 }
 

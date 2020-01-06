@@ -38,7 +38,29 @@ class UserController
             header('location:index.php');
         }
         //(harusnya login.php tapi gabisa karena stuck di login.php terus)
+
         require_once 'login.php';
+    }
+    public function olahUser(){
+        /////////////////ini untuk insert////////////////
+        $btnSubmit = FILTER_INPUT(INPUT_POST, 'btnSubmitUser');
+        if($btnSubmit)
+        {
+            $role = FILTER_INPUT(INPUT_POST, 'role');
+            $name = FILTER_INPUT(INPUT_POST, 'nama');
+            $uname = FILTER_INPUT(INPUT_POST, 'uname');
+            $password = FILTER_INPUT(INPUT_POST, 'pwd');
+            $user = new User();
+            $user->setNama($name);
+            $user->setRole($role);
+            $user->setPassword($password);
+            $user->setUsername($uname);
+            $msg = $this->userDao->insertUser($user);
+            header('location:index.php?menu=user&msg='.$msg);
+        }
+
+        require_once 'management.php';
+        $hasilUser = $this->userDao->getAllUser();
     }
 }
 ?>
