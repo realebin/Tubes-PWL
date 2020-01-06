@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- Title -->
-<title>Soup - Restaurant with Online Ordering System Template</title>
+<title>Mougs - ★★★★☆ Restaurant</title>
 
 <!-- Favicons -->
 <link rel="shortcut icon" href="../assets/img/favicon.png">
@@ -32,6 +32,93 @@
 </head>
 
 <body>
+<?php
+include_once "PDOUtility.php";
+//class entity tiap tabel database
+include_once "Entity/Kategori.php";
+include_once "Entity/User.php";
+include_once "Entity/Menu.php";
+include_once "Entity/Menu_Pesanan.php";
+include_once "Entity/Pembayaran.php";
+include_once "Entity/Pesanan.php";
+//class Daonya
+include_once "Dao/MenuDaoImpl.php";
+include_once "Dao/UserDaoImpl.php";
+include_once "Dao/PembayaranDaoImpl.php";
+include_once "Dao/PesananDaoImpl.php";
+include_once "Dao/KategoriDaoImpl.php";
+include_once "Dao/MenuPesanDaoImpl.php";
+
+include_once "Controller/MenuController.php";
+include_once "Controller/UserController.php";
+
+include_once "function.php";
+?>
+
+<!--            dari sini ubahnya-->
+<?php
+$nav = FILTER_INPUT(INPUT_GET, 'menu');
+$userControl = new UserController();
+$menuControl = new MenuController();
+switch ($nav)
+{
+    case 'home' :
+        $userControl->login();
+        break;
+    case 'logout' :
+        {
+            $_SESSION['approved_user'] = FALSE;
+            $_SESSION['userid'] = '';
+            $_SESSION['username'] = '';
+            $_SESSION['userrole'] = '';
+            $_SESSION['name'] = '';
+            session_unset();
+            session_destroy();
+            header('location:index.php');
+        }
+        break;
+    case 'about' : include_once 'page-about.php';
+        break;
+    case 'book' : include_once 'book-a-table.php';
+        break;
+    case 'checkout' : include_once 'checkout.php';
+        break;
+//    case 'service' : include_once 'page-services.php';
+//        break;
+//    case 'gallery' : include_once 'page-gallery.php';
+//        break;
+//    case 'review' : include_once 'page-reviews.php';
+//        break;
+//    case 'faq' : include_once 'page-faq.php';
+//        break;
+//    case 'offers' : include_once 'page-offers.php';
+//        break;
+    case 'contact' : include_once 'page-contact.php';
+        break;
+    case 'order' :
+        {
+            $commander = FILTER_INPUT(INPUT_GET, 'command');
+
+            $menuControl = new MenuController();
+            if(isset($commander) && $commander == 'edit' && $_SESSION['userrole'] == 'admin')
+            {
+                $menuControl->ubahMenu();
+            }
+            else{
+                $menuControl->olahMenu();
+            }
+        }
+        break;
+
+    default : $userControl->login();
+        break;
+}
+if(!isset($nav))
+{
+    $userControl->login();
+}
+?>
+<!--            sampe sini-->
 
 <!-- Body Wrapper -->
 <div id="body-wrapper" class="animsition">
@@ -45,7 +132,7 @@
                     <!-- Logo -->
                     <div class="module module-logo dark">
                         <a href="../index.php">
-                            <img src="../assets/img/logo-light.svg" alt="" width="88">
+                            <img src="../assets/img/logoMougsPutih.png" alt="" width="200">
                         </a>
                     </div>
                 </div>
@@ -53,75 +140,23 @@
                     <!-- Navigation -->
                     <nav class="module module-navigation left mr-4">
                         <ul id="nav-main" class="nav nav-main">
-                            <li class="has-dropdown">
-                                <a href="#">Home</a>
-                                <div class="dropdown-container">
-                                    <ul>
-                                        <li><a href="../index.php">Home Basic</a></li>
-                                        <li><a href="index-slider.php">Home Fullwidth Slider</a></li>
-                                        <li><a href="index-video.php">Home Video</a></li>
-                                    </ul>
-                                </div>
+                            <li>
+                                <a href="../index.php">Home</a>
                             </li>
-                            <li class="has-dropdown">
-                                <a href="#">About</a>
-                                <div class="dropdown-container">
-                                    <ul class="dropdown-mega">
-                                        <li><a href="../page-about.php">About Us</a></li>
-                                        <li><a href="page-services.php">Services</a></li>
-                                        <li><a href="page-gallery.php">Gallery</a></li>
-                                        <li><a href="page-reviews.php">Reviews</a></li>
-                                        <li><a href="page-faq.php">FAQ</a></li>
-                                    </ul>
-                                    <div class="dropdown-image">
-                                        <img src="../assets/img/photos/dropdown-about.jpg" alt="">
-                                    </div>
-                                </div>
+                            <li>
+                                <a href="../index.php?menu=about">About</a>
                             </li>
-                            <li class="has-dropdown">
-                                <a href="#">Menu</a>
-                                <div class="dropdown-container">
-                                    <ul>
-                                        <li class="has-dropdown">
-                                            <a href="#">List</a>
-                                            <ul>
-                                                <li><a href="../menu-list-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-list-collapse.php">Collapse</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="#">Grid</a>
-                                            <ul>
-                                                <li><a href="menu-grid-navigation.php">Navigation</a></li>
-                                                <li><a href="menu-grid-collapse.php">Collapse</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <li>
+                                <a href="../index.php?menu=order">Menu</a>
                             </li>
-                            <li><a href="page-offers.php">Offers</a></li>
-                            <li><a href="../page-contact.php">Contact</a></li>
-                            <li class="has-dropdown">   
-                                <a href="#">More</a>
-                                <div class="dropdown-container">
-                                    <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.php">Book a table</a></li>
-                                        <li><a href="../checkout.php">Checkout</a></li>
-                                        <li><a href="../confirmation.php">Confirmation</a></li>
-                                        <li><a href="blog.php">Blog</a></li>
-                                        <li><a href="blog-sidebar.php">Blog + Sidebar</a></li>
-                                        <li><a href="blog-post.php">Blog Post</a></li>
-                                        <li><a href="documentation.php">Documentation</a></li>
-                                    </ul>
-                                    <div class="dropdown-image">
-                                        <img src="../assets/img/photos/dropdown-more.jpg" alt="">
-                                    </div>
-                                </div>
+                            <li><a href="../index.php?menu=contact">Contact</a></li>
+                            <li>
+                                <a href="../index.php?menu=book">Book</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="module left">
-                        <a href="../menu-list-navigation.php" class="btn btn-outline-secondary"><span>Order</span></a>
+                        <a href="../index.php?menu=order" class="btn btn-outline-secondary"><span>Order</span></a>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -148,7 +183,7 @@
 
         <div class="module module-logo">
             <a href="../index.php">
-                <img src="../assets/img/logo-horizontal-dark.svg" alt="">
+                <img src="../assets/img/logoMougsPutih.png" alt="">
             </a>
         </div>
 
@@ -163,109 +198,69 @@
     <!-- Content -->
     <div id="content">
 
-        <!-- Page Title -->
-        <div class="page-title bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 push-lg-4">
-                        <h1 class="mb-0">Blog</h1>
-                        <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Section -->
+        <section class="section section-lg bg-dark">
 
-        <!-- Page Content -->
-        <div class="page-content bg-light">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 push-lg-1">
-                        <!-- Post / Item -->
-                        <article class="post post-wide animated" data-animation="fadeIn">
-                            <div class="post-image"><img src="../assets/img/posts/post01.jpg" alt=""></div>
-                            <div class="post-content">
-                                <ul class="post-meta">
-                                    <li>24 July, 2016</li>
-                                    <li>by Johnatan Doe</li>
-                                </ul>
-                                <h4><a href="blog-post.php">Delicious idea for your Sunday dessert</a></h4>
-                                <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
-                            </div>
-                        </article>
-                        <!-- Post / Item -->
-                        <article class="post post-wide animated" data-animation="fadeIn">
-                            <div class="post-image"><img src="../assets/img/posts/post02.jpg" alt=""></div>
-                            <div class="post-content">
-                                <ul class="post-meta">
-                                    <li>24 July, 2016</li>
-                                    <li>by Johnatan Doe</li>
-                                </ul>
-                                <h4><a href="blog-post.php">How to make perfect Pasta?</a></h4>
-                                <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
-                            </div>
-                        </article>
-                        <!-- Post / Item -->
-                        <article class="post post-wide animated" data-animation="fadeIn">
-                            <div class="post-image"><img src="../assets/img/posts/post03.jpg" alt=""></div>
-                            <div class="post-content">
-                                <ul class="post-meta">
-                                    <li>24 July, 2016</li>
-                                    <li>by Johnatan Doe</li>
-                                </ul>
-                                <h4><a href="blog-post.php">Delicious idea for your Sunday dessert</a></h4>
-                                <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
-                            </div>
-                        </article>
-                        <!-- Post / Item -->
-                        <article class="post post-wide animated" data-animation="fadeIn">
-                            <div class="post-image"><img src="../assets/img/posts/post04.jpg" alt=""></div>
-                            <div class="post-content">
-                                <ul class="post-meta">
-                                    <li>24 July, 2016</li>
-                                    <li>by Johnatan Doe</li>
-                                </ul>
-                                <h4><a href="blog-post.php">How to make perfect Pasta?</a></h4>
-                                <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
-                            </div>
-                        </article>
-                        <!-- Post / Item -->
-                        <article class="post post-wide animated" data-animation="fadeIn">
-                            <div class="post-image"><img src="../assets/img/posts/post05.jpg" alt=""></div>
-                            <div class="post-content">
-                                <ul class="post-meta">
-                                    <li>24 July, 2016</li>
-                                    <li>by Johnatan Doe</li>
-                                </ul>
-                                <h4><a href="blog-post.php">How to make perfect Pasta?</a></h4>
-                                <p>Nulla leo lectus, commodo porttitor lacus a, placerat facilisis ligula.</p>
-                            </div>
-                        </article>
-                        <!-- Pagination -->
-                        <nav aria-label="Page navigation" class="mt-5">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <i class="ti-arrow-left"></i>
-                                        <span class="sr-only">Previous</span>
-                                  </a>
-                                </li>
-                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <i class="ti-arrow-right"></i>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+            <!-- Video BG -->
+            <div class="bg-video" data-property="{videoURL:'https://youtu.be/t4gN-iqeY0E', showControls: false, containment:'self',startAt:1,stopAt:39,mute:true,autoPlay:true,loop:true,opacity:0.8,quality:'hd1080'}"></div>
+            <div class="bg-image bg-video-placeholder zooming"><img src="../assets/img/photos/bg-restaurant.jpg" alt=""></div>
             
-        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 push-lg-3">
+                        <!-- Book a Table -->
+                        <div class="utility-box">
+                            <div class="utility-box-title bg-dark dark">
+                                <div class="bg-image"><img src="../assets/img/photos/modal-review.jpg" alt=""></div>
+                                <div>
+                                    <span class="icon icon-primary"><i class="ti ti-bookmark-alt"></i></span>
+                                    <h4 class="mb-0">Book a table</h4>
+                                    <p class="lead text-muted mb-0">Details about your reservation.</p>
+                                </div>
+                            </div>
+                            <form action="#" id="booking-form" data-validate>
+                                <div class="utility-box-content">
+                                    <div class="form-group">
+                                        <label>Name and surename:</label>
+                                        <input type="text" name="name" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>E-mail:</label>
+                                        <input type="email" name="email" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone:</label>
+                                        <input type="text" name="phone" class="form-control" required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Date:</label>
+                                                <input type="date" name="date" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Attendens:</label>
+                                                <input type="number" name="attendents" min="1" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" type="submit">
+                                    <span class="description">Make reservation!</span>
+                                    <span class="success">
+                                        <svg x="0px" y="0px" viewBox="0 0 32 32"><path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/></svg>
+                                    </span>
+                                    <span class="error">Try again...</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+        </section>
 
         <!-- Footer -->
         <footer id="footer" class="bg-dark dark">
@@ -274,7 +269,7 @@
                 <!-- Footer 1st Row -->
                 <div class="footer-first-row row">
                     <div class="col-lg-3 text-center">
-                        <a href="../index.php"><img src="../assets/img/logo-light.svg" alt="" width="88" class="mt-5 mb-5"></a>
+                        <a href="../index.php"><img src="../assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-muted">Latest news</h5>
@@ -400,14 +395,14 @@
                 </div>
             </div>
         </div>
-        <a href="../checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="../index.php?menu=checkout" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->
     <nav id="panel-mobile">
         <div class="module module-logo bg-dark dark">
             <a href="#">
-                <img src="../assets/img/logo-light.svg" alt="" width="88">
+                <img src="../assets/img/logoMougsPutih.png" alt="" width="200">
             </a>
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>

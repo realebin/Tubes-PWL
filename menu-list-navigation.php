@@ -54,72 +54,60 @@ include_once "Controller/UserController.php";
 
 include_once "function.php";
 ?>
-
-<!--            dari sini ubahnya-->
+<!--<!-- nyoba cart -->-->
 <?php
-$nav = FILTER_INPUT(INPUT_GET, 'menu');
-$userControl = new UserController();
-$menuControl = new MenuController();
-switch ($nav)
-{
-    case 'home' :
-        $userControl->login();
-        break;
-    case 'logout' :
-        {
-            $_SESSION['approved_user'] = FALSE;
-            $_SESSION['userid'] = '';
-            $_SESSION['username'] = '';
-            $_SESSION['userrole'] = '';
-            $_SESSION['name'] = '';
-            session_unset();
-            session_destroy();
-            header('location:index.php');
-        }
-        break;
-    case 'about' : include_once 'page-about.php';
-        break;
-//    case 'book' : include_once 'book-a-table.php';
+//$menuControl = new MenuController();
+//$menuDao = new MenuDaoImpl();
+//$menu = new Menu();
+//$link = PDOUtility::get_koneksi();
+//if(!empty($_GET["action"])) {
+//    switch($_GET["action"]) {
+//        case "add":
+//            if(!empty($_POST["quantity"])) {
+//                $productByCode =$menuDao->getOneMenu($menu->setIdMenu($_GET["code"]));
+////                $productByCode = PDOUtility::->runQuery("SELECT * FROM tblproduct WHERE code='" . $_GET["code"] . "'");
+//$itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"], 'image'=>$productByCode[0]["image"]));
+//
+//                if(!empty($_SESSION["cart_item"])) {
+//                    if(in_array($productByCode[0]["code"],array_keys($_SESSION["cart_item"]))) {
+//                        foreach($_SESSION["cart_item"] as $k => $v) {
+//                            if($productByCode[0]["code"] == $k) {
+//                                if(empty($_SESSION["cart_item"][$k]["quantity"])) {
+//                                    $_SESSION["cart_item"][$k]["quantity"] = 0;
+//                                    }
+//
+//                                $_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
+//                                }
+//                        }
+//                    } else {
+//                        $_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
+//                        }
+//                } else {
+//                    $_SESSION["cart_item"] = $itemArray;
+//                    }
+//                }
 //        break;
-    case 'checkout' : include_once 'checkout.php';
-        break;
-//    case 'service' : include_once 'page-services.php';
-//        break;
-//    case 'gallery' : include_once 'page-gallery.php';
-//        break;
-//    case 'review' : include_once 'page-reviews.php';
-//        break;
-//    case 'faq' : include_once 'page-faq.php';
-//        break;
-//    case 'offers' : include_once 'page-offers.php';
-//        break;
-    case 'contact' : include_once 'page-contact.php';
-        break;
-    case 'order' :
-        {
-            $commander = FILTER_INPUT(INPUT_GET, 'command');
+//
+//case "remove":
+//    if(!empty($_SESSION["cart_item"])) {
+//        foreach($_SESSION["cart_item"] as $k => $v) {
+//            if($_GET["code"] == $k)
+//                unset($_SESSION["cart_item"][$k]);
+//            if(empty($_SESSION["cart_item"]))
+//                unset($_SESSION["cart_item"]);
+//            }
+//        }
+//    break;
+//
+//case "empty":
+//    unset($_SESSION["cart_item"]);
+//    break;
+//    }
+//}
+//?>
+<!--sampe sini-->
 
-            $menuControl = new MenuController();
-            if(isset($commander) && $commander == 'edit' && $_SESSION['userrole'] == 'admin')
-            {
-                $menuControl->ubahMenu();
-            }
-            else{
-                $menuControl->olahMenu();
-            }
-        }
-        break;
 
-    default : $userControl->login();
-        break;
-}
-if(!isset($nav))
-{
-    $userControl->login();
-}
-?>
-<!--            sampe sini-->
-<!-- Body Wrapper -->
 <div id="body-wrapper" class="animsition">
 
     <!-- Header -->
@@ -203,7 +191,7 @@ if(!isset($nav))
                 <div class="row">
                     <div class="col-lg-8 push-lg-4">
                         <h1 class="mb-0">Menu List</h1>
-                        <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
+                        <h4 class="text-muted mb-0">Our Fresh Foods From The Oven</h4>
                     </div>
                 </div>
             </div>
@@ -243,12 +231,10 @@ if(!isset($nav))
                                     <div class="menu-item menu-list-item">
                                         <div class="row align-items-center">
                                             <div class="col-sm-6 mb-2 mb-sm-0">
-<!--                                                <div><h6 class="mb-0">--><?php //echo $hasil->getNama(); ?><!--</h6></div>-->
                                                 <div><h6 class="mb-0"><?php echo $data->getNama();?></h6></div>
                                             </div>
                                             <div class="col-sm-6 text-sm-right">
-                                                <span class="text-md mr-4"><span
-                                                            class="text-muted">from</span> Rp.<?php echo $data->getHarga(); ?></span>
+                                                <span class="text-md mr-4"> Rp.<?php echo $data->getHarga(); ?></span>
                                                 <button class="btn btn-outline-secondary btn-sm"
                                                         data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
                                                 </button>
@@ -280,8 +266,7 @@ if(!isset($nav))
                                                 <h6 class="mb-0"><?php echo $data->getNama();?></h6>
                                             </div>
                                             <div class="col-sm-6 text-sm-right">
-                                                <span class="text-md mr-4"><span
-                                                            class="text-muted">from</span>  Rp.<?php echo $data->getHarga(); ?></span>
+                                                <span class="text-md mr-4">  Rp.<?php echo $data->getHarga(); ?></span>
                                                 <button class="btn btn-outline-secondary btn-sm"
                                                         data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
                                                 </button>
@@ -313,8 +298,7 @@ if(!isset($nav))
                                                     <h6 class="mb-0"><?php echo $data->getNama(); ?></h6>
                                                 </div>
                                                 <div class="col-sm-6 text-sm-right">
-                                                <span class="text-md mr-4"><span
-                                                            class="text-muted">from</span>  Rp.<?php echo $data->getHarga(); ?></span>
+                                                <span class="text-md mr-4">  Rp.<?php echo $data->getHarga(); ?></span>
                                                     <button class="btn btn-outline-secondary btn-sm"
                                                             data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
                                                     </button>
@@ -343,11 +327,9 @@ if(!isset($nav))
                                             <div class="row align-items-center">
                                                 <div class="col-sm-6 mb-2 mb-sm-0">
                                                     <h6 class="mb-0"><?php echo $data->getNama(); ?></h6>
-                                                    <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                                 </div>
                                                 <div class="col-sm-6 text-sm-right">
-                                                <span class="text-md mr-4"><span
-                                                            class="text-muted">from</span> Rp.<?php echo $data->getHarga(); ?></span>
+                                                <span class="text-md mr-4"> Rp.<?php echo $data->getHarga(); ?></span>
                                                     <button class="btn btn-outline-secondary btn-sm"
                                                             data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
                                                     </button>
@@ -378,8 +360,7 @@ if(!isset($nav))
                                                 <h6 class="mb-0"><?php echo $data->getNama(); ?></h6>
                                             </div>
                                             <div class="col-sm-6 text-sm-right">
-                                                <span class="text-md mr-4"><span
-                                                            class="text-muted">from</span> Rp.<?php echo $data->getHarga(); ?></span>
+                                                <span class="text-md mr-4"> Rp.<?php echo $data->getHarga(); ?></span>
                                                 <button class="btn btn-outline-secondary btn-sm"
                                                         data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
                                                 </button>
@@ -411,8 +392,7 @@ if(!isset($nav))
                                                         <h6 class="mb-0"><?php echo $data->getNama(); ?></h6>
                                                     </div>
                                                     <div class="col-sm-6 text-sm-right">
-                                                <span class="text-md mr-4"><span
-                                                            class="text-muted">from</span>  Rp.<?php echo $data->getHarga(); ?></span>
+                                                <span class="text-md mr-4">  Rp.<?php echo $data->getHarga(); ?></span>
                                                         <button class="btn btn-outline-secondary btn-sm"
                                                                 data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
                                                         </button>
@@ -439,23 +419,6 @@ if(!isset($nav))
                     <div class="col-lg-3 text-center">
                         <a href="index.php"><img src="assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <h5 class="text-muted">Latest news</h5>
-                        <ul class="list-posts">
-                            <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
-                                <span class="date">February 14, 2015</span>
-                            </li>
-                            <li>
-                                <a href="Unused/blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
-                                <span class="date">February 14, 2015</span>
-                            </li>
-                            <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
-                                <span class="date">February 14, 2015</span>
-                            </li>
-                        </ul>
-                    </div>
                     <div class="col-lg-5 col-md-6">
                         <h5 class="text-muted">Subscribe Us!</h5>
                         <!-- MailChimp Form -->
@@ -473,12 +436,12 @@ if(!isset($nav))
                                 </span>
                             </div>
                         </form>
-                        <h5 class="text-muted mb-3">Social Media</h5>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
+<!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
                     </div>
                 </div>
                 <!-- Footer 2nd Row -->
@@ -591,132 +554,7 @@ if(!isset($nav))
 </div>
 
 <!-- Modal / Product -->
-<div class="modal fade" id="productModal" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header modal-header-lg dark bg-dark">
-                <div class="bg-image"><img src="assets/img/photos/modal-add.jpg" alt=""></div>
-                <h4 class="modal-title">Specify your dish</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>
-            </div>
-            <div class="modal-product-details">
-                <div class="row align-items-center">
-                    <div class="col-9">
-                        <h6 class="mb-0">Boscaiola Pasta</h6>
-                        <span class="text-muted">Pasta, Cheese, Tomatoes, Olives</span>
-                    </div>
-                    <div class="col-3 text-lg text-right">$9.00</div>
-                </div>
-            </div>
-            <div class="modal-body panel-details-container">
-                <!-- Panel Details / Size -->
-                <div class="panel-details">
-                    <h5 class="panel-details-title">
-                        <label class="custom-control custom-radio">
-                            <input name="radio_title_size" type="radio" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                        </label>
-                        <a href="#panelDetailsSize" data-toggle="collapse">Size</a>
-                    </h5>
-                    <div id="panelDetailsSize" class="collapse show">
-                        <div class="panel-details-content">
-                            <div class="form-group">
-                                <label class="custom-control custom-radio">
-                                    <input name="radio_size" type="radio" class="custom-control-input" checked>
-                                    <span class="custom-control-indicator"></span>
-                                    <span class="custom-control-description">Small - 100g ($9.99)</span>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="custom-control custom-radio">
-                                    <input name="radio_size" type="radio" class="custom-control-input">
-                                    <span class="custom-control-indicator"></span>
-                                    <span class="custom-control-description">Medium - 200g ($14.99)</span>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="custom-control custom-radio">
-                                    <input name="radio_size" type="radio" class="custom-control-input">
-                                    <span class="custom-control-indicator"></span>
-                                    <span class="custom-control-description">Large - 350g ($21.99)</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Panel Details / Additions -->
-                <div class="panel-details">
-                    <h5 class="panel-details-title">
-                        <label class="custom-control custom-radio">
-                            <input name="radio_title_additions" type="radio" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                        </label>
-                        <a href="#panelDetailsAdditions" data-toggle="collapse">Additions</a>
-                    </h5>
-                    <div id="panelDetailsAdditions" class="collapse">
-                        <div class="panel-details-content">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input">
-                                            <span class="custom-control-indicator"></span>
-                                            <span class="custom-control-description">Tomato ($1.29)</span>
-                                        </label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input">
-                                            <span class="custom-control-indicator"></span>
-                                            <span class="custom-control-description">Ham ($1.29)</span>
-                                        </label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input">
-                                            <span class="custom-control-indicator"></span>
-                                            <span class="custom-control-description">Chicken ($1.29)</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input">
-                                            <span class="custom-control-indicator"></span>
-                                            <span class="custom-control-description">Cheese($1.29)</span>
-                                        </label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input">
-                                            <span class="custom-control-indicator"></span>
-                                            <span class="custom-control-description">Bacon ($1.29)</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Panel Details / Other -->
-                <div class="panel-details">
-                    <h5 class="panel-details-title">
-                        <label class="custom-control custom-radio">
-                            <input name="radio_title_other" type="radio" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                        </label>
-                        <a href="#panelDetailsOther" data-toggle="collapse">Other</a>
-                    </h5>
-                    <div id="panelDetailsOther" class="collapse">
-                        <textarea cols="30" rows="4" class="form-control" placeholder="Put this any other informations..."></textarea>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class="modal-btn btn btn-secondary btn-block btn-lg" data-dismiss="modal"><span>Add to Cart</span></button>
-        </div>
-    </div>
-</div>
+<!-- diindex-->
 
 <!-- JS Plugins -->
 <script src="assets/plugins/jquery/dist/jquery.min.js"></script>

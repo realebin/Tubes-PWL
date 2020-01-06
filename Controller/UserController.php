@@ -20,14 +20,14 @@ class UserController
             $pengguna = new User();
             $pengguna->setUsername($username);
             $pengguna->setPassword($password);
+//            var_dump($pengguna);exit;
 
 //            $userDao = new UserDaoImpl();
             $data = $this->userDao->masuk($pengguna);
 
             $result = $data->fetch();
 
-            var_dump($result);
-            exit();
+            ///kalau $result['idUser'] > 0 dihapus bisa masuk tapi salah bener jadi approved user
             if (isset($result) && $result['idUser'] > 0) {
                 $_SESSION['approved_user'] = TRUE;
                 $_SESSION['userid'] = $result['idUser'];
@@ -37,8 +37,8 @@ class UserController
             }
             header('location:index.php');
         }
-        require_once 'index.php';
-
+        //(harusnya login.php tapi gabisa karena stuck di login.php terus)
+        require_once 'login.php';
     }
 }
 ?>
