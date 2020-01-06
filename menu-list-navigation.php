@@ -54,7 +54,7 @@ include_once "Controller/UserController.php";
 
 include_once "function.php";
 ?>
-<!--<!-- nyoba cart -->-->
+<!-- nyoba cart -->
 <?php
 //$menuControl = new MenuController();
 //$menuDao = new MenuDaoImpl();
@@ -196,6 +196,129 @@ include_once "function.php";
                 </div>
             </div>
         </div>
+        <?php
+        if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){ ?>
+            <legend>Insert Menu</legend>
+        <form method="POST" action="" enctype="multipart/form-data">
+            <div class="utility-box-content">
+                <div class="form-group">
+                    <label>Name :</label>
+                    <input type="text" name="menunama" class="form-control" placeholder="Insert Name" required/>
+                </div>
+                <div class="form-group">
+                    <label>Price :</label>
+                    <input type="text" name="harga" class="form-control" placeholder="Insert Price" required/>
+                </div><div class="form-group">
+                    <label>Status :</label>
+                    <input type="text" name="status" class="form-control" placeholder="Insert Status (1 or 0)" required/>
+                </div>
+                <div class="form-group">
+                    <label>Category :</label>
+                    <select name="kategori">
+                        <option value="">-Select Category-</option>
+                        <?php
+                        //                            $catDao = new CategoryDaoImpl();
+                        //                            $hasil = $catDao->getAllCategory();
+                        while($data = $hasil->fetch()){
+                            ?>
+                            <option value="<?php echo $data->getKategori()->getIdKategory(); ?>">
+                                <?php echo $data->getKategori()->getNama(); ?>
+                            </option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+                <button class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit"
+                        type="submit" name="btnSubmitMenu" value="insertmenu">
+                    <span class="description">Insert</span>
+                    <!--                                    <span class="success">-->
+                    <!--                                        <svg x="0px" y="0px" viewBox="0 0 32 32"><path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/></svg>-->
+                    <!--                                    </span>-->
+                    <!--                                    <span class="error">Try again...</span>-->
+                </button>
+            </div>
+        </form>
+
+        <?php }?>
+        <!------------- insert cuy --------------->
+<!--        --><?php //if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){ ?>
+<!--            <legend>Insert Menu</legend>-->
+<!--            <form method="POST" action="" enctype="multipart/form-data">-->
+<!--                <table>-->
+<!--                    <tr>-->
+<!--                        <td>Name</td>-->
+<!--                        <td>:</td>-->
+<!--                        <td><input type="text" name="menunama" placeholder="Nama"/></td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Price</td>-->
+<!--                        <td>:</td>-->
+<!--                        <td><input type="text" name="harga" placeholder="Price"/></td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Status</td>-->
+<!--                        <td>:</td>-->
+<!--                        <td><input type="text" name="status" placeholder="Status (1 or 0)"/></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Category</td>-->
+<!--                        <td>:</td>-->
+<!--                        <td>-->
+<!--                            <select name="cat">-->
+<!--                                <option value="">-Select Company-</option>-->
+<!--                                --><?php
+//                                //                            $catDao = new CategoryDaoImpl();
+//                                //                            $hasil = $catDao->getAllCategory();
+//
+//                                while ($datacat = $hasil->fetch()) {
+//                                    ?>
+<!--                                    <option value="--><?php //echo $datacat->getIdKategory(); ?><!--">-->
+<!--                                        --><?php //echo $datacat->getNama(); ?>
+<!--                                    </option>-->
+<!--                                    --><?php
+//                                }
+//                                ?>
+<!--                            </select>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    --><?php
+//                    if($_SESSION['approved_user'] == TRUE) {
+//                        ?>
+<!--                        <tr>-->
+<!--                            <td colspan="2"><input type="submit" value="Submit" name="btnSubmitMenu"/></td>-->
+<!--                        </tr>-->
+<!--                    --><?php //} ?>
+<!--                </table>-->
+<!--            </form>-->
+<!--            --><?php
+//            $msg = FILTER_INPUT(INPUT_GET, 'msg');
+//            if (isset($msg)) {
+//                if ($msg == 'sukses') {
+//                    echo '<p style="color:green;">Data berhasil disimpan.</p>';
+//                } else if ($msg == 'gagal') {
+//                    echo '<p style="color:red;">Data gagal disimpan.</p>';
+//                } else if ($msg == 'ext') {
+//                    echo '<p style="color:red;">Data gagal disimpan karena file cover tidak sesuai typenya.</p>';
+//                }
+//                else if ($msg == 'suksesu') {
+//                    echo '<p style="color:green;">Data berhasil diubah.</p>';
+//                } else if ($msg == 'gagalu') {
+//                    echo '<p style="color:red;">Data gagal diubah.</p>';
+//                }
+//                else if ($msg == 'suksesx') {
+//                    echo '<p style="color:green;">Data berhasil dihapus.</p>';
+//                } else {
+//                    echo '<p style="color:red;">Data gagal dihapus.</p>';
+//                }
+//
+//            }
+//            ?>
+<!--            </fieldset>-->
+<!---->
+<!--        --><?php //}?>
 
         <!-- Page Content -->
         <div class="page-content">

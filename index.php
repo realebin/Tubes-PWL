@@ -275,6 +275,7 @@ if(!isset($nav))
                                 ?>
                                 <li>
                                     <a href="index.php?menu=logout">Logout</a>
+                                    <p>Welcome <?php echo $_SESSION['userrole']?></p>
                                 </li>
                             <?php }
                                 else{
