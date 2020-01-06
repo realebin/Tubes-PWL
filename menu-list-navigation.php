@@ -191,7 +191,7 @@ include_once "function.php";
                 <div class="row">
                     <div class="col-lg-8 push-lg-4">
                         <h1 class="mb-0">Menu List</h1>
-                        <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
+                        <h4 class="text-muted mb-0">Our Fresh Foods From The Oven</h4>
                     </div>
                 </div>
             </div>
@@ -231,12 +231,10 @@ include_once "function.php";
                                     <div class="menu-item menu-list-item">
                                         <div class="row align-items-center">
                                             <div class="col-sm-6 mb-2 mb-sm-0">
-<!--                                                <div><h6 class="mb-0">--><?php //echo $hasil->getNama(); ?><!--</h6></div>-->
                                                 <div><h6 class="mb-0"><?php echo $data->getNama();?></h6></div>
                                             </div>
                                             <div class="col-sm-6 text-sm-right">
-                                                <span class="text-md mr-4"><span
-                                                            class="text-muted">from</span> Rp.<?php echo $data->getHarga(); ?></span>
+                                                <span class="text-md mr-4"> Rp.<?php echo $data->getHarga(); ?></span>
                                                 <button class="btn btn-outline-secondary btn-sm"
                                                         data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
                                                 </button>
@@ -268,8 +266,7 @@ include_once "function.php";
                                                 <h6 class="mb-0"><?php echo $data->getNama();?></h6>
                                             </div>
                                             <div class="col-sm-6 text-sm-right">
-                                                <span class="text-md mr-4"><span
-                                                            class="text-muted">from</span>  Rp.<?php echo $data->getHarga(); ?></span>
+                                                <span class="text-md mr-4">  Rp.<?php echo $data->getHarga(); ?></span>
                                                 <button class="btn btn-outline-secondary btn-sm"
                                                         data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
                                                 </button>
@@ -301,8 +298,7 @@ include_once "function.php";
                                                     <h6 class="mb-0"><?php echo $data->getNama(); ?></h6>
                                                 </div>
                                                 <div class="col-sm-6 text-sm-right">
-                                                <span class="text-md mr-4"><span
-                                                            class="text-muted">from</span>  Rp.<?php echo $data->getHarga(); ?></span>
+                                                <span class="text-md mr-4">  Rp.<?php echo $data->getHarga(); ?></span>
                                                     <button class="btn btn-outline-secondary btn-sm"
                                                             data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
                                                     </button>
@@ -331,11 +327,9 @@ include_once "function.php";
                                             <div class="row align-items-center">
                                                 <div class="col-sm-6 mb-2 mb-sm-0">
                                                     <h6 class="mb-0"><?php echo $data->getNama(); ?></h6>
-                                                    <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                                 </div>
                                                 <div class="col-sm-6 text-sm-right">
-                                                <span class="text-md mr-4"><span
-                                                            class="text-muted">from</span> Rp.<?php echo $data->getHarga(); ?></span>
+                                                <span class="text-md mr-4"> Rp.<?php echo $data->getHarga(); ?></span>
                                                     <button class="btn btn-outline-secondary btn-sm"
                                                             data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
                                                     </button>
@@ -366,8 +360,7 @@ include_once "function.php";
                                                 <h6 class="mb-0"><?php echo $data->getNama(); ?></h6>
                                             </div>
                                             <div class="col-sm-6 text-sm-right">
-                                                <span class="text-md mr-4"><span
-                                                            class="text-muted">from</span> Rp.<?php echo $data->getHarga(); ?></span>
+                                                <span class="text-md mr-4"> Rp.<?php echo $data->getHarga(); ?></span>
                                                 <button class="btn btn-outline-secondary btn-sm"
                                                         data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
                                                 </button>
@@ -399,8 +392,7 @@ include_once "function.php";
                                                         <h6 class="mb-0"><?php echo $data->getNama(); ?></h6>
                                                     </div>
                                                     <div class="col-sm-6 text-sm-right">
-                                                <span class="text-md mr-4"><span
-                                                            class="text-muted">from</span>  Rp.<?php echo $data->getHarga(); ?></span>
+                                                <span class="text-md mr-4">  Rp.<?php echo $data->getHarga(); ?></span>
                                                         <button class="btn btn-outline-secondary btn-sm"
                                                                 data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
                                                         </button>
@@ -427,23 +419,6 @@ include_once "function.php";
                     <div class="col-lg-3 text-center">
                         <a href="index.php"><img src="assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <h5 class="text-muted">Latest news</h5>
-                        <ul class="list-posts">
-                            <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
-                                <span class="date">February 14, 2015</span>
-                            </li>
-                            <li>
-                                <a href="Unused/blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
-                                <span class="date">February 14, 2015</span>
-                            </li>
-                            <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
-                                <span class="date">February 14, 2015</span>
-                            </li>
-                        </ul>
-                    </div>
                     <div class="col-lg-5 col-md-6">
                         <h5 class="text-muted">Subscribe Us!</h5>
                         <!-- MailChimp Form -->
@@ -461,12 +436,12 @@ include_once "function.php";
                                 </span>
                             </div>
                         </form>
-                        <h5 class="text-muted mb-3">Social Media</h5>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
-                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
+<!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
                     </div>
                 </div>
                 <!-- Footer 2nd Row -->
