@@ -3,6 +3,41 @@ class Pesanan{
     private $idPesanan;
     private $no_meja;
     private $sub_total;
+    private $idWaiters;
+    private $Status_Pembayaran;
+
+    /**
+     * @return mixed
+     */
+    public function getIdWaiters()
+    {
+        return $this->idWaiters;
+    }
+
+    /**
+     * @param mixed $idWaiters
+     */
+    public function setIdWaiters($idWaiters)
+    {
+        $this->idWaiters = $idWaiters;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatusPembayaran()
+    {
+        return $this->Status_Pembayaran;
+    }
+
+    /**
+     * @param mixed $Status_Pembayaran
+     */
+    public function setStatusPembayaran($Status_Pembayaran)
+    {
+        $this->Status_Pembayaran = $Status_Pembayaran;
+    }
+
 
     /**
      * @return mixed

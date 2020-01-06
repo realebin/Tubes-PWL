@@ -35,10 +35,14 @@ class PesananDaoImpl{
         $msg = 'gagal';
         try{
             $link->beginTransaction();
-            $sql = "INSERT INTO pesanan (no_meja,sub_total) VALUES(?,?)";
+            $sql = "INSERT INTO pesanan (no_meja,sub_total,idWiters,Status_Pembayaran) VALUES(?,?,?,?)";
             $stmt = $link->prepare($sql);
             $stmt->bindValue(1,$pesanan->getNoMeja(),PDO::PARAM_INT);
             $stmt->bindValue(2,$pesanan->getSubTotal(),PDO::PARAM_INT);
+            $stmt->bindValue(3,$pesanan->getIdWaiters(),PDO::PARAM_INT);
+            $stmt->bindValue(4,$pesanan->getStatusPembayaran(),PDO::PARAM_INT);
+
+
             $stmt->execute();
         }
         catch (PDOException $err){
