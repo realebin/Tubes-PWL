@@ -792,7 +792,7 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
                             <div class="example-box-title">Example</div>
                             <div class="example-box-content">
                                 <!-- Button trigger modal -->
-                                <a href="#" class="btn-play-2" data-toggle="video-modal" data-target="#modalVideo" data-video="https://youtu.be/F32P-LVXonM"><span></span>Check it now!</a>
+                                <a href="#" class="btn-play-2" data-toggle="video-modal" data-target="#modalVideo" data-video="https://www.youtube.com/embed/F32P-LVXonM"><span></span>Check it now!</a>
                             </div>
                         </div>
                         <!-- Video Modal / Demo -->
@@ -806,7 +806,7 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
                         </div>
 <pre class="prettyprint">
 &lt;!-- Button trigger modal --&gt;
-&lt;a href="#" class="btn-play-2" data-toggle="video-modal" data-target="#modalVideo" data-video="https://www.youtube.com/embed/uVju5--RqtY"&gt;&lt;span&gt;&lt;/span&gt;Check it now!&lt;/a&gt;
+&lt;a href="#" class="btn-play-2" data-toggle="video-modal" data-target="#modalVideo" data-video="https://www.youtube.com/watch?v=F32P-LVXonM&t=5s"&gt;&lt;span&gt;&lt;/span&gt;Check it now!&lt;/a&gt;
 
 &lt;!-- Video Modal / Demo --&gt;
 &lt;div class="modal modal-video fade" id="modalVideo" role="dialog"&gt;

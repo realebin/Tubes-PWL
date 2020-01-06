@@ -162,43 +162,40 @@ include_once "function.php";
         <fieldset>
             <legend>Insert User</legend>
             <form method="POST" action="" enctype="multipart/form-data">
-                <table>
-                    <tr>
-                        <td>Role</td>
-                        <td>:</td>
-                        <td><input type="text" name="role" placeholder="Waiter, Cashier, Kitchen"/></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Nama</td>
-                        <td>:</td>
-                        <td><input type="text" name="nama" placeholder="Name"/></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Username</td>
-                        <td>:</td>
-                        <td><input type="text" name="uname" placeholder="Username"/></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td>:</td>
-                        <td><input type="text" name="pwd" placeholder="Password"/></td>
-                    </tr>
-<!--                    <tr>-->
-<!--                        <td>Retype Password</td>-->
-<!--                        <td>:</td>-->
-<!--                        <td><input type="text" name="rpwd" placeholder=" Re-type Password"/></td>-->
-<!--                    </tr>-->
+                <div class="utility-box-content">
+                    <div class="form-group">
+                        <label>Role :</label>
+                        <input type="text" name="role" class="form-control" placeholder="Waiter, Cashier, Kitchen"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Nama :</label>
+                        <input type="text" name="nama" class="form-control" placeholder="Name"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Username :</label>
+                        <td><input type="text" name="uname" class="form-control" placeholder="Username"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Password :</label>
+                        <input type="text" name="pwd" class="form-control" placeholder="Password"/>
+                    </div>
+<!--                    <div class="form-group">-->
+<!--                        <label>Retype Password :</label>-->
+<!--                        <input type="text" name="rpwd" class="form-control" placeholder=" Re-type Password"/>-->
+<!--                    </div>-->
 
                     <?php
                     if($_SESSION['approved_user'] == TRUE) {
                         ?>
-                        <tr>
-                            <td colspan="2"><input type="submit" value="Submit" name="btnSubmitUser"/></td>
-                        </tr>
+
+                        <div class="form-group">
+                            <input type="submit" class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" value="Submit" name="btnSubmitUser"/>
+                        </div>
                     <?php } ?>
-                </table>
+
+
+
+                </div>
             </form>
             <?php
             $msg = FILTER_INPUT(INPUT_GET, 'msg');
