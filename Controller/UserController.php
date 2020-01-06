@@ -33,13 +33,13 @@ class UserController
                 $_SESSION['username'] = $result['username'];
                 $_SESSION['userrole'] = $result['role'];
                 $_SESSION['name'] = $result['nama'];
-                var_dump($_SESSION['username']);
-                exit();
+//                var_dump($_SESSION['username']);
+//                exit();
             }
             header('location:index.php');
         }
         //(harusnya login.php tapi gabisa karena stuck di login.php terus)
-        require_once 'index.php';
+        require_once 'login.php';
 
     }
 }

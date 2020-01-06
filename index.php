@@ -169,7 +169,7 @@ switch ($nav)
         //dikasih include_once login disini soalnya gagal di UserControllernya
         //gagalnya karena stuck di login.php terus
         //jadinya di UserController nya require_once nya di index.php (seharusnya login.php)
-        include_once 'login.php';
+//        include_once 'login.php';
         $userControl->login();
         }
         break;
