@@ -97,7 +97,7 @@
                                 <a href="#">More</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="../book-a-table.php">Book a table</a></li>
+                                        <li><a href="book-a-table.php">Book a table</a></li>
                                         <li><a href="../checkout.php">Checkout</a></li>
                                         <li><a href="../confirmation.php">Confirmation</a></li>
                                         <li><a href="blog.php">Blog</a></li>
@@ -434,7 +434,7 @@
                     <h2 class="mb-3">Would you like to visit Us?</h2>
                     <h5 class="text-muted">Book a table even right now or make an online order!</h5>
                     <a href="../menu-list-navigation.php" class="btn btn-primary"><span>Order Online</span></a>
-                    <a href="../book-a-table.php" class="btn btn-outline-primary"><span>Book a table</span></a>
+                    <a href="book-a-table.php" class="btn btn-outline-primary"><span>Book a table</span></a>
                 </div>
             </div>
 

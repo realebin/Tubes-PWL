@@ -105,7 +105,7 @@
                                 <a href="#">More</a>
                                 <div class="dropdown-container">
                                     <ul class="dropdown-mega">
-                                        <li><a href="book-a-table.php">Book a table</a></li>
+                                        <li><a href="Unused/book-a-table.php">Book a table</a></li>
                                         <li><a href="checkout.php">Checkout</a></li>
                                         <li><a href="confirmation.php">Confirmation</a></li>
                                         <li><a href="Unused/blog.php">Blog</a></li>
