@@ -19,6 +19,8 @@ class UserDaoImpl
             die();
         }
         PDOUtility::close_koneksi($link);
+//        var_dump($sql);
+//        exit();
         return $stmt;
     }
 }

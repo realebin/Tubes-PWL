@@ -122,6 +122,7 @@ if(!empty($_GET["action"])) {
                                 if(empty($_SESSION["cart_item"][$k]["quantity"])) {
                                     $_SESSION["cart_item"][$k]["quantity"] = 0;
                                 }
+<<<<<<< HEAD
 
                                 $_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
                             }
@@ -146,6 +147,32 @@ if(!empty($_GET["action"])) {
             }
             break;
 
+=======
+
+                                $_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
+                            }
+                        }
+                    } else {
+                        $_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
+                    }
+                } else {
+                    $_SESSION["cart_item"] = $itemArray;
+                }
+            }
+            break;
+
+        case "remove":
+            if(!empty($_SESSION["cart_item"])) {
+                foreach($_SESSION["cart_item"] as $k => $v) {
+                    if($_GET["code"] == $k)
+                        unset($_SESSION["cart_item"][$k]);
+                    if(empty($_SESSION["cart_item"]))
+                        unset($_SESSION["cart_item"]);
+                }
+            }
+            break;
+
+>>>>>>> 67748080f91e32ee1bc70aca7dc4e425edd4e9f5
         case "empty":
             unset($_SESSION["cart_item"]);
             break;
@@ -169,7 +196,11 @@ switch ($nav)
         //dikasih include_once login disini soalnya gagal di UserControllernya
         //gagalnya karena stuck di login.php terus
         //jadinya di UserController nya require_once nya di index.php (seharusnya login.php)
+<<<<<<< HEAD
         include_once 'login.php';
+=======
+//        include_once 'login.php';
+>>>>>>> 67748080f91e32ee1bc70aca7dc4e425edd4e9f5
         $userControl->login();
         }
         break;
