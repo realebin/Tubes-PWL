@@ -187,15 +187,26 @@ switch ($nav)
         break;
     case 'about' : include_once 'page-about.php';
         break;
+    case 'management' : include_once 'management.php';
+        break;
     case 'mnu' :
+    {
+        $commander = FILTER_INPUT(INPUT_GET, 'command');
+        if($commander == 'edit')
+        {
+            $menuControl->ubahMenu();
+        }
+        else {
+            $menuControl->olahMenu();
+        }
+    }
+    break;
+    case 'user' :
         {
             $commander = FILTER_INPUT(INPUT_GET, 'command');
             if($commander == 'edit')
             {
-                $menuControl->ubahMenu();
-            }
-            else {
-                $menuControl->olahMenu();
+                $userControl->login();
             }
         }
         break;
@@ -279,7 +290,7 @@ if(!isset($nav))
                             if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){
                                 ?>
                                 <li>
-                                    <a href="index.php?menu=management">Book</a>
+                                    <a href="index.php?menu=management">User Manage</a>
                                 </li>
                             <?php
                             }
@@ -287,7 +298,7 @@ if(!isset($nav))
                                 ?>
                                 <li>
                                     <a href="index.php?menu=logout">Logout</a>
-                                    <p>Welcome <?php echo $_SESSION['userrole']?></p>
+
                                 </li>
                             <?php }
                                 else{
@@ -305,7 +316,14 @@ if(!isset($nav))
                     <div class="module left">
 <!--                        ini juga diubah a hrefnya-->
                         <a href="index.php?menu=order" class="btn btn-outline-secondary"><span>Order</span></a>
+
                     </div>
+                    <div class ="module left"> <?php if($_SESSION['approved_user']==TRUE){
+                            ?>
+                            <p style="text-align: center ;alignment: center; font-size: 20px "> &nbsp;&nbsp;&nbsp;Welcome <?php echo $_SESSION['userrole']?></p>
+                        <?php }?>
+                    </div>
+
                 </div>
 
                 <div class="col-md-2">
@@ -375,6 +393,9 @@ if(!isset($nav))
         }
         function editMenu(id) {
             window.location = "index.php?menu=mnu&command=edit&id="+id;
+        }
+        function editUser(id) {
+            window.location = "index.php?menu=user&command=edit&id="+id;
         }
     </script>
     <!-- Content -->
@@ -572,6 +593,7 @@ if(!isset($nav))
                         <h3 class="title">Drinks</h3>
                     </a>
                 </div>
+
             </div>
 
         </section>

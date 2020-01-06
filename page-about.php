@@ -75,20 +75,44 @@ include_once "function.php";
                     <!-- Navigation -->
                     <nav class="module module-navigation left mr-4">
                         <ul id="nav-main" class="nav nav-main">
-                            <li>
-                                <a href="index.php">Home</a>
-                            </li>
+                            <li><a href="index.php">Home</a></li>
                             <li>
                                 <a href="index.php?menu=about">About</a>
                             </li>
                             <li>
                                 <a href="index.php?menu=order">Menu</a>
-                            </li>
-                            <li><a href="index.php?menu=contact">Contact</a></li>
-<!--                            <li>-->
-<!--                                <a href="index.php?menu=book">Book</a>-->
-<!--                            </li>-->
 
+                            </li>
+                            <!--                            <li><a href="page-offers.php">Offers</a></li>-->
+                            <li><a href="index.php?menu=contact">Contact</a></li>
+                            <!--                            <li>-->
+                            <!--                                <a href="index.php?menu=book">Book</a>-->
+                            <!--                            </li>-->
+                            <?php
+                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){
+                                ?>
+                                <li>
+                                    <a href="index.php?menu=management">User Manage</a>
+                                </li>
+                                <?php
+                            }
+                            if($_SESSION['approved_user']==TRUE){
+                                ?>
+                                <li>
+                                    <a href="index.php?menu=logout">Logout</a>
+
+                                </li>
+                            <?php }
+                            else{
+                                ?>
+                                <li>
+                                    <a href="index.php?menu=login">Login</a>
+                                    <!--                                        <p>--><?php //echo $_SESSION['nama']?><!--</p>-->
+
+                                </li>
+                                <?php
+                            }
+                            ?>
                         </ul>
                     </nav>
                     <div class="module left">
