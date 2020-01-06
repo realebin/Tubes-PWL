@@ -792,7 +792,7 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
                             <div class="example-box-title">Example</div>
                             <div class="example-box-content">
                                 <!-- Button trigger modal -->
-                                <a href="#" class="btn-play-2" data-toggle="video-modal" data-target="#modalVideo" data-video="https://www.youtube.com/embed/uVju5--RqtY"><span></span>Check it now!</a>
+                                <a href="#" class="btn-play-2" data-toggle="video-modal" data-target="#modalVideo" data-video="https://youtu.be/F32P-LVXonM"><span></span>Check it now!</a>
                             </div>
                         </div>
                         <!-- Video Modal / Demo -->

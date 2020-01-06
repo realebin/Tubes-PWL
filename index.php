@@ -187,6 +187,29 @@ switch ($nav)
         break;
     case 'about' : include_once 'page-about.php';
         break;
+    case 'management' : include_once 'management.php';
+        break;
+    case 'mnu' :
+    {
+        $commander = FILTER_INPUT(INPUT_GET, 'command');
+        if($commander == 'edit')
+        {
+            $menuControl->ubahMenu();
+        }
+        else {
+            $menuControl->olahMenu();
+        }
+    }
+    break;
+    case 'user' :
+        {
+            $commander = FILTER_INPUT(INPUT_GET, 'command');
+            if($commander == 'edit')
+            {
+                $userControl->login();
+            }
+        }
+        break;
 //    case 'book' : include_once 'book-a-table.php';
 //        break;
     case 'checkout' : include_once 'checkout.php';
@@ -267,7 +290,7 @@ if(!isset($nav))
                             if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){
                                 ?>
                                 <li>
-                                    <a href="index.php?menu=management">Book</a>
+                                    <a href="index.php?menu=management">User Manage</a>
                                 </li>
                             <?php
                             }
@@ -275,6 +298,7 @@ if(!isset($nav))
                                 ?>
                                 <li>
                                     <a href="index.php?menu=logout">Logout</a>
+
                                 </li>
                             <?php }
                                 else{
@@ -292,7 +316,14 @@ if(!isset($nav))
                     <div class="module left">
 <!--                        ini juga diubah a hrefnya-->
                         <a href="index.php?menu=order" class="btn btn-outline-secondary"><span>Order</span></a>
+
                     </div>
+                    <div class ="module left"> <?php if($_SESSION['approved_user']==TRUE){
+                            ?>
+                            <p style="text-align: center ;alignment: center; font-size: 20px "> &nbsp;&nbsp;&nbsp;Welcome <?php echo $_SESSION['userrole']?></p>
+                        <?php }?>
+                    </div>
+
                 </div>
 
                 <div class="col-md-2">
@@ -343,6 +374,30 @@ if(!isset($nav))
     </header>
     <!-- Header / End -->
 
+    <script type="text/javascript">
+        function deleteCat(id) {
+            if(confirm("Apakah Anda yakin ingin menghapus data dengan id: "+id))
+            {
+                window.location = "index.php?menu=kat&command=delete&id="+id;
+            }
+        }
+
+        function editCat(id) {
+            window.location = "index.php?menu=kat&command=edit&id="+id;
+        }
+        function deleteMenu(id){
+            if(confirm("Apakah Anda yakin ingin menghapus data dengan id: "+id))
+            {
+                window.location = "index.php?menu=mnu&command=delete&id="+id;
+            }
+        }
+        function editMenu(id) {
+            window.location = "index.php?menu=mnu&command=edit&id="+id;
+        }
+        function editUser(id) {
+            window.location = "index.php?menu=user&command=edit&id="+id;
+        }
+    </script>
     <!-- Content -->
     <div id="content">
 
@@ -360,19 +415,19 @@ if(!isset($nav))
                         <div id="section-main-1-carousel-content">
                             <div class="content-inner">
                                 <h1>Delicious Pasta</h1>
-                                <h5 class="text-muted mb-5">Order it online even now!</h5>
+                                <h5 class="text-muted mb-5">Order it now!</h5>
                                 <div class="btn-group">
                                     <a href="index.php?menu=order" data-toggle="modal" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
                                 </div>
                             </div>
                             <div class="content-inner">
                                 <h1>Delicious Burger</h1>
-                                <h5 class="text-muted mb-5">Order it online even now!</h5>
+                                <h5 class="text-muted mb-5">Order it now!</h5>
                                 <a href="index.php?menu=order" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
                             </div>
                             <div class="content-inner">
                                 <h1>Delicious Desserts</h1>
-                                <h5 class="text-muted mb-5">Order it online even now!</h5>
+                                <h5 class="text-muted mb-5">Order it now!</h5>
                                 <a href="index.php?menu=order" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
                             </div>
                         </div>
@@ -538,6 +593,7 @@ if(!isset($nav))
                         <h3 class="title">Drinks</h3>
                     </a>
                 </div>
+
             </div>
 
         </section>
@@ -557,7 +613,7 @@ if(!isset($nav))
                 <div class="col-lg-8 push-lg-2">
                     <h2 class="mb-3">Check our promo video!</h2>
                     <h5 class="text-muted">Book a table even right now or make an online order!</h5>
-                    <button class="btn-play" data-toggle="video-modal" data-target="#modalVideo" data-video="https://www.youtube.com/embed/uVju5--RqtY"></button>
+                    <button class="btn-play" data-toggle="video-modal" data-target="#modalVideo" data-video="https://youtu.be/F32P-LVXonM"></button>
                 </div>
             </div>
 

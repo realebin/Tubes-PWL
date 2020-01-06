@@ -58,6 +58,7 @@ class MenuController{
             $id = FILTER_INPUT(INPUT_GET, 'idMenu');
             $menu = new Menu();
             $menu->setIdMenu($id);
+
             $msg = $this->menuDao->deleteMenu($menu);
             header('location:index.php?menu=mnu&msg='.$msg);
         }
@@ -73,6 +74,7 @@ class MenuController{
         $hasil4 = $this->menuDao->getAllMenu();
         $hasil5 = $this->menuDao->getAllMenu();
         $hasil6 = $this->menuDao->getAllMenu();
+        $hasilcat = $this->kategoriDao->getAllKategori();
         require_once 'menu-list-navigation.php';
 //        require_once 'cobacoba.php';
     }
@@ -106,7 +108,7 @@ class MenuController{
 
         }
         //panggil hlmnview
-        require_once 'update_menu.php';
+//        require_once 'update_menu.php';
     }
 
 }

@@ -131,81 +131,136 @@ include_once "function.php";
                 </div>
             </div>
         </div>
-
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     </header>
-    <!-- Header / End -->
-
-    <!-- Header -->
-    <header id="header-mobile" class="light">
-
-        <div class="module module-nav-toggle">
-            <a href="#" id="nav-toggle" data-toggle="panel-mobile"><span></span><span></span><span></span><span></span></a>
-        </div>    
-
-        <div class="module module-logo">
-            <a href="index.php">
-                <img src="assets/img/logoMougsPutih.png" alt="">
-            </a>
-        </div>
-
-        <a href="#" class="module module-cart" data-toggle="panel-cart">
-            <i class="ti ti-shopping-cart"></i>
-            <span class="notification">2</span>
-        </a>
-
-    </header>
-    <!-- Header / End -->
-
     <!-- Content -->
     <div id="content">
-
-        <!-- Page Title -->
-        <div class="page-title bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 push-lg-4">
-                        <h1 class="mb-0">Contact Us</h1>
-                        <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
-                    </div>
+    <!-- Page Title -->
+    <div class="page-title bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 push-lg-4">
+                    <h1 class="mb-0">User Management</h1>
+                    <h4 class="text-muted mb-0">Some informations about our User</h4>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Section -->
-        <section class="section">
-            
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 push-lg-1 col-md-6">
-                        <img src="assets/img/logoMougs.png" alt="" class="mb-5" width="200">
-                        <h4 class="mb-0">Mougs Restaurant</h4>
-                        <span class="text-muted">Komp. Setra Duta 10, Indonesia</span>
-                        <hr class="hr-md">
-                        <div class="row">
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                                <h6 class="mb-1 text-muted">Phone:</h6>
-                                +622 85318078808
-                            </div>
-                            <div class="col-sm-6">
-                                <h6 class="mb-1 text-muted">E-mail:</h6>
-                                <a href="#">mougslovers@gmail.com</a>
-                            </div>
-                        </div>
-<!--                        <hr class="hr-md">-->
-<!--                        <h6 class="mb-3 text-muted">Follow Us!</h6>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
-                    </div>
-                    <div class="col-lg-5 push-lg-2 col-md-6">
-                        <div id="google-map" class="h-500 shadow"></div>
-                    </div>
-                </div>
-            </div>
+    <?php
+    if($_SESSION['approved_user'] == TRUE) {
+        ?>
 
-        </section>
+        <fieldset>
+            <legend>Insert User</legend>
+            <form method="POST" action="" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <td>Role</td>
+                        <td>:</td>
+                        <td><input type="text" name="role" placeholder="Waiter, Cashier, Kitchen"/></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Nama</td>
+                        <td>:</td>
+                        <td><input type="text" name="nama" placeholder="Name"/></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Username</td>
+                        <td>:</td>
+                        <td><input type="text" name="uname" placeholder="Username"/></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>:</td>
+                        <td><input type="text" name="pwd" placeholder="Password"/></td>
+                    </tr>
+<!--                    <tr>-->
+<!--                        <td>Retype Password</td>-->
+<!--                        <td>:</td>-->
+<!--                        <td><input type="text" name="rpwd" placeholder=" Re-type Password"/></td>-->
+<!--                    </tr>-->
+
+                    <?php
+                    if($_SESSION['approved_user'] == TRUE) {
+                        ?>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Submit" name="btnSubmitUser"/></td>
+                        </tr>
+                    <?php } ?>
+                </table>
+            </form>
+            <?php
+            $msg = FILTER_INPUT(INPUT_GET, 'msg');
+            if (isset($msg)) {
+                if ($msg == 'sukses') {
+                    echo '<p style="color:green;">Data berhasil disimpan.</p>';
+                } else if ($msg == 'gagal') {
+                    echo '<p style="color:red;">Data gagal disimpan.</p>';
+                } else if ($msg == 'ext') {
+                    echo '<p style="color:red;">Data gagal disimpan karena file cover tidak sesuai typenya.</p>';
+                }
+                else if ($msg == 'suksesu') {
+                    echo '<p style="color:green;">Data berhasil diubah.</p>';
+                } else if ($msg == 'gagalu') {
+                    echo '<p style="color:red;">Data gagal diubah.</p>';
+                }
+                else if ($msg == 'suksesx') {
+                    echo '<p style="color:green;">Data berhasil dihapus.</p>';
+                } else {
+                    echo '<p style="color:red;">Data gagal dihapus.</p>';
+                }
+
+            }
+            ?>
+        </fieldset>
+        <?php
+    }
+    ?>
+
+    <table class="display" id="user" style="text-align: center">
+        <thead>
+        <tr>
+            <th>ID User</th>
+            <th>Role</th>
+            <th>Nama</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+<!--        --><?php
+//        while ($data = $hasilUser->fetch()) {
+////            ?>
+<!--            <tr>-->
+<!--                <td>--><?php ////echo $data->getIdUser(); ?><!--</td>-->
+<!--                <td>--><?php ////echo $data->getRole(); ?><!--</td>-->
+<!--                <td>--><?php ////echo $data->getNama(); ?><!--</td>-->
+<!--                <td>--><?php ////echo $data->getUsername(); ?><!--</td>-->
+<!--                <td>--><?php ////echo $data->getPassword(); ?><!--</td>-->
+<!--                    <td><input type="button" onclick="editUser(--><?php ////echo $data->getIdUser(); ?><!--//)" value="Edit">-->
+<!--                    </td>-->
+<!--           </tr>-->
+<!--       --><?php //}?>
+
+        </tbody>
+    </table>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#user').DataTable();
+        });
+    </script>
 
         <!-- Footer -->
         <footer id="footer" class="bg-dark dark">
@@ -269,7 +324,7 @@ include_once "function.php";
 
     </div>
     <!-- Content / End -->
-
+</div>
     <!-- Panel Cart -->
     <div id="panel-cart">
         <div class="panel-cart-container">
@@ -363,7 +418,6 @@ include_once "function.php";
     <div id="body-overlay"></div>
 
 </div>
-
 <!-- Modal / Product -->
 <!--di index-->
 
@@ -388,5 +442,4 @@ include_once "function.php";
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 
 </body>
-
 </html>
