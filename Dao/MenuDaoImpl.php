@@ -42,13 +42,15 @@ class MenuDaoImpl{
             $stmt->bindValue(3,$menu->getStatus(),PDO::PARAM_INT);
             $stmt->bindValue(4,$menu->getKategori(),PDO::PARAM_INT);
             $stmt->execute();
+            $link->commit();
+            $msg = 'sukses';
         }
         catch (PDOException $err){
             echo $err ->getMessage();
             die();
         }
         PDOUtility::close_koneksi($link);
-        return $stmt;
+        return $msg;
     }
 
     public function deleteMenu(Menu $menu)
@@ -59,7 +61,7 @@ class MenuDaoImpl{
             //begin transaksi #
             $link->beginTransaction();
             //query
-            $qry = "DELETE FROM menu WHERE idMenu = (?)";
+            $qry = "DELETE FROM menu WHERE idMenu = ?";
             //prepare
             $stmt = $link -> prepare($qry);
             //parameter #
@@ -108,7 +110,7 @@ class MenuDaoImpl{
         try{
             $sql = "SELECT * FROM menu WHERE kategori_id=?";
             $stmt = $link->query($sql);
-            $stmt->bindValue(1,$kategori->getIdKategory(),PDO::PARAM_INT);
+            $stmt->bindValue(1,$kategori->getIdKategori(),PDO::PARAM_INT);
             $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE ,'Menu');
             $stmt->execute();
         }

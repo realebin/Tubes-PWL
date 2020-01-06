@@ -219,10 +219,10 @@ include_once "function.php";
                         <?php
                         //                            $catDao = new CategoryDaoImpl();
                         //                            $hasil = $catDao->getAllCategory();
-                        while($data = $hasil->fetch()){
+                        while($data2 = $hasilcat->fetch()){
                             ?>
-                            <option value="<?php echo $data->getKategori()->getIdKategory(); ?>">
-                                <?php echo $data->getKategori()->getNama(); ?>
+                            <option value="<?php echo $data2->getIdKategori(); ?>">
+                                <?php echo $data2->getNama(); ?>
                             </option>
                             <?php
                         }
@@ -349,7 +349,7 @@ include_once "function.php";
                             <!--------------------------------------------- Menu Item ------------------------------------------------>
                                     <?php
                                     while($data = $hasil->fetch()){
-                                        if($data->getKategori()->getIdKategory() == "1"){
+                                        if($data->getKategori()->getIdKategori() == "1"){
                                     ?>
                                     <div class="menu-item menu-list-item">
                                         <div class="row align-items-center">
@@ -358,9 +358,25 @@ include_once "function.php";
                                             </div>
                                             <div class="col-sm-6 text-sm-right">
                                                 <span class="text-md mr-4"> Rp.<?php echo $data->getHarga(); ?></span>
-                                                <button class="btn btn-outline-secondary btn-sm"
-                                                        data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
-                                                </button>
+
+
+                                            <!-- tambah tombol edit delete-->
+                                                <?php if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){ ?>
+                                                    <td><input type="button" onclick="editMenu(<?php echo $data->getIdMenu(); ?>)" value="Edit">
+                                                        <input type="button" onclick="deleteMenu(<?php echo $data->getIdMenu(); ?>)" value="Delete">
+                                                    </td>
+<!--                                                <button class="btn btn-outline-secondary btn-sm"-->
+<!--                                                        data-target="#productModal" name="btnUpdateMenu" data-toggle="modal"><span>Edit</span>-->
+<!--                                                </button>-->
+<!--                                                    <button class="btn btn-outline-secondary btn-sm"-->
+<!--                                                            data-target="#productModal" name="btnDeleteMenu" data-toggle="modal"><span>Delete</span>-->
+<!--                                                    </button>-->
+                                                <?php }
+                                                else {?>
+                                                    <button class="btn btn-outline-secondary btn-sm"
+                                                            data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
+                                                    </button>
+                                                    <?php }?>
                                             </div>
                                         </div>
                                     </div>
@@ -381,7 +397,7 @@ include_once "function.php";
                             <!--------------------------------------------- Menu Item ------------------------------------------------>
                                     <?php
                                     while($data = $hasil2->fetch()){
-                                    if($data->getKategori()->getIdKategory() == "2"){
+                                    if($data->getKategori()->getIdKategori() == "2"){
                                     ?>
                                     <div class="menu-item menu-list-item">
                                         <div class="row align-items-center">
@@ -390,9 +406,22 @@ include_once "function.php";
                                             </div>
                                             <div class="col-sm-6 text-sm-right">
                                                 <span class="text-md mr-4">  Rp.<?php echo $data->getHarga(); ?></span>
-                                                <button class="btn btn-outline-secondary btn-sm"
-                                                        data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
-                                                </button>
+                                                <?php if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){ ?>
+                                                    <td><input type="button" onclick="editMenu(<?php echo $data->getIdMenu(); ?>)" value="Edit">
+                                                        <input type="button" onclick="deleteMenu(<?php echo $data->getIdMenu(); ?>)" value="Delete">
+                                                    </td>
+                                                    <!--                                                <button class="btn btn-outline-secondary btn-sm"-->
+                                                    <!--                                                        data-target="#productModal" name="btnUpdateMenu" data-toggle="modal"><span>Edit</span>-->
+                                                    <!--                                                </button>-->
+                                                    <!--                                                    <button class="btn btn-outline-secondary btn-sm"-->
+                                                    <!--                                                            data-target="#productModal" name="btnDeleteMenu" data-toggle="modal"><span>Delete</span>-->
+                                                    <!--                                                    </button>-->
+                                                <?php }
+                                                else {?>
+                                                    <button class="btn btn-outline-secondary btn-sm"
+                                                            data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
+                                                    </button>
+                                                <?php }?>
                                             </div>
                                         </div>
                                     </div>
@@ -413,7 +442,7 @@ include_once "function.php";
                                 <!--------------------------------------------- Menu Item ------------------------------------------------>
                                     <?php
                                     while($data = $hasil3->fetch()){
-                                    if($data->getKategori()->getIdKategory() == "3") {
+                                    if($data->getKategori()->getIdKategori() == "3") {
                                         ?>
                                         <div class="menu-item menu-list-item">
                                             <div class="row align-items-center">
@@ -422,9 +451,22 @@ include_once "function.php";
                                                 </div>
                                                 <div class="col-sm-6 text-sm-right">
                                                 <span class="text-md mr-4">  Rp.<?php echo $data->getHarga(); ?></span>
-                                                    <button class="btn btn-outline-secondary btn-sm"
-                                                            data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
-                                                    </button>
+                                                    <?php if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){ ?>
+                                                        <td><input type="button" onclick="editMenu(<?php echo $data->getIdMenu(); ?>)" value="Edit">
+                                                            <input type="button" onclick="deleteMenu(<?php echo $data->getIdMenu(); ?>)" value="Delete">
+                                                        </td>
+                                                        <!--                                                <button class="btn btn-outline-secondary btn-sm"-->
+                                                        <!--                                                        data-target="#productModal" name="btnUpdateMenu" data-toggle="modal"><span>Edit</span>-->
+                                                        <!--                                                </button>-->
+                                                        <!--                                                    <button class="btn btn-outline-secondary btn-sm"-->
+                                                        <!--                                                            data-target="#productModal" name="btnDeleteMenu" data-toggle="modal"><span>Delete</span>-->
+                                                        <!--                                                    </button>-->
+                                                    <?php }
+                                                    else {?>
+                                                        <button class="btn btn-outline-secondary btn-sm"
+                                                                data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
+                                                        </button>
+                                                    <?php }?>
                                                 </div>
                                             </div>
                                         </div>
@@ -444,7 +486,7 @@ include_once "function.php";
                             <!--------------------------------------------- Menu Item ------------------------------------------------>
                                     <?php
                                     while($data = $hasil4->fetch()){
-                                    if($data->getKategori()->getIdKategory() == "4") {
+                                    if($data->getKategori()->getIdKategori() == "4") {
                                         ?>
                                         <div class="menu-item menu-list-item">
                                             <div class="row align-items-center">
@@ -453,9 +495,22 @@ include_once "function.php";
                                                 </div>
                                                 <div class="col-sm-6 text-sm-right">
                                                 <span class="text-md mr-4"> Rp.<?php echo $data->getHarga(); ?></span>
-                                                    <button class="btn btn-outline-secondary btn-sm"
-                                                            data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
-                                                    </button>
+                                                    <?php if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){ ?>
+                                                        <td><input type="button" onclick="editMenu(<?php echo $data->getIdMenu(); ?>)" value="Edit">
+                                                            <input type="button" onclick="deleteMenu(<?php echo $data->getIdMenu(); ?>)" value="Delete">
+                                                        </td>
+                                                        <!--                                                <button class="btn btn-outline-secondary btn-sm"-->
+                                                        <!--                                                        data-target="#productModal" name="btnUpdateMenu" data-toggle="modal"><span>Edit</span>-->
+                                                        <!--                                                </button>-->
+                                                        <!--                                                    <button class="btn btn-outline-secondary btn-sm"-->
+                                                        <!--                                                            data-target="#productModal" name="btnDeleteMenu" data-toggle="modal"><span>Delete</span>-->
+                                                        <!--                                                    </button>-->
+                                                    <?php }
+                                                    else {?>
+                                                        <button class="btn btn-outline-secondary btn-sm"
+                                                                data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
+                                                        </button>
+                                                    <?php }?>
                                                 </div>
                                             </div>
                                         </div>
@@ -475,7 +530,7 @@ include_once "function.php";
                                  <!--------------------------------------------- Menu Item ------------------------------------------------>
                                     <?php
                                     while($data = $hasil5->fetch()){
-                                        if($data->getKategori()->getIdKategory() == "5") {
+                                        if($data->getKategori()->getIdKategori() == "5") {
                                             ?>
                                     <div class="menu-item menu-list-item">
                                         <div class="row align-items-center">
@@ -484,9 +539,22 @@ include_once "function.php";
                                             </div>
                                             <div class="col-sm-6 text-sm-right">
                                                 <span class="text-md mr-4"> Rp.<?php echo $data->getHarga(); ?></span>
-                                                <button class="btn btn-outline-secondary btn-sm"
-                                                        data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
-                                                </button>
+                                                <?php if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){ ?>
+                                                    <td><input type="button" onclick="editMenu(<?php echo $data->getIdMenu(); ?>)" value="Edit">
+                                                        <input type="button" onclick="deleteMenu(<?php echo $data->getIdMenu(); ?>)" value="Delete">
+                                                    </td>
+                                                    <!--                                                <button class="btn btn-outline-secondary btn-sm"-->
+                                                    <!--                                                        data-target="#productModal" name="btnUpdateMenu" data-toggle="modal"><span>Edit</span>-->
+                                                    <!--                                                </button>-->
+                                                    <!--                                                    <button class="btn btn-outline-secondary btn-sm"-->
+                                                    <!--                                                            data-target="#productModal" name="btnDeleteMenu" data-toggle="modal"><span>Delete</span>-->
+                                                    <!--                                                    </button>-->
+                                                <?php }
+                                                else {?>
+                                                    <button class="btn btn-outline-secondary btn-sm"
+                                                            data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
+                                                    </button>
+                                                <?php }?>
                                             </div>
                                         </div>
                                     </div>
@@ -507,7 +575,7 @@ include_once "function.php";
                                  <!--------------------------------------------- Menu Item ------------------------------------------------>
                                     <?php
                                     while($data = $hasil6->fetch()) {
-                                        if ($data->getKategori()->getIdKategory() == "6") {
+                                        if ($data->getKategori()->getIdKategori() == "6") {
                                             ?>
                                             <div class="menu-item menu-list-item">
                                                 <div class="row align-items-center">
@@ -516,9 +584,22 @@ include_once "function.php";
                                                     </div>
                                                     <div class="col-sm-6 text-sm-right">
                                                 <span class="text-md mr-4">  Rp.<?php echo $data->getHarga(); ?></span>
-                                                        <button class="btn btn-outline-secondary btn-sm"
-                                                                data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
-                                                        </button>
+                                                        <?php if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){ ?>
+                                                            <td><input type="button" onclick="editMenu(<?php echo $data->getIdMenu(); ?>)" value="Edit">
+                                                                <input type="button" onclick="deleteMenu(<?php echo $data->getIdMenu(); ?>)" value="Delete">
+                                                            </td>
+                                                            <!--                                                <button class="btn btn-outline-secondary btn-sm"-->
+                                                            <!--                                                        data-target="#productModal" name="btnUpdateMenu" data-toggle="modal"><span>Edit</span>-->
+                                                            <!--                                                </button>-->
+                                                            <!--                                                    <button class="btn btn-outline-secondary btn-sm"-->
+                                                            <!--                                                            data-target="#productModal" name="btnDeleteMenu" data-toggle="modal"><span>Delete</span>-->
+                                                            <!--                                                    </button>-->
+                                                        <?php }
+                                                        else {?>
+                                                            <button class="btn btn-outline-secondary btn-sm"
+                                                                    data-target="#productModal" data-toggle="modal"><span>Add to cart</span>
+                                                            </button>
+                                                        <?php }?>
                                                     </div>
                                                 </div>
                                             </div>

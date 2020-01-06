@@ -1,22 +1,22 @@
 <?php
 class Kategori{
-    private $idKategory;
+    private $idKategori;
     private $nama;
 
     /**
      * @return mixed
      */
-    public function getIdKategory()
+    public function getIdKategori()
     {
-        return $this->idKategory;
+        return $this->idKategori;
     }
 
     /**
      * @param mixed $idKategory
      */
-    public function setIdKategory($idKategory)
+    public function setIdKategori($idKategori)
     {
-        $this->idKategory = $idKategory;
+        $this->idKategori = $idKategori;
     }
 
     /**

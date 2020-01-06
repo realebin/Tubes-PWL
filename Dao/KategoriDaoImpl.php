@@ -7,7 +7,8 @@ Class KategoriDaoImpl{
             $sql = "SELECT * FROM kategori";
             //prepare
             $stmt = $link -> prepare($sql);
-            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE ,'Kategori');
+            $stmt->setFetchMode(PDO::FETCH_CLASS |
+                PDO::FETCH_PROPS_LATE ,'Kategori');
             //execute
             $stmt->execute();
 
@@ -25,7 +26,7 @@ Class KategoriDaoImpl{
         try{
             $sql = "SELECT * FROM kategori WHERE idKategori =?";
             $stmt = $link->prepare($sql);
-            $stmt->bindValue(1,$kategori->getIdKategory(),PDO::PARAM_INT);
+            $stmt->bindValue(1,$kategori->getIdKategori(),PDO::PARAM_INT);
             $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE ,'Kategori');
             $stmt->execute();
         }
@@ -66,7 +67,7 @@ Class KategoriDaoImpl{
             //prepare
             $stmt = $link -> prepare($qry);
             //parameter #
-            $stmt->bindValue(1, $kategori->getIdKategory(), PDO::PARAM_INT);
+            $stmt->bindValue(1, $kategori->getIdKategori(), PDO::PARAM_INT);
             //execute
             $stmt->execute();
             $link->commit();
@@ -87,7 +88,7 @@ Class KategoriDaoImpl{
             $query = "UPDATE kategori SET nama=? WHERE idKategori = ?";
             $stmt = $link->prepare($query);
             $stmt->bindValue(1, $kategori->getNama(), PDO::PARAM_STR);
-            $stmt->bindValue(2, $kategori->getIdKategory(), PDO::PARAM_INT);
+            $stmt->bindValue(2, $kategori->getIdKategori(), PDO::PARAM_INT);
             $stmt->execute();
             $link->commit();
             $msg = 'suksesu';

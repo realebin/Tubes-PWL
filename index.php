@@ -187,6 +187,18 @@ switch ($nav)
         break;
     case 'about' : include_once 'page-about.php';
         break;
+    case 'mnu' :
+        {
+            $commander = FILTER_INPUT(INPUT_GET, 'command');
+            if($commander == 'edit')
+            {
+                $menuControl->ubahMenu();
+            }
+            else {
+                $menuControl->olahMenu();
+            }
+        }
+        break;
 //    case 'book' : include_once 'book-a-table.php';
 //        break;
     case 'checkout' : include_once 'checkout.php';
@@ -344,6 +356,27 @@ if(!isset($nav))
     </header>
     <!-- Header / End -->
 
+    <script type="text/javascript">
+        function deleteCat(id) {
+            if(confirm("Apakah Anda yakin ingin menghapus data dengan id: "+id))
+            {
+                window.location = "index.php?menu=kat&command=delete&id="+id;
+            }
+        }
+
+        function editCat(id) {
+            window.location = "index.php?menu=kat&command=edit&id="+id;
+        }
+        function deleteMenu(id){
+            if(confirm("Apakah Anda yakin ingin menghapus data dengan id: "+id))
+            {
+                window.location = "index.php?menu=mnu&command=delete&id="+id;
+            }
+        }
+        function editMenu(id) {
+            window.location = "index.php?menu=mnu&command=edit&id="+id;
+        }
+    </script>
     <!-- Content -->
     <div id="content">
 
@@ -361,19 +394,19 @@ if(!isset($nav))
                         <div id="section-main-1-carousel-content">
                             <div class="content-inner">
                                 <h1>Delicious Pasta</h1>
-                                <h5 class="text-muted mb-5">Order it online even now!</h5>
+                                <h5 class="text-muted mb-5">Order it now!</h5>
                                 <div class="btn-group">
                                     <a href="index.php?menu=order" data-toggle="modal" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
                                 </div>
                             </div>
                             <div class="content-inner">
                                 <h1>Delicious Burger</h1>
-                                <h5 class="text-muted mb-5">Order it online even now!</h5>
+                                <h5 class="text-muted mb-5">Order it now!</h5>
                                 <a href="index.php?menu=order" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
                             </div>
                             <div class="content-inner">
                                 <h1>Delicious Desserts</h1>
-                                <h5 class="text-muted mb-5">Order it online even now!</h5>
+                                <h5 class="text-muted mb-5">Order it now!</h5>
                                 <a href="index.php?menu=order" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
                             </div>
                         </div>

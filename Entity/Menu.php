@@ -105,7 +105,7 @@ class Menu{
                     $this->kategori->setNama($value);
                     break;
                 case 'id_kategori':
-                    $this->kategori->setIdKategory($value);
+                    $this->kategori->setIdKategori($value);
                     break;
             }
         }
