@@ -38,6 +38,7 @@ class UserController
             }
             header('location:index.php');
         }
+        //(harusnya login.php tapi gabisa karena stuck di login.php terus)
         require_once 'index.php';
 
     }
