@@ -26,14 +26,15 @@ class UserController
 
             $result = $data->fetch();
 
-            var_dump($result);
-            exit();
+            ///kalau $result['idUser'] > 0 dihapus bisa masuk tapi salah bener jadi approved user
             if (isset($result) && $result['idUser'] > 0) {
                 $_SESSION['approved_user'] = TRUE;
                 $_SESSION['userid'] = $result['idUser'];
                 $_SESSION['username'] = $result['username'];
                 $_SESSION['userrole'] = $result['role'];
                 $_SESSION['name'] = $result['nama'];
+                var_dump($_SESSION['username']);
+                exit();
             }
             header('location:index.php');
         }

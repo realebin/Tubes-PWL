@@ -10,24 +10,24 @@
 <title>Mougs - ★★★★☆ Restaurant</title>
 
 <!-- Favicons -->
-<link rel="shortcut icon" href="assets/img/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
+<link rel="shortcut icon" href="../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon_60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon_76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon_120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon_152x152.png">
 
 <!-- CSS Plugins -->
-<link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
-<link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
-<link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
+<link rel="stylesheet" href="../assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../assets/plugins/slick-carousel/slick/slick.css" />
+<link rel="stylesheet" href="../assets/plugins/animate.css/animate.min.css" />
+<link rel="stylesheet" href="../assets/plugins/animsition/dist/css/animsition.min.css" />
 
 <!-- CSS Icons -->
-<link rel="stylesheet" href="assets/css/themify-icons.css" />
-<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../assets/css/themify-icons.css" />
+<link rel="stylesheet" href="../assets/plugins/font-awesome/css/font-awesome.min.css" />
 
 <!-- CSS Theme -->
-<link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
+<link id="theme" rel="stylesheet" href="../assets/css/themes/theme-beige.min.css" />
 
 </head>
 
@@ -131,8 +131,8 @@ if(!isset($nav))
                 <div class="col-md-3">
                     <!-- Logo -->
                     <div class="module module-logo dark">
-                        <a href="index.php">
-                            <img src="assets/img/logoMougsPutih.png" alt="" width="200">
+                        <a href="../index.php">
+                            <img src="../assets/img/logoMougsPutih.png" alt="" width="200">
                         </a>
                     </div>
                 </div>
@@ -141,22 +141,22 @@ if(!isset($nav))
                     <nav class="module module-navigation left mr-4">
                         <ul id="nav-main" class="nav nav-main">
                             <li>
-                                <a href="index.php">Home</a>
+                                <a href="../index.php">Home</a>
                             </li>
                             <li>
-                                <a href="index.php?menu=about">About</a>
+                                <a href="../index.php?menu=about">About</a>
                             </li>
                             <li>
-                                <a href="index.php?menu=order">Menu</a>
+                                <a href="../index.php?menu=order">Menu</a>
                             </li>
-                            <li><a href="index.php?menu=contact">Contact</a></li>
+                            <li><a href="../index.php?menu=contact">Contact</a></li>
                             <li>
-                                <a href="index.php?menu=book">Book</a>
+                                <a href="../index.php?menu=book">Book</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="module left">
-                        <a href="index.php?menu=order" class="btn btn-outline-secondary"><span>Order</span></a>
+                        <a href="../index.php?menu=order" class="btn btn-outline-secondary"><span>Order</span></a>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -182,8 +182,8 @@ if(!isset($nav))
         </div>    
 
         <div class="module module-logo">
-            <a href="index.php">
-                <img src="assets/img/logoMougsPutih.png" alt="">
+            <a href="../index.php">
+                <img src="../assets/img/logoMougsPutih.png" alt="">
             </a>
         </div>
 
@@ -203,7 +203,7 @@ if(!isset($nav))
 
             <!-- Video BG -->
             <div class="bg-video" data-property="{videoURL:'https://youtu.be/t4gN-iqeY0E', showControls: false, containment:'self',startAt:1,stopAt:39,mute:true,autoPlay:true,loop:true,opacity:0.8,quality:'hd1080'}"></div>
-            <div class="bg-image bg-video-placeholder zooming"><img src="assets/img/photos/bg-restaurant.jpg" alt=""></div>
+            <div class="bg-image bg-video-placeholder zooming"><img src="../assets/img/photos/bg-restaurant.jpg" alt=""></div>
             
             <div class="container">
                 <div class="row">
@@ -211,7 +211,7 @@ if(!isset($nav))
                         <!-- Book a Table -->
                         <div class="utility-box">
                             <div class="utility-box-title bg-dark dark">
-                                <div class="bg-image"><img src="assets/img/photos/modal-review.jpg" alt=""></div>
+                                <div class="bg-image"><img src="../assets/img/photos/modal-review.jpg" alt=""></div>
                                 <div>
                                     <span class="icon icon-primary"><i class="ti ti-bookmark-alt"></i></span>
                                     <h4 class="mb-0">Book a table</h4>
@@ -269,21 +269,21 @@ if(!isset($nav))
                 <!-- Footer 1st Row -->
                 <div class="footer-first-row row">
                     <div class="col-lg-3 text-center">
-                        <a href="index.php"><img src="assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
+                        <a href="../index.php"><img src="../assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-muted">Latest news</h5>
                         <ul class="list-posts">
                             <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="Unused/blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
+                                <a href="blog-post.php" class="title">Awesome weekend in Polish mountains!</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                             <li>
-                                <a href="Unused/blog-post.php" class="title">How to create effective webdeisign?</a>
+                                <a href="blog-post.php" class="title">How to create effective webdeisign?</a>
                                 <span class="date">February 14, 2015</span>
                             </li>
                         </ul>
@@ -395,14 +395,14 @@ if(!isset($nav))
                 </div>
             </div>
         </div>
-        <a href="index.php?menu=checkout" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="../index.php?menu=checkout" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->
     <nav id="panel-mobile">
         <div class="module module-logo bg-dark dark">
             <a href="#">
-                <img src="assets/img/logoMougsPutih.png" alt="" width="200">
+                <img src="../assets/img/logoMougsPutih.png" alt="" width="200">
             </a>
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>
@@ -427,7 +427,7 @@ if(!isset($nav))
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header modal-header-lg dark bg-dark">
-                <div class="bg-image"><img src="assets/img/photos/modal-add.jpg" alt=""></div>
+                <div class="bg-image"><img src="../assets/img/photos/modal-add.jpg" alt=""></div>
                 <h4 class="modal-title">Specify your dish</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>
             </div>
@@ -551,21 +551,21 @@ if(!isset($nav))
 </div>
 
 <!-- JS Plugins -->
-<script src="assets/plugins/jquery/dist/jquery.min.js"></script>
-<script src="assets/plugins/tether/dist/js/tether.min.js"></script>
-<script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="assets/plugins/slick-carousel/slick/slick.min.js"></script>
-<script src="assets/plugins/jquery.appear/jquery.appear.js"></script>
-<script src="assets/plugins/jquery.scrollto/jquery.scrollTo.min.js"></script>
-<script src="assets/plugins/jquery.localscroll/jquery.localScroll.min.js"></script>
-<script src="assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="assets/plugins/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
-<script src="assets/plugins/twitter-fetcher/js/twitterFetcher_min.js"></script>
-<script src="assets/plugins/skrollr/dist/skrollr.min.js"></script>
-<script src="assets/plugins/animsition/dist/js/animsition.min.js"></script>
+<script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
+<script src="../assets/plugins/tether/dist/js/tether.min.js"></script>
+<script src="../assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/slick-carousel/slick/slick.min.js"></script>
+<script src="../assets/plugins/jquery.appear/jquery.appear.js"></script>
+<script src="../assets/plugins/jquery.scrollto/jquery.scrollTo.min.js"></script>
+<script src="../assets/plugins/jquery.localscroll/jquery.localScroll.min.js"></script>
+<script src="../assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="../assets/plugins/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
+<script src="../assets/plugins/twitter-fetcher/js/twitterFetcher_min.js"></script>
+<script src="../assets/plugins/skrollr/dist/skrollr.min.js"></script>
+<script src="../assets/plugins/animsition/dist/js/animsition.min.js"></script>
 
 <!-- JS Core -->
-<script src="assets/js/core.js"></script>
+<script src="../assets/js/core.js"></script>
 
 </body>
 
