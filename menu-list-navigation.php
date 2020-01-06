@@ -675,6 +675,20 @@ include_once "function.php";
                     <div class="col-lg-3 text-center">
                         <a href="index.php"><img src="assets/img/logoMougsPutih.png" alt="" width="200" class="mt-5 mb-5"></a>
                     </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="text-muted">Latest News About Mougs</h5>
+                        <ul class="list-posts">
+                            <li>
+                                <a class="title">Mougs get Michellin Star Rewards at 2025.</a>
+                            </li>
+                            <li>
+                                <a class="title">The best Western Restaurant in Town.</a>
+                            </li>
+                            <li>
+                                <a class="title">Specialitation of Burger.</a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="col-lg-5 col-md-6">
                         <h5 class="text-muted">Subscribe Us!</h5>
                         <!-- MailChimp Form -->
