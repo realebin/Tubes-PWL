@@ -171,7 +171,7 @@ if($_SESSION['approved_user'] == FALSE) {
                                             <input type="password" name="pwd" class="form-control" required/>
                                         </div>
                                         <button class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit"
-                                                type="submit" name="btnLogin" value="login">
+                                                type="submit" name="btnLogin">
                                             <span class="description">Login</span>
                                             <!--                                    <span class="success">-->
                                             <!--                                        <svg x="0px" y="0px" viewBox="0 0 32 32"><path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/></svg>-->
@@ -197,20 +197,16 @@ if($_SESSION['approved_user'] == FALSE) {
                                                      class="mt-5 mb-5"></a>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <h5 class="text-muted">Latest news</h5>
+                            <h5 class="text-muted">Latest News About Mougs</h5>
                             <ul class="list-posts">
                                 <li>
-                                    <a href="Unused/blog-post.php" class="title">How to create effective webdesign?</a>
-                                    <span class="date">February 14, 2015</span>
+                                    <a class="title">Mougs get Michellin Star Rewards at 2025.</a>
                                 </li>
                                 <li>
-                                    <a href="Unused/blog-post.php" class="title">Awesome weekend in Polish
-                                        mountains!</a>
-                                    <span class="date">February 14, 2015</span>
+                                    <a class="title">The best Western Restaurant in Town.</a>
                                 </li>
                                 <li>
-                                    <a href="Unused/blog-post.php" class="title">How to create effective webdesign?</a>
-                                    <span class="date">February 14, 2015</span>
+                                    <a class="title">Specialitation of Burger.</a>
                                 </li>
                             </ul>
                         </div>
@@ -348,15 +344,15 @@ if($_SESSION['approved_user'] == FALSE) {
                 <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
             </div>
             <nav class="module module-navigation"></nav>
-            <div class="module module-social">
-                <h6 class="text-sm mb-3">Follow Us!</h6>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i
-                            class="fa fa-facebook"></i></a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
-            </div>
+<!--            <div class="module module-social">-->
+<!--                <h6 class="text-sm mb-3">Follow Us!</h6>-->
+<!--                <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i-->
+<!--                            class="fa fa-facebook"></i></a>-->
+<!--                <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+<!--                <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+<!--                <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+<!--                <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
+<!--            </div>-->
         </nav>
 
         <!-- Body Overlay -->
