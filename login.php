@@ -142,8 +142,9 @@ if($_SESSION['approved_user'] == FALSE) {
             <section class="section section-lg bg-dark">
 
                 <!-- Video BG -->
+<!--                https://youtu.be/t4gN-iqeY0E-->
                 <div class="bg-video"
-                     data-property="{videoURL:'https://youtu.be/t4gN-iqeY0E', showControls: false, containment:'self',startAt:1,stopAt:39,mute:true,autoPlay:true,loop:true,opacity:0.8,quality:'hd1080'}"></div>
+                     data-property="{videoURL:'https://youtu.be/F32P-LVXonM', showControls: false, containment:'self',startAt:1,stopAt:39,mute:true,autoPlay:true,loop:true,opacity:0.8,quality:'hd1080'}"></div>
                 <div class="bg-image bg-video-placeholder zooming"><img src="assets/img/photos/bg-restaurant.jpg"
                                                                         alt=""></div>
 
