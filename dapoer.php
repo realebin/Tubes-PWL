@@ -2,36 +2,58 @@
 <html lang="en">
 <head>
 
-<!-- Meta -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- Title -->
-<title>Mougs - ★★★★☆ Restaurant</title>
+    <!-- Title -->
+    <title>Mougs - ★★★★☆ Restaurant</title>
 
-<!-- Favicons -->
-<link rel="shortcut icon" href="assets/img/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
 
-<!-- CSS Plugins -->
-<link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
-<link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
-<link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
 
-<!-- CSS Icons -->
-<link rel="stylesheet" href="assets/css/themify-icons.css" />
-<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <!-- CSS Icons -->
+    <link rel="stylesheet" href="assets/css/themify-icons.css" />
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
 
-<!-- CSS Theme -->
-<link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
+    <!-- CSS Theme -->
+    <link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
 
 </head>
 
 <body>
+<?php
+include_once "PDOUtility.php";
+//class entity tiap tabel database
+include_once "Entity/Kategori.php";
+include_once "Entity/User.php";
+include_once "Entity/Menu.php";
+include_once "Entity/Menu_Pesanan.php";
+include_once "Entity/Pembayaran.php";
+include_once "Entity/Pesanan.php";
+//class Daonya
+include_once "Dao/MenuDaoImpl.php";
+include_once "Dao/UserDaoImpl.php";
+include_once "Dao/PembayaranDaoImpl.php";
+include_once "Dao/PesananDaoImpl.php";
+include_once "Dao/KategoriDaoImpl.php";
+include_once "Dao/MenuPesanDaoImpl.php";
+
+include_once "Controller/MenuController.php";
+include_once "Controller/UserController.php";
+
+include_once "function.php";
+?>
 
 <!-- Body Wrapper -->
 <div id="body-wrapper" class="animsition">
@@ -107,9 +129,7 @@
                             ?>
                         </ul>
                     </nav>
-                    <div class="module left">
-                        <a href="index.php?menu=order" class="btn btn-outline-secondary"><span>Order</span></a>
-                    </div>
+
                 </div>
                 <div class="col-md-2">
                     <a href="#" class="module module-cart right" data-toggle="panel-cart">
@@ -131,7 +151,7 @@
 
         <div class="module module-nav-toggle">
             <a href="#" id="nav-toggle" data-toggle="panel-mobile"><span></span><span></span><span></span><span></span></a>
-        </div>    
+        </div>
 
         <div class="module module-logo">
             <a href="index.php">
@@ -151,113 +171,105 @@
     <div id="content">
 
         <!-- Page Title -->
-        <div class="page-title bg-dark dark">
-            <!-- BG Image -->
-            <div class="bg-image bg-parallax"><img src="assets/img/photos/bg-croissant.jpg" alt=""></div>
+        <div class="page-title border-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 push-lg-4">
-                        <h1 class="mb-0">Checkout</h1>
-                        <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
+                    <div class="col-lg-7 push-lg-5">
+                        <h1 class="mb-0">Dapoer</h1>
+                        <h4 class="text-muted mb-0">Some condition informations about our dapoer</h4>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Section -->
-        <section class="section bg-light">
+        <section class="section section-bg-edge">
 
+            <div class="image left bottom col-md-7">
+                <div class="bg-image"><img src="assets/img/photos/some.png" alt=""></div>
+            </div>
+
+                <title>Caffe Tables</title>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <body>
+            <center>
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 push-xl-8 col-lg-5 push-lg-7">
-                        <div class="shadow bg-white stick-to-content mb-4">
-                            <div class="bg-dark dark p-4"><h5 class="mb-0">You order</h5></div>
-                            <table class="table-cart">
-                                <tr class="title">
-                                    <td> <span class="caption text-muted"><a href="#productModal" data-toggle="modal">Id Menu</a></span></td>
-                                    <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal">Nama Makanan</a></span></td>
-                                    <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal">Quantity</a></span></td>
-                                    <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal">Harga</a></span></td>
-                                </tr>
-                                <?php
-                                foreach ($_SESSION['cart_item'] as $pilihan) { ?>
-                                    <tr class="title">
-                                        <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"><?php echo $pilihan["id_makanan"]; ?></a></span></td>
-                                        <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"><?php echo $pilihan["nama_makanan"]; ?></a></span></td>
-                                        <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"><?php echo $pilihan["quantity"]; ?></a></span></td>
-                                        <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"> Rp.<?php echo $pilihan["quantity"] * $pilihan["harga"] ; ?></a></span></td>
-                                    </tr>
-                                    <?php
-                                }
-                                ?>
-                                <?php
-                                $jumfin = 0;
-                                foreach ($_SESSION['cart_item'] as $pilihan) {
-                                    $jumlah = $pilihan["quantity"] * $pilihan["harga"];
-                                    $jumfin = $jumfin + $jumlah;
-                                }?>
-                                <tr class="title">
-                                    <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal">Subtotal</a></span></td>
-                                    <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"></a></span></td>
-                                    <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"></a></span></td>
-                                    <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal">Rp. <?php echo $jumfin?></a></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="col-xl-8 pull-xl-4 col-lg-7 pull-lg-5">
-                        <div class="bg-white p-4 p-md-5 mb-4">
-                            <h4 class="border-bottom pb-4"><i class="ti ti-user mr-3 text-primary"></i>Basic informations</h4>
-                            <div class="row mb-5">
-                                <div class="form-group col-sm-6">
-                                    <label>Table Number:</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
+                <h2>Caffe Tables</h2>
+                <p>Choose The Tables :</p>
+                <form>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 01
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 02
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 03
+                    </label>
+                    <br><br>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 04
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 05
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 06
+                    </label>
+                    <br><br>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 07
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 08
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 09
+                    </label>
+                    <br><br>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 10
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 11
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 12
+                    </label>
+                </form>
+            </div>
+            </center>s
+<br><br>
+            <?php
+            if($_SESSION['approved_user'] == TRUE) {
+                ?>
 
-<!--                            <h4 class="border-bottom pb-4"><i class="ti ti-package mr-3 text-primary"></i>Delivery</h4>-->
-<!--                            <div class="row mb-5">-->
-<!--                                <div class="form-group col-sm-6">-->
-<!--                                    <label>Delivery time:</label>-->
-<!--                                    <div class="select-container">-->
-<!--                                        <select class="form-control">-->
-<!--                                            <option>As fast as possible</option>-->
-<!--                                            <option>In one hour</option>-->
-<!--                                            <option>In two hours</option>-->
-<!--                                        </select>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
+                <div class="form-group">
+                    <input type="submit" class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" value="Submit" name="btnSubmitUser"/>
+                </div>
+            <?php } ?>
+            </body>
 
-                            <h4 class="border-bottom pb-4"><i class="ti ti-wallet mr-3 text-primary"></i>Payment</h4>
-                            <div class="row text-lg">
-                                <div class="col-md-4 col-sm-6 form-group">
-                                    <label class="custom-control custom-radio">
-                                        <input type="radio" name="payment_type" class="custom-control-input">
-                                        <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">Debit Card</span>
-                                    </label>
-                                </div>
-                                <div class="col-md-4 col-sm-6 form-group">
-                                    <label class="custom-control custom-radio">
-                                        <input type="radio" name="payment_type" class="custom-control-input">
-                                        <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">Credit Card</span>
-                                    </label>
-                                </div>
-                                <div class="col-md-4 col-sm-6 form-group">
-                                    <label class="custom-control custom-radio">
-                                        <input type="radio" name="payment_type" class="custom-control-input">
-                                        <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">Cash</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <button class="btn btn-primary btn-lg"><span>Order now!</span></button>
-                        </div>
-                    </div>
+
+
+        </section>
+
+        <!-- Section -->
+        <section class="section section-lg dark bg-dark">
+
+            <!-- BG Image -->
+            <div class="bg-image bg-parallax"><img src="assets/img/photos/bg-croissant.jpg" alt=""></div>
+
+            <div class="container text-center">
+                <div class="col-lg-8 push-lg-2">
+                    <h2 class="mb-3">Would you like to visit Us?</h2>
+                    <h5 class="text-muted">Book a table even right now or make an online order!</h5>
+                    <a href="menu-list-navigation.php" class="btn btn-primary"><span>Order Online</span></a>
+                    <!--                    <a href="book-a-table.php" class="btn btn-outline-primary"><span>Book a table</span></a>-->
                 </div>
             </div>
 
@@ -265,7 +277,7 @@
 
         <!-- Footer -->
         <footer id="footer" class="bg-dark dark">
-            
+
             <div class="container">
                 <!-- Footer 1st Row -->
                 <div class="footer-first-row row">
@@ -303,12 +315,12 @@
                                 </span>
                             </div>
                         </form>
-<!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
+                        <!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
                     </div>
                 </div>
                 <!-- Footer 2nd Row -->
@@ -405,6 +417,14 @@
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>
         <nav class="module module-navigation"></nav>
+        <!--        <div class="module module-social">-->
+        <!--            <h6 class="text-sm mb-3">Follow Us!</h6>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
+        <!--        </div>-->
     </nav>
 
     <!-- Body Overlay -->
@@ -413,7 +433,7 @@
 </div>
 
 <!-- Modal / Product -->
-<!--diindex-->
+<!-- diindex -->
 
 <!-- JS Plugins -->
 <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
@@ -425,6 +445,7 @@
 <script src="assets/plugins/jquery.localscroll/jquery.localScroll.min.js"></script>
 <script src="assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="assets/plugins/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
+<script src="assets/plugins/twitter-fetcher/js/twitterFetcher_min.js"></script>
 <script src="assets/plugins/skrollr/dist/skrollr.min.js"></script>
 <script src="assets/plugins/animsition/dist/js/animsition.min.js"></script>
 

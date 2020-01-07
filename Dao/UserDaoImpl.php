@@ -65,6 +65,44 @@ class UserDaoImpl
         PDOUtility::close_koneksi($link);
         return $msg;
     }
+    public function getOneUser(User $user){
+        $link = PDOUtility::get_koneksi();
+        try{
+            $sql = "SELECT * FROM user WHERE idUser =?";
+            $stmt = $link->query($sql);
+            $stmt->bindValue(1,$user->getIdUser(),PDO::PARAM_INT);
+            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE ,'User');
+            $stmt->execute();
+        }
+        catch (PDOException $err){
+            echo $err ->getMessage();
+            die();
+        }
+        PDOUtility::close_koneksi($link);
+        return $stmt;
+    }
+    public function updateUser(User $user){
+        $msg = 'gagalu';
+        $link = PDOUtility::get_koneksi();
+        try{
+            $sql = "UPDATE user SET role =? ,nama=?,username=?, password=? WHERE idUser =?";
+            $stmt = $link->prepare($sql);
+            $stmt->bindValue(1,$user->getRole(),PDO::PARAM_STR);
+            $stmt->bindValue(2,$user->getNama(),PDO::PARAM_STR);
+            $stmt->bindValue(3,$user->getUsername(),PDO::PARAM_STR);
+            $stmt->bindValue(4,$user->getPassword(),PDO::PARAM_STR);
+            $stmt->bindValue(5,$user->getIdUser(),PDO::PARAM_INT);
+            $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE ,'User');
+            $stmt->execute();
+            $link->commit();
+            $msg = 'suksesu';
+        }
+        catch (PDOException $err){
+            echo $err ->getMessage();
+            die();
+        }
+        return $msg;
+    }
 }
 
 ?>

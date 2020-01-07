@@ -78,6 +78,9 @@ include_once "Dao/MenuPesanDaoImpl.php";
 include_once "Controller/MenuController.php";
 include_once "Controller/UserController.php";
 include_once "Controller/KategoriController.php";
+include_once "Controller/MenuPesanController.php";
+include_once "Controller/PembayaranController.php";
+include_once "Controller/PesananController.php";
 
 include_once "function.php";
 ?>
@@ -185,6 +188,8 @@ switch ($nav)
         $userControl = new UserController();
         $userControl->olahUser();
         break;
+    case 'dapoer' : include_once 'dapoer.php';
+        break;
     case 'mnu' :
     {
         $commander = FILTER_INPUT(INPUT_GET, 'command');
@@ -200,12 +205,17 @@ switch ($nav)
     case 'user' :
         {
             $commander = FILTER_INPUT(INPUT_GET, 'command');
+            $userControl = new UserController();
             if($commander == 'edit')
             {
-                $userControl->login();
+                $userControl->ubahUser();
+            }
+            else{
+                $userControl->olahUser();
             }
         }
         break;
+
 //    case 'book' : include_once 'book-a-table.php';
 //        break;
     case 'checkout' : include_once 'checkout.php';
@@ -289,6 +299,20 @@ if(!isset($nav))
                                     <a href="index.php?menu=management">User Manage</a>
                                 </li>
                             <?php
+                            }
+                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Dapur' ){
+                                ?>
+                                <li>
+                                    <a href="index.php?menu=dapoer">Dapoer</a>
+                                </li>
+                                <?php
+                            }
+                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Waiters' ){
+                                ?>
+                                <li>
+                                    <a href="index.php?menu=dapoer">Waiters</a>
+                                </li>
+                                <?php
                             }
                             if($_SESSION['approved_user']==TRUE){
                                 ?>
@@ -893,7 +917,13 @@ if(!isset($nav))
         </div>
     </div>
 </div>
-
+<!--<script type="text/javascript" src="datatables/datatables.js"></script>-->
+<!--<script type="text/javascript" src="datatables/datatables.min.js"></script>-->
+<!---->
+<!--<script type="text/javascript">-->
+<!--    $(document).ready(function() {-->
+<!--        $('#user').DataTable();-->
+<!--    });-->
 <!-- JS Plugins -->
 <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
 <script src="assets/plugins/tether/dist/js/tether.min.js"></script>
