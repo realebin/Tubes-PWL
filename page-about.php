@@ -96,6 +96,13 @@ include_once "function.php";
                                 </li>
                                 <?php
                             }
+                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){
+                                ?>
+                                <li>
+                                    <a href="index.php?menu=dapoer">Dapoer</a>
+                                </li>
+                                <?php
+                            }
                             if($_SESSION['approved_user']==TRUE){
                                 ?>
                                 <li>
