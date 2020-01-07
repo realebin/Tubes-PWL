@@ -69,7 +69,7 @@ class UserDaoImpl
         $link = PDOUtility::get_koneksi();
         try{
             $sql = "SELECT * FROM user WHERE idUser =?";
-            $stmt = $link->prepare($sql);
+            $stmt = $link->query($sql);
             $stmt->bindValue(1,$user->getIdUser(),PDO::PARAM_INT);
             $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE ,'User');
             $stmt->execute();
