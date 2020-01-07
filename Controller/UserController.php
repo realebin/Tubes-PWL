@@ -34,6 +34,7 @@ class UserController
                 $_SESSION['username'] = $result['username'];
                 $_SESSION['userrole'] = $result['role'];
                 $_SESSION['name'] = $result['nama'];
+                $_SESSION["cart_item"] = array();
             }
             header('location:index.php');
         }
@@ -56,7 +57,7 @@ class UserController
             $user->setPassword($password);
             $user->setUsername($uname);
             $msg = $this->userDao->insertUser($user);
-            header('location:index.php?menu=user&msg='.$msg);
+            header('location:index.php?menu=management&msg='.$msg);
         }
         $hasilUser = $this->userDao->getAllUser();
         include_once 'management.php';

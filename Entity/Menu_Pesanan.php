@@ -1,8 +1,11 @@
 <?php
 class Menu_Pesanan{
+//  nyimpan id_menu
     private $menu;
     private $pesanan;
+//  nyimpan quantity
     private $qty;
+//  nyimpan harga
     private $harga_jual;
     private $status;
 

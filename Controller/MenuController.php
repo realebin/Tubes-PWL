@@ -35,9 +35,32 @@ class MenuController{
 
         ///////////////////////buat cart///////////////////////
         $btnAddCart = FILTER_INPUT(INPUT_POST, 'btnAddCart');
+//       Array Penyimapan Semua Pesanan
         if($btnAddCart)
         {
-            $cart=array();
+//            ToDo: Buat Filter Input Post untuk id_makanan,harga,quantity
+            $id_makanan = FILTER_INPUT(INPUT_POST,'id_makanan');
+            $nama_makanan = FILTER_INPUT(INPUT_POST,'nama_makanan');
+            $harga = FILTER_INPUT(INPUT_POST,'harga');
+            $quantity = FILTER_INPUT(INPUT_POST,'quantity');
+
+//            ToDo: Buat Objek Menu set data objek sama Filter Input Diatas
+//            $menu_pesanan = new Menu_Pesanan();
+//            $menu_pesanan->setMenu($id_makanan);
+//            $menu_pesanan->setHargaJual($harga);
+//            $menu_pesanan->setQty($quantity);
+
+//            Todo: Masukkin Objek Kedalam Array
+//            $pesanan=array($menu_pesanan);
+            $pesanan=array("id_makanan"=>$id_makanan, "nama_makanan"=>$nama_makanan,"quantity"=>$quantity,"harga"=>$harga);
+//            Todo: Masukkin pesanan yang diatas kedalam array penampung pesanan
+            array_push($_SESSION['cart_item'],$pesanan);
+//            Kalau ini untuk ngeprint isi si arayy nya abaikan terlebih dahulu.
+//            Dan caranya harus di rubah sedikit
+//            foreach ($cart as $pilihan) {
+//                print_r(" Makanan: ".$pilihan["id_makanan"]);
+//                print_r(" Banyak: ".$pilihan["quantity"]);
+//            }
 
         }
 
