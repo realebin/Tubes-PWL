@@ -37,18 +37,8 @@ class MenuController{
         $btnAddCart = FILTER_INPUT(INPUT_POST, 'btnAddCart');
         if($btnAddCart)
         {
-            $name = FILTER_INPUT(INPUT_POST, 'menunama');
-            $harga = FILTER_INPUT(INPUT_POST, 'harga');
-            $status = FILTER_INPUT(INPUT_POST, 'status');
-            $kategori = FILTER_INPUT(INPUT_POST, 'kategori');
-            $menu = new Menu();
-            $menu->setNama($name);
-            $menu->setKategori($kategori);
-            $menu->setHarga($harga);
-            $menu->setStatus($status);
+            $cart=array();
 
-            $msg = $this->menuDao->insertMenu($menu);
-            header('location:index.php?menu=mnu&msg='.$msg);
         }
 
 

@@ -447,7 +447,9 @@ include_once "function.php";
                                                 <span class="text-md mr-4"> Rp.<?php echo $data->getHarga(); ?></span>
 
                                                 <!-------------------------------Button Cart--------------------------->
-                                                <form>
+                                                <form type="">
+                                                    <input type="hidden" name="id_makanan" value="<?php echo $data->getIdMenu(); ?>" />
+                                                    <input type="hidden" name="harga" value="<?php echo $data->getIdMenu(); ?>" />
                                                 <input type="submit" name="btnAddCart" value="Add to cart" class="btn btn-outline-secondary btn-sm"/>
                                                 <!-------------------------------Quantity--------------------------->
                                                 <div class="input-group" style="margin-right: 0px;margin-left: auto;">
