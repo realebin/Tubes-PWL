@@ -934,13 +934,13 @@ if(!isset($nav))
         </div>
     </div>
 </div>
-<script type="text/javascript" src="datatables/datatables.js"></script>
-<script type="text/javascript" src="datatables/datatables.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#user').DataTable();
-    });
+<!--<script type="text/javascript" src="datatables/datatables.js"></script>-->
+<!--<script type="text/javascript" src="datatables/datatables.min.js"></script>-->
+<!---->
+<!--<script type="text/javascript">-->
+<!--    $(document).ready(function() {-->
+<!--        $('#user').DataTable();-->
+<!--    });-->
 <!-- JS Plugins -->
 <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
 <script src="assets/plugins/tether/dist/js/tether.min.js"></script>
