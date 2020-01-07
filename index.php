@@ -9,14 +9,6 @@ if (!isset($_SESSION['approved_user'])) {
 <html lang="en">
 <head>
 
-    <script type="text/javascript" src="jquery-3.4.1.js"></script>
-    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="datatables/datatables.css"/>
-    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
-
-    <script type="text/javascript" src="datatables/datatables.js"></script>
-    <script type="text/javascript" src="datatables/datatables.min.js"></script>
 
 
     <!-- Meta -->
@@ -187,7 +179,9 @@ switch ($nav)
         break;
     case 'about' : include_once 'page-about.php';
         break;
-    case 'management' : include_once 'management.php';
+    case 'management' :
+        $userControl = new UserController();
+        $userControl->olahUser();
         break;
     case 'mnu' :
     {
@@ -940,7 +934,6 @@ if(!isset($nav))
 
 <!-- JS Core -->
 <script src="assets/js/core.js"></script>
-
 
 </body>
 

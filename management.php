@@ -29,6 +29,12 @@
 <!-- CSS Theme -->
 <link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
 
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="datatables/datatables.css"/>
+<link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+
 </head>
 
 <body>
@@ -160,7 +166,7 @@ include_once "function.php";
         ?>
 
         <fieldset>
-            <legend>Insert User</legend>
+            <legend>Manage User</legend>
             <form method="POST" action="" enctype="multipart/form-data">
                 <div class="utility-box-content">
                     <div class="form-group">
@@ -237,27 +243,22 @@ include_once "function.php";
         </tr>
         </thead>
         <tbody>
-<!--        --><?php
-//        while ($data = $hasilUser->fetch()) {
-////            ?>
-<!--            <tr>-->
-<!--                <td>--><?php ////echo $data->getIdUser(); ?><!--</td>-->
-<!--                <td>--><?php ////echo $data->getRole(); ?><!--</td>-->
-<!--                <td>--><?php ////echo $data->getNama(); ?><!--</td>-->
-<!--                <td>--><?php ////echo $data->getUsername(); ?><!--</td>-->
-<!--                <td>--><?php ////echo $data->getPassword(); ?><!--</td>-->
-<!--                    <td><input type="button" onclick="editUser(--><?php ////echo $data->getIdUser(); ?><!--//)" value="Edit">-->
-<!--                    </td>-->
-<!--           </tr>-->
-<!--       --><?php //}?>
+        <?php
+        /* @var $data as User*/
+        foreach ($hasilUser as $data) {
+            echo '<tr>';
+                echo '<td>'.$data->getIdUser().'</td>';
+                echo '<td>'.$data->getRole().'</td>';
+                echo '<td>'.$data->getNama().'</td>';
+                echo '<td>'.$data->getUsername().'</td>';
+                echo '<td>'.$data->getPassword().'</td>';
+                echo '<td><input type="button" onclick="editUser('.$data->getIdUser().')" value="Edit"></td>';
+           echo '</tr>';
+       }?>
 
         </tbody>
     </table>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#user').DataTable();
-        });
-    </script>
+
 
         <!-- Footer -->
         <footer id="footer" class="bg-dark dark">
@@ -438,5 +439,13 @@ include_once "function.php";
 <!-- JS Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 
+<script type="text/javascript" src="datatables/datatables.js"></script>
+<script type="text/javascript" src="datatables/datatables.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#user').DataTable();
+    });
+</script>
 </body>
 </html>

@@ -58,9 +58,8 @@ class UserController
             $msg = $this->userDao->insertUser($user);
             header('location:index.php?menu=user&msg='.$msg);
         }
-
-        require_once 'management.php';
         $hasilUser = $this->userDao->getAllUser();
+        include_once 'management.php';
     }
 }
 ?>
