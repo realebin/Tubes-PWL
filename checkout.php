@@ -225,18 +225,6 @@
                                     <label>Table Number:</label>
                                     <input type="text" class="form-control">
                                 </div>
-                                <div class="form-group col-sm-6">
-                                    <label>Name:</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <label>Phone number:</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <label>E-mail address:</label>
-                                    <input type="email" class="form-control">
-                                </div>
                             </div>
 
 <!--                            <h4 class="border-bottom pb-4"><i class="ti ti-package mr-3 text-primary"></i>Delivery</h4>-->
@@ -259,7 +247,7 @@
                                     <label class="custom-control custom-radio">
                                         <input type="radio" name="payment_type" class="custom-control-input">
                                         <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">PayPal</span>
+                                        <span class="custom-control-description">Debit Card</span>
                                     </label>
                                 </div>
                                 <div class="col-md-4 col-sm-6 form-group">
