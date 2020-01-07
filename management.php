@@ -252,7 +252,7 @@ include_once "function.php";
                 echo '<td>'.$data->getNama().'</td>';
                 echo '<td>'.$data->getUsername().'</td>';
                 echo '<td>'.$data->getPassword().'</td>';
-                echo '<td><input type="button" name="btnUpdateUser" onclick="editUser('.$data->getIdUser().')" value="Edit"></td>';
+                echo '<td><input type="button" onclick="editUser('.$data->getIdUser().')" value="Edit"></td>';
            echo '</tr>';
        }?>
 

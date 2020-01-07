@@ -77,6 +77,9 @@ include_once "Dao/MenuPesanDaoImpl.php";
 include_once "Controller/MenuController.php";
 include_once "Controller/UserController.php";
 include_once "Controller/KategoriController.php";
+include_once "Controller/MenuPesanController.php";
+include_once "Controller/PembayaranController.php";
+include_once "Controller/PesananController.php";
 
 include_once "function.php";
 ?>
@@ -198,9 +201,13 @@ switch ($nav)
     case 'user' :
         {
             $commander = FILTER_INPUT(INPUT_GET, 'command');
+            $userControl = new UserController();
             if($commander == 'edit')
             {
-                $userControl->login();
+                $userControl->ubahUser();
+            }
+            else{
+                $userControl->olahUser();
             }
         }
         break;
@@ -917,7 +924,13 @@ if(!isset($nav))
         </div>
     </div>
 </div>
+<script type="text/javascript" src="datatables/datatables.js"></script>
+<script type="text/javascript" src="datatables/datatables.min.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#user').DataTable();
+    });
 <!-- JS Plugins -->
 <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
 <script src="assets/plugins/tether/dist/js/tether.min.js"></script>
