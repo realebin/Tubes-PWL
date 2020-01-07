@@ -27,7 +27,7 @@ class UserDaoImpl
         $link = PDOUtility::get_koneksi();
         try{
             //query
-            $sql = "SELECT * FROM user WHERE role =Dapur AND role=Kasir AND role=Waiters ORDER BY idUser ASC ";
+            $sql = "SELECT * FROM user WHERE role = 'Dapur' OR role='Kasir' OR role='Waiters' ORDER BY idUser ASC ";
             //prepare
             $stmt = $link -> prepare($sql);
             $stmt->setFetchMode(PDO::FETCH_CLASS |

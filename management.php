@@ -29,6 +29,12 @@
 <!-- CSS Theme -->
 <link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
 
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="datatables/datatables.css"/>
+<link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+
 </head>
 
 <body>
@@ -160,45 +166,42 @@ include_once "function.php";
         ?>
 
         <fieldset>
-            <legend>Insert User</legend>
+            <legend>Manage User</legend>
             <form method="POST" action="" enctype="multipart/form-data">
-                <table>
-                    <tr>
-                        <td>Role</td>
-                        <td>:</td>
-                        <td><input type="text" name="role" placeholder="Waiter, Cashier, Kitchen"/></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Nama</td>
-                        <td>:</td>
-                        <td><input type="text" name="nama" placeholder="Name"/></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Username</td>
-                        <td>:</td>
-                        <td><input type="text" name="uname" placeholder="Username"/></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td>:</td>
-                        <td><input type="text" name="pwd" placeholder="Password"/></td>
-                    </tr>
-<!--                    <tr>-->
-<!--                        <td>Retype Password</td>-->
-<!--                        <td>:</td>-->
-<!--                        <td><input type="text" name="rpwd" placeholder=" Re-type Password"/></td>-->
-<!--                    </tr>-->
+                <div class="utility-box-content">
+                    <div class="form-group">
+                        <label>Role :</label>
+                        <input type="text" name="role" class="form-control" placeholder="Waiter, Cashier, Kitchen"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Nama :</label>
+                        <input type="text" name="nama" class="form-control" placeholder="Name"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Username :</label>
+                        <td><input type="text" name="uname" class="form-control" placeholder="Username"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Password :</label>
+                        <input type="text" name="pwd" class="form-control" placeholder="Password"/>
+                    </div>
+<!--                    <div class="form-group">-->
+<!--                        <label>Retype Password :</label>-->
+<!--                        <input type="text" name="rpwd" class="form-control" placeholder=" Re-type Password"/>-->
+<!--                    </div>-->
 
                     <?php
                     if($_SESSION['approved_user'] == TRUE) {
                         ?>
-                        <tr>
-                            <td colspan="2"><input type="submit" value="Submit" name="btnSubmitUser"/></td>
-                        </tr>
+
+                        <div class="form-group">
+                            <input type="submit" class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" value="Submit" name="btnSubmitUser"/>
+                        </div>
                     <?php } ?>
-                </table>
+
+
+
+                </div>
             </form>
             <?php
             $msg = FILTER_INPUT(INPUT_GET, 'msg');
@@ -240,27 +243,22 @@ include_once "function.php";
         </tr>
         </thead>
         <tbody>
-<!--        --><?php
-//        while ($data = $hasilUser->fetch()) {
-////            ?>
-<!--            <tr>-->
-<!--                <td>--><?php ////echo $data->getIdUser(); ?><!--</td>-->
-<!--                <td>--><?php ////echo $data->getRole(); ?><!--</td>-->
-<!--                <td>--><?php ////echo $data->getNama(); ?><!--</td>-->
-<!--                <td>--><?php ////echo $data->getUsername(); ?><!--</td>-->
-<!--                <td>--><?php ////echo $data->getPassword(); ?><!--</td>-->
-<!--                    <td><input type="button" onclick="editUser(--><?php ////echo $data->getIdUser(); ?><!--//)" value="Edit">-->
-<!--                    </td>-->
-<!--           </tr>-->
-<!--       --><?php //}?>
+        <?php
+        /* @var $data as User*/
+        foreach ($hasilUser as $data) {
+            echo '<tr>';
+                echo '<td>'.$data->getIdUser().'</td>';
+                echo '<td>'.$data->getRole().'</td>';
+                echo '<td>'.$data->getNama().'</td>';
+                echo '<td>'.$data->getUsername().'</td>';
+                echo '<td>'.$data->getPassword().'</td>';
+                echo '<td><input type="button" onclick="editUser('.$data->getIdUser().')" value="Edit"></td>';
+           echo '</tr>';
+       }?>
 
         </tbody>
     </table>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#user').DataTable();
-        });
-    </script>
+
 
         <!-- Footer -->
         <footer id="footer" class="bg-dark dark">
@@ -441,5 +439,13 @@ include_once "function.php";
 <!-- JS Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 
+<script type="text/javascript" src="datatables/datatables.js"></script>
+<script type="text/javascript" src="datatables/datatables.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#user').DataTable();
+    });
+</script>
 </body>
 </html>

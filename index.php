@@ -9,14 +9,6 @@ if (!isset($_SESSION['approved_user'])) {
 <html lang="en">
 <head>
 
-    <script type="text/javascript" src="jquery-3.4.1.js"></script>
-    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="datatables/datatables.css"/>
-    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
-
-    <script type="text/javascript" src="datatables/datatables.js"></script>
-    <script type="text/javascript" src="datatables/datatables.min.js"></script>
 
 
     <!-- Meta -->
@@ -187,7 +179,9 @@ switch ($nav)
         break;
     case 'about' : include_once 'page-about.php';
         break;
-    case 'management' : include_once 'management.php';
+    case 'management' :
+        $userControl = new UserController();
+        $userControl->olahUser();
         break;
     case 'mnu' :
     {
@@ -613,7 +607,7 @@ if(!isset($nav))
                 <div class="col-lg-8 push-lg-2">
                     <h2 class="mb-3">Check our promo video!</h2>
                     <h5 class="text-muted">Book a table even right now or make an online order!</h5>
-                    <button class="btn-play" data-toggle="video-modal" data-target="#modalVideo" data-video="https://youtu.be/F32P-LVXonM"></button>
+                    <button class="btn-play" data-toggle="video-modal" data-target="#modalVideo" data-video="https://www.youtube.com/embed/F32P-LVXonM"></button>
                 </div>
             </div>
 
@@ -940,7 +934,6 @@ if(!isset($nav))
 
 <!-- JS Core -->
 <script src="assets/js/core.js"></script>
-
 
 </body>
 
