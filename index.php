@@ -298,10 +298,17 @@ if(!isset($nav))
                                 </li>
                             <?php
                             }
-                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){
+                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Dapur' ){
                                 ?>
                                 <li>
                                     <a href="index.php?menu=dapoer">Dapoer</a>
+                                </li>
+                                <?php
+                            }
+                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Waiters' ){
+                                ?>
+                                <li>
+                                    <a href="index.php?menu=dapoer">Waiters</a>
                                 </li>
                                 <?php
                             }

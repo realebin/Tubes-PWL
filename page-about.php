@@ -96,10 +96,17 @@ include_once "function.php";
                                 </li>
                                 <?php
                             }
-                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){
+                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Dapur'){
                                 ?>
                                 <li>
                                     <a href="index.php?menu=dapoer">Dapoer</a>
+                                </li>
+                                <?php
+                            }
+                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Waiters' ){
+                                ?>
+                                <li>
+                                    <a href="index.php?menu=dapoer">Waiters</a>
                                 </li>
                                 <?php
                             }
@@ -209,7 +216,7 @@ include_once "function.php";
                 <div class="col-lg-8 push-lg-2">
                     <h2 class="mb-3">Would you like to visit Us?</h2>
                     <h5 class="text-muted">Book a table even right now or make an online order!</h5>
-                    <a href="menu-list-navigation.php" class="btn btn-primary"><span>Order Online</span></a>
+                    <a href="index.php?menu=order" class="btn btn-primary"><span>Order Online</span></a>
 <!--                    <a href="book-a-table.php" class="btn btn-outline-primary"><span>Book a table</span></a>-->
                 </div>
             </div>
