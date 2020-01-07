@@ -183,6 +183,8 @@ switch ($nav)
         $userControl = new UserController();
         $userControl->olahUser();
         break;
+    case 'dapoer' : include_once 'dapoer.php';
+        break;
     case 'mnu' :
     {
         $commander = FILTER_INPUT(INPUT_GET, 'command');
@@ -204,6 +206,7 @@ switch ($nav)
             }
         }
         break;
+
 //    case 'book' : include_once 'book-a-table.php';
 //        break;
     case 'checkout' : include_once 'checkout.php';
@@ -287,6 +290,13 @@ if(!isset($nav))
                                     <a href="index.php?menu=management">User Manage</a>
                                 </li>
                             <?php
+                            }
+                            if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){
+                                ?>
+                                <li>
+                                    <a href="index.php?menu=dapoer">Dapoer</a>
+                                </li>
+                                <?php
                             }
                             if($_SESSION['approved_user']==TRUE){
                                 ?>

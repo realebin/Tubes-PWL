@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
 
-<!-- Meta -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- Title -->
-<title>Mougs - ★★★★☆ Restaurant</title>
+    <!-- Title -->
+    <title>Mougs - ★★★★☆ Restaurant</title>
 
-<!-- Favicons -->
-<link rel="shortcut icon" href="assets/img/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
 
-<!-- CSS Plugins -->
-<link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
-<link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
-<link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
 
-<!-- CSS Icons -->
-<link rel="stylesheet" href="assets/css/themify-icons.css" />
-<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <!-- CSS Icons -->
+    <link rel="stylesheet" href="assets/css/themify-icons.css" />
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
 
-<!-- CSS Theme -->
-<link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
+    <!-- CSS Theme -->
+    <link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
 
 </head>
 
@@ -54,7 +54,6 @@ include_once "Controller/UserController.php";
 
 include_once "function.php";
 ?>
-
 
 <!-- Body Wrapper -->
 <div id="body-wrapper" class="animsition">
@@ -123,9 +122,7 @@ include_once "function.php";
                             ?>
                         </ul>
                     </nav>
-                    <div class="module left">
-                        <a href="index.php?menu=order" class="btn btn-outline-secondary"><span>Order</span></a>
-                    </div>
+
                 </div>
                 <div class="col-md-2">
                     <a href="#" class="module module-cart right" data-toggle="panel-cart">
@@ -147,7 +144,7 @@ include_once "function.php";
 
         <div class="module module-nav-toggle">
             <a href="#" id="nav-toggle" data-toggle="panel-mobile"><span></span><span></span><span></span><span></span></a>
-        </div>    
+        </div>
 
         <div class="module module-logo">
             <a href="index.php">
@@ -167,48 +164,105 @@ include_once "function.php";
     <div id="content">
 
         <!-- Page Title -->
-        <div class="page-title bg-light">
+        <div class="page-title border-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 push-lg-4">
-                        <h1 class="mb-0">Contact Us</h1>
-                        <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
+                    <div class="col-lg-7 push-lg-5">
+                        <h1 class="mb-0">Dapoer</h1>
+                        <h4 class="text-muted mb-0">Some condition informations about our dapoer</h4>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Section -->
-        <section class="section">
-            
+        <section class="section section-bg-edge">
+
+            <div class="image left bottom col-md-7">
+                <div class="bg-image"><img src="assets/img/photos/some.png" alt=""></div>
+            </div>
+
+                <title>Caffe Tables</title>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <body>
+            <center>
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 push-lg-1 col-md-6">
-                        <img src="assets/img/logoMougs.png" alt="" class="mb-5" width="200">
-                        <h4 class="mb-0">Mougs Restaurant</h4>
-                        <span class="text-muted">Komp. Setra Duta 10, Indonesia</span>
-                        <hr class="hr-md">
-                        <div class="row">
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                                <h6 class="mb-1 text-muted">Phone:</h6>
-                                +622 85318078808
-                            </div>
-                            <div class="col-sm-6">
-                                <h6 class="mb-1 text-muted">E-mail:</h6>
-                                <a href="#">mougslovers@gmail.com</a>
-                            </div>
-                        </div>
-<!--                        <hr class="hr-md">-->
-<!--                        <h6 class="mb-3 text-muted">Follow Us!</h6>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
-                    </div>
-                    <div class="col-lg-5 push-lg-2 col-md-6">
-                        <div id="google-map" class="h-500 shadow"></div>
-                    </div>
+                <h2>Caffe Tables</h2>
+                <p>Choose The Tables :</p>
+                <form>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 01
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 02
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 03
+                    </label>
+                    <br><br>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 04
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 05
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 06
+                    </label>
+                    <br><br>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 07
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 08
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 09
+                    </label>
+                    <br><br>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 10
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 11
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 12
+                    </label>
+                </form>
+            </div>
+            </center>s
+<br><br>
+            <?php
+            if($_SESSION['approved_user'] == TRUE) {
+                ?>
+
+                <div class="form-group">
+                    <input type="submit" class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" value="Submit" name="btnSubmitUser"/>
+                </div>
+            <?php } ?>
+            </body>
+
+
+
+        </section>
+
+        <!-- Section -->
+        <section class="section section-lg dark bg-dark">
+
+            <!-- BG Image -->
+            <div class="bg-image bg-parallax"><img src="assets/img/photos/bg-croissant.jpg" alt=""></div>
+
+            <div class="container text-center">
+                <div class="col-lg-8 push-lg-2">
+                    <h2 class="mb-3">Would you like to visit Us?</h2>
+                    <h5 class="text-muted">Book a table even right now or make an online order!</h5>
+                    <a href="menu-list-navigation.php" class="btn btn-primary"><span>Order Online</span></a>
+                    <!--                    <a href="book-a-table.php" class="btn btn-outline-primary"><span>Book a table</span></a>-->
                 </div>
             </div>
 
@@ -216,7 +270,7 @@ include_once "function.php";
 
         <!-- Footer -->
         <footer id="footer" class="bg-dark dark">
-            
+
             <div class="container">
                 <!-- Footer 1st Row -->
                 <div class="footer-first-row row">
@@ -254,12 +308,12 @@ include_once "function.php";
                                 </span>
                             </div>
                         </form>
-<!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
+                        <!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
                     </div>
                 </div>
                 <!-- Footer 2nd Row -->
@@ -356,14 +410,14 @@ include_once "function.php";
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>
         <nav class="module module-navigation"></nav>
-<!--        <div class="module module-social">-->
-<!--            <h6 class="text-sm mb-3">Follow Us!</h6>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
-<!--        </div>-->
+        <!--        <div class="module module-social">-->
+        <!--            <h6 class="text-sm mb-3">Follow Us!</h6>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
+        <!--        </div>-->
     </nav>
 
     <!-- Body Overlay -->
@@ -372,7 +426,7 @@ include_once "function.php";
 </div>
 
 <!-- Modal / Product -->
-<!--di index-->
+<!-- diindex -->
 
 <!-- JS Plugins -->
 <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
@@ -390,9 +444,6 @@ include_once "function.php";
 
 <!-- JS Core -->
 <script src="assets/js/core.js"></script>
-
-<!-- JS Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js"></script>
 
 </body>
 
