@@ -61,5 +61,36 @@ class UserController
         $hasilUser = $this->userDao->getAllUser();
         include_once 'management.php';
     }
+    public function ubahUser(){
+        /////////////////ini untuk insert////////////////
+        $id = FILTER_INPUT(INPUT_GET,'idUser');
+        if(isset($id))
+        {
+            $user = new User();
+            $user->setIdUser($id);
+
+            $data = $this->userDao->getOneUser($user);
+            $result = $data->fetch();;
+            $btnUpdateUser = FILTER_INPUT(INPUT_POST,'btnUpdateUser');
+            if($btnUpdateUser){
+                $role = FILTER_INPUT(INPUT_POST, 'role');
+                $name = FILTER_INPUT(INPUT_POST, 'nama');
+                $uname = FILTER_INPUT(INPUT_POST, 'uname');
+                $password = FILTER_INPUT(INPUT_POST, 'pwd');
+
+                $user->setNama($name);
+                $user->setRole($role);
+                $user->setPassword($password);
+                $user->setUsername($uname);
+
+                $msg = $this->userDao->updateUser($user);
+                header('location:index.php?menu=user&msg='.$msg);
+
+            }
+
+        }
+
+        include_once 'management.php';
+    }
 }
 ?>
