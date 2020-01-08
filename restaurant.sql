@@ -160,14 +160,14 @@ CREATE TABLE `user` (
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`idUser`, `role`, `nama`, `username`, `password`) VALUES
-(1, 'Admin', 'Febrina', 'AdmFeb', '202cb962ac59075b964b07152d234b70'),
-(2, 'Admin', 'Levina', 'AdmLev', '202cb962ac59075b964b07152d234b70'),
-(3, 'Admin', 'Tiaz', 'AdmTia', '202cb962ac59075b964b07152d234b70'),
-(4, 'Dapur', 'Febrina Anastasha', 'Ubin', '202cb962ac59075b964b07152d234b70'),
-(5, 'Kasir', 'Levina Anastasia', 'Lele', '202cb962ac59075b964b07152d234b70'),
-(6, 'Waiters', 'Tiaz Rizqy', 'Manda', '2fc04d527399d7eb418d276092017f84'),
-(8, 'Guest', 'laperaa', 'aaa', '202cb962ac59075b964b07152d234b70');
+INSERT INTO `user` ( `role`, `nama`, `username`, `password`) VALUES
+( 'Admin', 'Febrina', 'AdmFeb', '202cb962ac59075b964b07152d234b70'),
+( 'Admin', 'Levina', 'AdmLev', '202cb962ac59075b964b07152d234b70'),
+( 'Admin', 'Tiaz', 'AdmTia', '202cb962ac59075b964b07152d234b70'),
+( 'Dapur', 'Febrina Anastasha', 'Ubin', '202cb962ac59075b964b07152d234b70'),
+( 'Kasir', 'Levina Anastasia', 'Lele', '202cb962ac59075b964b07152d234b70'),
+( 'Waiters', 'Tiaz Rizqy', 'Manda', '2fc04d527399d7eb418d276092017f84'),
+( 'Guest', 'laperaa', 'aaa', '202cb962ac59075b964b07152d234b70');
 
 --
 -- Indexes for dumped tables
