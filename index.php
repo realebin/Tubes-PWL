@@ -93,42 +93,6 @@ $link = PDOUtility::get_koneksi();
 if(!empty($_GET["action"])) {
     switch($_GET["action"]) {
         case "add":
-//            if(!empty($_POST["quantity"])) {
-//                ///ini gmn caranya???
-//                /// terus kalau <form method="post" action="index.php?action=add&code=<?php echo $product_array[$key]["code"]; ?siku tutup ">
-//                ///  kalo posisi ga diindex gimana?
-////          <div class="product-item">
-/*			<form method="post" action="index.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">*/
-/*			<div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>*/
-////			<div class="product-tile-footer">
-////			<div class="product-title"><?php echo $product_array[$key]["name"]; ?siku tutup</div>
-////          <div class="product-price"><?php //echo "$".$product_array[$key]["price"]; ?siku tutup </div>
-////          <div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" /><input type="submit" value="Add to Cart" class="btnAddAction" /></div>
-////          </div>
-////          </form>
-////          </div>
-////                $productByCode =$menuDao->getOneMenu($menu->setIdMenu($_GET["code"]));
-//////                $productByCode = PDOUtility::->runQuery("SELECT * FROM tblproduct WHERE code='" . $_GET["code"] . "'");
-////                $itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"], 'image'=>$productByCode[0]["image"]));
-////
-////                if(!empty($_SESSION["cart_item"])) {
-////                    if(in_array($productByCode[0]["code"],array_keys($_SESSION["cart_item"]))) {
-////                        foreach($_SESSION["cart_item"] as $k => $v) {
-////                            if($productByCode[0]["code"] == $k) {
-////                                if(empty($_SESSION["cart_item"][$k]["quantity"])) {
-////                                    $_SESSION["cart_item"][$k]["quantity"] = 0;
-////                                }
-////
-////                                $_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
-////                            }
-////                        }
-////                    } else {
-////                        $_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
-////                    }
-////                } else {
-////                    $_SESSION["cart_item"] = $itemArray;
-////                }
-//            }
             break;
 
         case "remove":
@@ -216,20 +180,8 @@ switch ($nav)
         }
         break;
 
-//    case 'book' : include_once 'book-a-table.php';
-//        break;
     case 'checkout' : include_once 'checkout.php';
         break;
-//    case 'service' : include_once 'page-services.php';
-//        break;
-//    case 'gallery' : include_once 'page-gallery.php';
-//        break;
-//    case 'review' : include_once 'page-reviews.php';
-//        break;
-//    case 'faq' : include_once 'page-faq.php';
-//        break;
-//    case 'offers' : include_once 'page-offers.php';
-//        break;
     case 'contact' : include_once 'page-contact.php';
         break;
     case 'order' :
@@ -287,13 +239,10 @@ if(!isset($nav))
                                 <a href="index.php?menu=order">Menu</a>
 
                             </li>
-<!--                            <li><a href="page-offers.php">Offers</a></li>-->
                             <li><a href="index.php?menu=contact">Contact</a></li>
-<!--                            <li>-->
-<!--                                <a href="index.php?menu=book">Book</a>-->
-<!--                            </li>-->
                             <?php
                             if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){
+
                                 ?>
                                 <li>
                                     <a href="index.php?menu=management">User Manage</a>
@@ -355,13 +304,6 @@ if(!isset($nav))
                         </span>
                         <span class="cart-value">$32.98</span>
                     </a>
-
-<!--                    <a href="#" class="module module-cart right" data-toggle="panel-cart1">-->
-<!--                        <span class="login-icon">-->
-<!--                            <i class="ti ti-shift-right"></i>-->
-<!--                            <span>&#160;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
-<!--                        </span>-->
-<!--                    </a>-->
 
                 </div>
 
@@ -680,12 +622,6 @@ if(!isset($nav))
                                 </span>
                             </div>
                         </form>
-<!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
                     </div>
                 </div>
                 <!-- Footer 2nd Row -->
@@ -779,134 +715,6 @@ if(!isset($nav))
 
 </div>
 
-<!-- si pensil edit di cart -->
-<!-- Modal / Product -->
-<!--<div class="modal fade" id="productModal" role="dialog">-->
-<!--    <div class="modal-dialog" role="document">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-header modal-header-lg dark bg-dark">-->
-<!--                <div class="bg-image"><img src="assets/img/photos/modal-add.jpg" alt=""></div>-->
-<!--                <h4 class="modal-title">Specify your dish</h4>-->
-<!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>-->
-<!--            </div>-->
-<!--            <div class="modal-product-details">-->
-<!--                <div class="row align-items-center">-->
-<!--                    <div class="col-9">-->
-<!--                        <h6 class="mb-0">Boscaiola Pasta</h6>-->
-<!--                        <span class="text-muted">Pasta, Cheese, Tomatoes, Olives</span>-->
-<!--                    </div>-->
-<!--                    <div class="col-3 text-lg text-right">$9.00</div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="modal-body panel-details-container">-->
-                <!-- Panel Details / Size -->
-<!--                <div class="panel-details">-->
-<!--                    <h5 class="panel-details-title">-->
-<!--                        <label class="custom-control custom-radio">-->
-<!--                            <input name="radio_title_size" type="radio" class="custom-control-input">-->
-<!--                            <span class="custom-control-indicator"></span>-->
-<!--                        </label>-->
-<!--                        <a href="#panelDetailsSize" data-toggle="collapse">Size</a>-->
-<!--                    </h5>-->
-<!--                    <div id="panelDetailsSize" class="collapse show">-->
-<!--                        <div class="panel-details-content">-->
-<!--                            <div class="form-group">-->
-<!--                                <label class="custom-control custom-radio">-->
-<!--                                    <input name="radio_size" type="radio" class="custom-control-input" checked>-->
-<!--                                    <span class="custom-control-indicator"></span>-->
-<!--                                    <span class="custom-control-description">Small - 100g ($9.99)</span>-->
-<!--                                </label>-->
-<!--                            </div>-->
-<!--                            <div class="form-group">-->
-<!--                                <label class="custom-control custom-radio">-->
-<!--                                    <input name="radio_size" type="radio" class="custom-control-input">-->
-<!--                                    <span class="custom-control-indicator"></span>-->
-<!--                                    <span class="custom-control-description">Medium - 200g ($14.99)</span>-->
-<!--                                </label>-->
-<!--                            </div>-->
-<!--                            <div class="form-group">-->
-<!--                                <label class="custom-control custom-radio">-->
-<!--                                    <input name="radio_size" type="radio" class="custom-control-input">-->
-<!--                                    <span class="custom-control-indicator"></span>-->
-<!--                                    <span class="custom-control-description">Large - 350g ($21.99)</span>-->
-<!--                                </label>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-                <!-- Panel Details / Additions -->
-<!--                <div class="panel-details">-->
-<!--                    <h5 class="panel-details-title">-->
-<!--                        <label class="custom-control custom-radio">-->
-<!--                            <input name="radio_title_additions" type="radio" class="custom-control-input">-->
-<!--                            <span class="custom-control-indicator"></span>-->
-<!--                        </label>-->
-<!--                        <a href="#panelDetailsAdditions" data-toggle="collapse">Additions</a>-->
-<!--                    </h5>-->
-<!--                    <div id="panelDetailsAdditions" class="collapse">-->
-<!--                        <div class="panel-details-content">-->
-<!--                            <div class="row">-->
-<!--                                <div class="col-sm-6">-->
-<!--                                    <div class="form-group">-->
-<!--                                        <label class="custom-control custom-checkbox">-->
-<!--                                            <input type="checkbox" class="custom-control-input">-->
-<!--                                            <span class="custom-control-indicator"></span>-->
-<!--                                            <span class="custom-control-description">Tomato ($1.29)</span>-->
-<!--                                        </label>-->
-<!--                                    </div>-->
-<!--                                    <div class="form-group">-->
-<!--                                        <label class="custom-control custom-checkbox">-->
-<!--                                            <input type="checkbox" class="custom-control-input">-->
-<!--                                            <span class="custom-control-indicator"></span>-->
-<!--                                            <span class="custom-control-description">Ham ($1.29)</span>-->
-<!--                                        </label>-->
-<!--                                    </div>-->
-<!--                                    <div class="form-group">-->
-<!--                                        <label class="custom-control custom-checkbox">-->
-<!--                                            <input type="checkbox" class="custom-control-input">-->
-<!--                                            <span class="custom-control-indicator"></span>-->
-<!--                                            <span class="custom-control-description">Chicken ($1.29)</span>-->
-<!--                                        </label>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="col-sm-6">-->
-<!--                                    <div class="form-group">-->
-<!--                                        <label class="custom-control custom-checkbox">-->
-<!--                                            <input type="checkbox" class="custom-control-input">-->
-<!--                                            <span class="custom-control-indicator"></span>-->
-<!--                                            <span class="custom-control-description">Cheese($1.29)</span>-->
-<!--                                        </label>-->
-<!--                                    </div>-->
-<!--                                    <div class="form-group">-->
-<!--                                        <label class="custom-control custom-checkbox">-->
-<!--                                            <input type="checkbox" class="custom-control-input">-->
-<!--                                            <span class="custom-control-indicator"></span>-->
-<!--                                            <span class="custom-control-description">Bacon ($1.29)</span>-->
-<!--                                        </label>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-                <!-- Panel Details / Other -->
-<!--                <div class="panel-details">-->
-<!--                    <h5 class="panel-details-title">-->
-<!--                        <label class="custom-control custom-radio">-->
-<!--                            <input name="radio_title_other" type="radio" class="custom-control-input">-->
-<!--                            <span class="custom-control-indicator"></span>-->
-<!--                        </label>-->
-<!--                        <a href="#panelDetailsOther" data-toggle="collapse">Other</a>-->
-<!--                    </h5>-->
-<!--                    <div id="panelDetailsOther" class="collapse">-->
-<!--                        <textarea cols="30" rows="4" class="form-control" placeholder="Put this any other informations..."></textarea>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <button type="button" class="modal-btn btn btn-secondary btn-block btn-lg" data-dismiss="modal"><span>Add to Cart</span></button>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
 
 <!-- Video Modal / Demo -->
 <div class="modal modal-video fade" id="modalVideo" role="dialog">
@@ -917,13 +725,7 @@ if(!isset($nav))
         </div>
     </div>
 </div>
-<!--<script type="text/javascript" src="datatables/datatables.js"></script>-->
-<!--<script type="text/javascript" src="datatables/datatables.min.js"></script>-->
-<!---->
-<!--<script type="text/javascript">-->
-<!--    $(document).ready(function() {-->
-<!--        $('#user').DataTable();-->
-<!--    });-->
+
 <!-- JS Plugins -->
 <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
 <script src="assets/plugins/tether/dist/js/tether.min.js"></script>

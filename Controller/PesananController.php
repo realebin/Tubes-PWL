@@ -36,7 +36,6 @@ class PesananController{
             header('location:index.php?menu=pes&msg='.$msg);
         }
         //panggil hlmn viewnya
-        // $ catDao ganti jdi $this->>catDao
         $hasil = $this->pesananDao->getAllPesanan();
         require_once 'menu-list-navigation.php';
     }

@@ -197,11 +197,7 @@ include_once "function.php";
                                 <a href="index.php?menu=order">Menu</a>
 
                             </li>
-                            <!--                            <li><a href="page-offers.php">Offers</a></li>-->
                             <li><a href="index.php?menu=contact">Contact</a></li>
-                            <!--                            <li>-->
-                            <!--                                <a href="index.php?menu=book">Book</a>-->
-                            <!--                            </li>-->
                             <?php
                             if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){
                                 ?>
@@ -235,7 +231,6 @@ include_once "function.php";
                                 ?>
                                 <li>
                                     <a href="index.php?menu=login">Login</a>
-                                    <!--                                        <p>--><?php //echo $_SESSION['nama']?><!--</p>-->
 
                                 </li>
                                 <?php
@@ -251,6 +246,13 @@ include_once "function.php";
                     <a href="#" class="module module-cart right" data-toggle="panel-cart">
                         <span class="cart-icon">
                             <i class="ti ti-shopping-cart"></i>
+<!--                            --><?php
+//                            $count = 0;
+//                    foreach ($_SESSION['cart_item'] as $pilihan) {
+//                            $count+=1;
+//
+//                                }
+//                                    ?>
                             <span class="notification">2</span>
                         </span>
                         <span class="cart-value">$32.98</span>
@@ -333,93 +335,11 @@ include_once "function.php";
                 <button class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit"
                         type="submit" name="btnSubmitMenu" value="insertmenu">
                     <span class="description">Insert</span>
-                    <!--                                    <span class="success">-->
-                    <!--                                        <svg x="0px" y="0px" viewBox="0 0 32 32"><path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/></svg>-->
-                    <!--                                    </span>-->
-                    <!--                                    <span class="error">Try again...</span>-->
                 </button>
             </div>
         </form>
 
         <?php }?>
-        <!------------- insert cuy --------------->
-<!--        --><?php //if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Admin'){ ?>
-<!--            <legend>Insert Menu</legend>-->
-<!--            <form method="POST" action="" enctype="multipart/form-data">-->
-<!--                <table>-->
-<!--                    <tr>-->
-<!--                        <td>Name</td>-->
-<!--                        <td>:</td>-->
-<!--                        <td><input type="text" name="menunama" placeholder="Nama"/></td>-->
-<!--                        <td></td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td>Price</td>-->
-<!--                        <td>:</td>-->
-<!--                        <td><input type="text" name="harga" placeholder="Price"/></td>-->
-<!--                        <td></td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td>Status</td>-->
-<!--                        <td>:</td>-->
-<!--                        <td><input type="text" name="status" placeholder="Status (1 or 0)"/></td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td>Category</td>-->
-<!--                        <td>:</td>-->
-<!--                        <td>-->
-<!--                            <select name="cat">-->
-<!--                                <option value="">-Select Company-</option>-->
-<!--                                --><?php
-//                                //                            $catDao = new CategoryDaoImpl();
-//                                //                            $hasil = $catDao->getAllCategory();
-//
-//                                while ($datacat = $hasil->fetch()) {
-//                                    ?>
-<!--                                    <option value="--><?php //echo $datacat->getIdKategory(); ?><!--">-->
-<!--                                        --><?php //echo $datacat->getNama(); ?>
-<!--                                    </option>-->
-<!--                                    --><?php
-//                                }
-//                                ?>
-<!--                            </select>-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                    --><?php
-//                    if($_SESSION['approved_user'] == TRUE) {
-//                        ?>
-<!--                        <tr>-->
-<!--                            <td colspan="2"><input type="submit" value="Submit" name="btnSubmitMenu"/></td>-->
-<!--                        </tr>-->
-<!--                    --><?php //} ?>
-<!--                </table>-->
-<!--            </form>-->
-<!--            --><?php
-//            $msg = FILTER_INPUT(INPUT_GET, 'msg');
-//            if (isset($msg)) {
-//                if ($msg == 'sukses') {
-//                    echo '<p style="color:green;">Data berhasil disimpan.</p>';
-//                } else if ($msg == 'gagal') {
-//                    echo '<p style="color:red;">Data gagal disimpan.</p>';
-//                } else if ($msg == 'ext') {
-//                    echo '<p style="color:red;">Data gagal disimpan karena file cover tidak sesuai typenya.</p>';
-//                }
-//                else if ($msg == 'suksesu') {
-//                    echo '<p style="color:green;">Data berhasil diubah.</p>';
-//                } else if ($msg == 'gagalu') {
-//                    echo '<p style="color:red;">Data gagal diubah.</p>';
-//                }
-//                else if ($msg == 'suksesx') {
-//                    echo '<p style="color:green;">Data berhasil dihapus.</p>';
-//                } else {
-//                    echo '<p style="color:red;">Data gagal dihapus.</p>';
-//                }
-//
-//            }
-//            ?>
-<!--            </fieldset>-->
-<!---->
-<!--        --><?php //}?>
 
         <!-- Page Content -->
         <div class="page-content">

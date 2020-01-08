@@ -48,7 +48,7 @@ class UserDaoImpl
         $msg = 'gagal';
         try{
             $link->beginTransaction();
-            $sql = "INSERT INTO user (role,nama,username, password) VALUES(?,?,?,?)";
+            $sql = "INSERT INTO user (role,nama,username, password) VALUES(?,?,?,MD5(?))";
             $stmt = $link->prepare($sql);
             $stmt->bindValue(1,$user->getRole(),PDO::PARAM_STR);
             $stmt->bindValue(2,$user->getNama(),PDO::PARAM_STR);
