@@ -45,7 +45,6 @@ class MenuPesanController{
             header('location:index.php?menu=mnup&msg='.$msg);
         }
         //panggil hlmn viewnya
-        // $ catDao ganti jdi $this->>catDao
         $hasil = $this->menuPesanDao->getAllMenuPesan();
         require_once 'menu-list-navigation.php';
     }

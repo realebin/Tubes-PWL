@@ -20,9 +20,7 @@ class UserController
             $pengguna = new User();
             $pengguna->setUsername($username);
             $pengguna->setPassword($password);
-//            var_dump($pengguna);exit;
 
-//            $userDao = new UserDaoImpl();
             $data = $this->userDao->masuk($pengguna);
 
             $result = $data->fetch();

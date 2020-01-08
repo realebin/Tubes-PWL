@@ -43,7 +43,6 @@ class PembayaranController{
             header('location:index.php?menu=pemb&msg='.$msg);
         }
         //panggil hlmn viewnya
-        // $ catDao ganti jdi $this->>catDao
         $hasil = $this->pembayaranDao->getAllPembayaran();
         require_once 'checkout.php';
     }

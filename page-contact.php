@@ -205,13 +205,6 @@ include_once "function.php";
                                 <a href="#">mougslovers@gmail.com</a>
                             </div>
                         </div>
-<!--                        <hr class="hr-md">-->
-<!--                        <h6 class="mb-3 text-muted">Follow Us!</h6>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
                     </div>
                     <div class="col-lg-5 push-lg-2 col-md-6">
                         <div id="google-map" class="h-500 shadow"></div>
@@ -261,12 +254,6 @@ include_once "function.php";
                                 </span>
                             </div>
                         </form>
-<!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
                     </div>
                 </div>
                 <!-- Footer 2nd Row -->
@@ -363,14 +350,6 @@ include_once "function.php";
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>
         <nav class="module module-navigation"></nav>
-<!--        <div class="module module-social">-->
-<!--            <h6 class="text-sm mb-3">Follow Us!</h6>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
-<!--        </div>-->
     </nav>
 
     <!-- Body Overlay -->

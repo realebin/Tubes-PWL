@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Jan 2020 pada 07.41
+-- Waktu pembuatan: 07 Jan 2020 pada 16.28
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.1.32
 
@@ -91,7 +91,8 @@ INSERT INTO `menu` (`idMenu`, `nama`, `harga`, `status`, `kategori_id`) VALUES
 (23, 'Lemon Tea', 20000, 0, 6),
 (24, 'Lemon Squash', 22000, 0, 6),
 (25, 'Earl Grey Tea', 35000, 0, 6),
-(26, 'Aqua', 10000, 0, 6);
+(26, 'Aqua', 10000, 0, 6),
+(27, 'Seblak', 25000, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -167,7 +168,9 @@ INSERT INTO `user` (`idUser`, `role`, `nama`, `username`, `password`) VALUES
 (4, 'Dapur', 'Febrina Anastasha', 'Ubin', '202cb962ac59075b964b07152d234b70'),
 (5, 'Kasir', 'Levina Anastasia', 'Lele', '202cb962ac59075b964b07152d234b70'),
 (6, 'Waiters', 'Tiaz Rizqy', 'Manda', '2fc04d527399d7eb418d276092017f84'),
-(8, 'Guest', 'laperaa', 'aaa', '202cb962ac59075b964b07152d234b70');
+(8, 'Guest', 'Celine', 'celcel', '202cb962ac59075b964b07152d234b70'),
+(9, 'Waiters', 'Binu', 'Binu', '202cb962ac59075b964b07152d234b70'),
+(10, 'Dapur', 'cisasa', 'cisasa', '202cb962ac59075b964b07152d234b70');
 
 --
 -- Indexes for dumped tables
@@ -229,7 +232,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT untuk tabel `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `idMenu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `idMenu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT untuk tabel `pembayaran`
@@ -247,7 +250,7 @@ ALTER TABLE `pesanan`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

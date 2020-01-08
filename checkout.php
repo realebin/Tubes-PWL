@@ -215,19 +215,6 @@
                                 </div>
                             </div>
 
-<!--                            <h4 class="border-bottom pb-4"><i class="ti ti-package mr-3 text-primary"></i>Delivery</h4>-->
-<!--                            <div class="row mb-5">-->
-<!--                                <div class="form-group col-sm-6">-->
-<!--                                    <label>Delivery time:</label>-->
-<!--                                    <div class="select-container">-->
-<!--                                        <select class="form-control">-->
-<!--                                            <option>As fast as possible</option>-->
-<!--                                            <option>In one hour</option>-->
-<!--                                            <option>In two hours</option>-->
-<!--                                        </select>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
 
                             <h4 class="border-bottom pb-4"><i class="ti ti-wallet mr-3 text-primary"></i>Payment</h4>
                             <div class="row text-lg">
@@ -303,12 +290,7 @@
                                 </span>
                             </div>
                         </form>
-<!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
+
                     </div>
                 </div>
                 <!-- Footer 2nd Row -->

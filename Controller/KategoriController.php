@@ -38,7 +38,6 @@ class KategoriController
             header('location:index.php?menu=kat&msg='.$msg);
         }
         //panggil hlmn viewnya
-        // $ catDao ganti jdi $this->>catDao
         $hasil = $this->katDao->getAllKategori();
         require_once 'menu-list-navigation.php';
 
@@ -67,8 +66,6 @@ class KategoriController
             }
 
         }
-        //panggil hlmnview
-//        require_once 'update_kat.php';
     }
 }
 
