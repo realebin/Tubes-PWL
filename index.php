@@ -149,7 +149,6 @@ switch ($nav)
     case 'about' : include_once 'page-about.php';
         break;
     case 'management' :
-        $userControl = new UserController();
         $userControl->olahUser();
         break;
     case 'dapoer' : include_once 'dapoer.php';
@@ -169,8 +168,7 @@ switch ($nav)
     case 'user' :
         {
             $commander = FILTER_INPUT(INPUT_GET, 'command');
-            $userControl = new UserController();
-            if($commander == 'edit')
+            if($commander == "edit")
             {
                 $userControl->ubahUser();
             }

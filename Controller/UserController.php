@@ -1,6 +1,4 @@
 <?php
-
-
 class UserController
 {
     private $userDao;
@@ -62,18 +60,22 @@ class UserController
     }
     public function ubahUser(){
         /////////////////ini untuk insert////////////////
-        $user = new User();
         $id = FILTER_INPUT(INPUT_GET,'idUser');
-        $user->setIdUser($id);
 
-        if(isset($id))
-        {
+        if(isset($id)) {
+            $user = new User();
+            $user->setIdUser($id);
+            $data = $this->userDao->getOneUser($user);
+            $result = $data->fetch();
+        }
             $btnUpdateUser = FILTER_INPUT(INPUT_POST,'btnUpdateUser');
             if($btnUpdateUser){
                 $role = FILTER_INPUT(INPUT_POST, 'role');
                 $name = FILTER_INPUT(INPUT_POST, 'nama');
                 $uname = FILTER_INPUT(INPUT_POST, 'uname');
                 $password = FILTER_INPUT(INPUT_POST, 'pwd');
+                $user = new User();
+                $user->setIdUser($id);
                 $user->setNama($name);
                 $user->setRole($role);
                 $user->setPassword($password);
@@ -81,10 +83,10 @@ class UserController
                 $msg = $this->userDao->updateUser($user);
                 header('location:index.php?menu=user&msg='.$msg);
 
-            }
-            $result = $this->userDao->getOneUser($user);
-        }
 
+
+//            $result = $this->userDao->getOneUser($user);
+        }
         require_once 'update_user.php';
     }
 }

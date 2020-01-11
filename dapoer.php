@@ -176,7 +176,7 @@ include_once "function.php";
                 <div class="row">
                     <div class="col-lg-7 push-lg-5">
                         <h1 class="mb-0">Dapoer</h1>
-                        <h4 class="text-muted mb-0">Some condition informations about our dapoer</h4>
+                        <h4 class="text-muted mb-0">Check Orders for Kitchen</h4>
                     </div>
                 </div>
             </div>
@@ -198,7 +198,7 @@ include_once "function.php";
             <body>
             <center>
             <div class="container">
-                <h2>Caffe Tables</h2>
+                <h2>Tables</h2>
                 <p>Choose The Tables :</p>
                 <form>
                     <label class="checkbox-inline">
@@ -267,8 +267,8 @@ include_once "function.php";
             <div class="container text-center">
                 <div class="col-lg-8 push-lg-2">
                     <h2 class="mb-3">Would you like to visit Us?</h2>
-                    <h5 class="text-muted">Book a table even right now or make an online order!</h5>
-                    <a href="menu-list-navigation.php" class="btn btn-primary"><span>Order Online</span></a>
+                    <h5 class="text-muted">Order foods and drinks even right now</h5>
+                    <a href="index.php?menu=order" class="btn btn-primary"><span>Order Now!</span></a>
                     <!--                    <a href="book-a-table.php" class="btn btn-outline-primary"><span>Book a table</span></a>-->
                 </div>
             </div>
