@@ -106,7 +106,7 @@ include_once "function.php";
                             if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Waiters' ){
                                 ?>
                                 <li>
-                                    <a href="index.php?menu=dapoer">Waiters</a>
+                                    <a href="index.php?menu=waiters">Waiters</a>
                                 </li>
                                 <?php
                             }

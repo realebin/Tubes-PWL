@@ -149,9 +149,12 @@ switch ($nav)
     case 'about' : include_once 'page-about.php';
         break;
     case 'management' :
+        $userControl = new UserController();
         $userControl->olahUser();
         break;
     case 'dapoer' : include_once 'dapoer.php';
+        break;
+    case 'waiters' : include_once 'waiters.php';
         break;
     case 'mnu' :
     {
@@ -168,7 +171,8 @@ switch ($nav)
     case 'user' :
         {
             $commander = FILTER_INPUT(INPUT_GET, 'command');
-            if($commander == "edit")
+            $userControl = new UserController();
+            if($commander == 'edit')
             {
                 $userControl->ubahUser();
             }
@@ -257,7 +261,7 @@ if(!isset($nav))
                             if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Waiters' ){
                                 ?>
                                 <li>
-                                    <a href="index.php?menu=dapoer">Waiters</a>
+                                    <a href="index.php?menu=waiters">Waiters</a>
                                 </li>
                                 <?php
                             }

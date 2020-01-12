@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Jan 2020 pada 16.28
+-- Waktu pembuatan: 12 Jan 2020 pada 14.03
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.1.32
 
@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `restaurant`
 --
-CREATE DATABASE IF NOT EXISTS `restaurant` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `restaurant` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `restaurant`;
 
 -- --------------------------------------------------------
@@ -88,11 +88,9 @@ INSERT INTO `menu` (`idMenu`, `nama`, `harga`, `status`, `kategori_id`) VALUES
 (18, 'Mougs Parfait', 35000, 0, 5),
 (19, 'Afogatto Cotton Candy', 45000, 0, 5),
 (20, 'Green Tea Late', 25000, 0, 6),
-(23, 'Lemon Tea', 20000, 0, 6),
-(24, 'Lemon Squash', 22000, 0, 6),
-(25, 'Earl Grey Tea', 35000, 0, 6),
-(26, 'Aqua', 10000, 0, 6),
-(27, 'Seblak', 25000, 1, 2);
+(21, 'Lemon Tea', 20000, 0, 6),
+(22, 'Early Grey Tea', 35000, 0, 6),
+(23, 'Aqua', 10000, 0, 6);
 
 -- --------------------------------------------------------
 
@@ -102,6 +100,7 @@ INSERT INTO `menu` (`idMenu`, `nama`, `harga`, `status`, `kategori_id`) VALUES
 
 DROP TABLE IF EXISTS `menu_pesanan`;
 CREATE TABLE `menu_pesanan` (
+  `id` int(11) NOT NULL,
   `pesanan_id` int(11) NOT NULL,
   `menu_id` int(11) NOT NULL,
   `qty` int(4) NOT NULL,
@@ -122,8 +121,7 @@ CREATE TABLE `pembayaran` (
   `total` double NOT NULL,
   `created` timestamp NOT NULL DEFAULT current_timestamp(),
   `user_id` int(11) NOT NULL,
-  `pesanan_id` int(11) NOT NULL,
-  `menu_id` int(11) NOT NULL
+  `menu_pesanan_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -137,9 +135,7 @@ CREATE TABLE `pesanan` (
   `idPesanan` int(11) NOT NULL,
   `no_meja` int(3) DEFAULT NULL,
   `sub_total` double NOT NULL,
-  `created` timestamp NOT NULL DEFAULT current_timestamp(),
-  `idWaiters` int(11) DEFAULT NULL,
-  `Status_Pembayaran` tinyint(1) NOT NULL
+  `created` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -161,14 +157,13 @@ CREATE TABLE `user` (
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` ( `role`, `nama`, `username`, `password`) VALUES
-( 'Admin', 'Febrina', 'AdmFeb', '202cb962ac59075b964b07152d234b70'),
-( 'Admin', 'Levina', 'AdmLev', '202cb962ac59075b964b07152d234b70'),
-( 'Admin', 'Tiaz', 'AdmTia', '202cb962ac59075b964b07152d234b70'),
-( 'Dapur', 'Febrina Anastasha', 'Ubin', '202cb962ac59075b964b07152d234b70'),
-( 'Kasir', 'Levina Anastasia', 'Lele', '202cb962ac59075b964b07152d234b70'),
-( 'Waiters', 'Tiaz Rizqy', 'Manda', '2fc04d527399d7eb418d276092017f84'),
-( 'Guest', 'laperaa', 'aaa', '202cb962ac59075b964b07152d234b70');
+INSERT INTO `user` (`idUser`, `role`, `nama`, `username`, `password`) VALUES
+(1, 'Admin', 'Febrina', 'Febrina', '202cb962ac59075b964b07152d234b70'),
+(2, 'Admin', 'Amandha', 'Amandha', '202cb962ac59075b964b07152d234b70'),
+(3, 'Dapur', 'Ubin', 'Ubin', '202cb962ac59075b964b07152d234b70'),
+(4, 'Kasir ', 'Cunda', 'Cunda', '202cb962ac59075b964b07152d234b70'),
+(5, 'Waiters', 'Celine', 'Celine', '202cb962ac59075b964b07152d234b70'),
+(6, 'Guest', 'Lele', 'Lele', '202cb962ac59075b964b07152d234b70');
 
 --
 -- Indexes for dumped tables
@@ -191,7 +186,7 @@ ALTER TABLE `menu`
 -- Indeks untuk tabel `menu_pesanan`
 --
 ALTER TABLE `menu_pesanan`
-  ADD PRIMARY KEY (`pesanan_id`,`menu_id`),
+  ADD PRIMARY KEY (`id`),
   ADD KEY `fk_pesanan_has_menu_menu1_idx` (`menu_id`),
   ADD KEY `fk_pesanan_has_menu_pesanan1_idx` (`pesanan_id`);
 
@@ -201,14 +196,13 @@ ALTER TABLE `menu_pesanan`
 ALTER TABLE `pembayaran`
   ADD PRIMARY KEY (`idPembayaran`) USING BTREE,
   ADD KEY `fk_pembayaran_user1_idx` (`user_id`),
-  ADD KEY `fk_pembayaran_menu_pesanan1_idx` (`pesanan_id`,`menu_id`);
+  ADD KEY `fk_pembayaran_menu_pesanan1_idx` (`menu_pesanan_id`);
 
 --
 -- Indeks untuk tabel `pesanan`
 --
 ALTER TABLE `pesanan`
-  ADD PRIMARY KEY (`idPesanan`),
-  ADD KEY `Waiters_Pesananan` (`idWaiters`);
+  ADD PRIMARY KEY (`idPesanan`);
 
 --
 -- Indeks untuk tabel `user`
@@ -230,7 +224,13 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT untuk tabel `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `idMenu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `idMenu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT untuk tabel `menu_pesanan`
+--
+ALTER TABLE `menu_pesanan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `pembayaran`
@@ -242,13 +242,13 @@ ALTER TABLE `pembayaran`
 -- AUTO_INCREMENT untuk tabel `pesanan`
 --
 ALTER TABLE `pesanan`
-  MODIFY `idPesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idPesanan` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -264,21 +264,15 @@ ALTER TABLE `menu`
 -- Ketidakleluasaan untuk tabel `menu_pesanan`
 --
 ALTER TABLE `menu_pesanan`
-  ADD CONSTRAINT `fk_pesanan_has_menu_menu1` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`idMenu`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_pesanan_has_menu_pesanan1` FOREIGN KEY (`pesanan_id`) REFERENCES `pesanan` (`idPesanan`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_pesanan_has_menu_menu1` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`idMenu`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_pesanan_has_menu_pesanan1` FOREIGN KEY (`pesanan_id`) REFERENCES `pesanan` (`idPesanan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ketidakleluasaan untuk tabel `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  ADD CONSTRAINT `fk_pembayaran_menu_pesanan1` FOREIGN KEY (`pesanan_id`,`menu_id`) REFERENCES `menu_pesanan` (`pesanan_id`, `menu_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_pembayaran_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Ketidakleluasaan untuk tabel `pesanan`
---
-ALTER TABLE `pesanan`
-  ADD CONSTRAINT `Waiters_Pesananan` FOREIGN KEY (`idWaiters`) REFERENCES `user` (`idUser`);
+  ADD CONSTRAINT `fk_pembayaran_menu_pesanan1` FOREIGN KEY (`menu_pesanan_id`) REFERENCES `menu_pesanan` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_pembayaran_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`idUser`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -2,38 +2,32 @@
 <html lang="en">
 <head>
 
-<!-- Meta -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- Title -->
-<title>Mougs - ★★★★☆ Restaurant</title>
+    <!-- Title -->
+    <title>Mougs - ★★★★☆ Restaurant</title>
 
-<!-- Favicons -->
-<link rel="shortcut icon" href="assets/img/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
 
-<!-- CSS Plugins -->
-<link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
-<link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
-<link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
 
-<!-- CSS Icons -->
-<link rel="stylesheet" href="assets/css/themify-icons.css" />
-<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <!-- CSS Icons -->
+    <link rel="stylesheet" href="assets/css/themify-icons.css" />
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
 
-<!-- CSS Theme -->
-<link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
-
-<script type="text/javascript" src="jquery-3.4.1.js"></script>
-<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="datatables/datatables.css"/>
-<link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+    <!-- CSS Theme -->
+    <link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
 
 </head>
 
@@ -60,7 +54,6 @@ include_once "Controller/UserController.php";
 
 include_once "function.php";
 ?>
-
 
 <!-- Body Wrapper -->
 <div id="body-wrapper" class="animsition">
@@ -113,7 +106,7 @@ include_once "function.php";
                             if($_SESSION['approved_user'] == TRUE && $_SESSION['userrole'] == 'Waiters' ){
                                 ?>
                                 <li>
-                                    <a href="index.php?menu=dapoer">Waiters</a>
+                                    <a href="index.php?menu=waiters">Waiters</a>
                                 </li>
                                 <?php
                             }
@@ -136,9 +129,7 @@ include_once "function.php";
                             ?>
                         </ul>
                     </nav>
-                    <div class="module left">
-                        <a href="index.php?menu=order" class="btn btn-outline-secondary"><span>Order</span></a>
-                    </div>
+
                 </div>
                 <div class="col-md-2">
                     <a href="#" class="module module-cart right" data-toggle="panel-cart">
@@ -151,132 +142,142 @@ include_once "function.php";
                 </div>
             </div>
         </div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+
     </header>
+    <!-- Header / End -->
+
+    <!-- Header -->
+    <header id="header-mobile" class="light">
+
+        <div class="module module-nav-toggle">
+            <a href="#" id="nav-toggle" data-toggle="panel-mobile"><span></span><span></span><span></span><span></span></a>
+        </div>
+
+        <div class="module module-logo">
+            <a href="index.php">
+                <img src="assets/img/logoMougsPutih.png" alt="">
+            </a>
+        </div>
+
+        <a href="#" class="module module-cart" data-toggle="panel-cart">
+            <i class="ti ti-shopping-cart"></i>
+            <span class="notification">2</span>
+        </a>
+
+    </header>
+    <!-- Header / End -->
+
     <!-- Content -->
     <div id="content">
-    <!-- Page Title -->
-    <div class="page-title bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 push-lg-4">
-                    <h1 class="mb-0">User Management</h1>
-                    <h4 class="text-muted mb-0">Some informations about our User</h4>
+
+        <!-- Page Title -->
+        <div class="page-title border-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 push-lg-5">
+                        <h1 class="mb-0">Waiters</h1>
+                        <h4 class="text-muted mb-0">Check Orders for Kitchen</h4>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <?php
-    if($_SESSION['approved_user'] == TRUE) {
-        ?>
+        <!-- Section -->
+        <section class="section section-bg-edge">
 
-        <fieldset>
-            <legend>Manage User</legend>
-            <form method="POST" action="" enctype="multipart/form-data">
-                <div class="utility-box-content">
-                    <div class="form-group">
-                        <label>Role :</label>
-                        <input type="text" name="role" class="form-control" placeholder="Waiter, Cashier, Kitchen"/>
-                    </div>
-                    <div class="form-group">
-                        <label>Nama :</label>
-                        <input type="text" name="nama" class="form-control" placeholder="Name"/>
-                    </div>
-                    <div class="form-group">
-                        <label>Username :</label>
-                        <td><input type="text" name="uname" class="form-control" placeholder="Username"/>
-                    </div>
-                    <div class="form-group">
-                        <label>Password :</label>
-                        <input type="text" name="pwd" class="form-control" placeholder="Password"/>
-                    </div>
-<!--                    <div class="form-group">-->
-<!--                        <label>Retype Password :</label>-->
-<!--                        <input type="text" name="rpwd" class="form-control" placeholder=" Re-type Password"/>-->
-<!--                    </div>-->
+            <div class="image left bottom col-md-7">
+                <div class="bg-image"><img src="assets/img/photos/some.png" alt=""></div>
+            </div>
 
-                    <?php
-                    if($_SESSION['approved_user'] == TRUE) {
-                        ?>
-
-                        <div class="form-group">
-                            <input type="submit" class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" value="Submit" name="btnSubmitUser"/>
-                        </div>
-                    <?php } ?>
-
-
-
-                </div>
-            </form>
+                <title>Caffe Tables</title>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <body>
+            <center>
+            <div class="container">
+                <h2>Tables</h2>
+                <p>Choose The Tables :</p>
+                <form>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 01
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 02
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 03
+                    </label>
+                    <br><br>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 04
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 05
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 06
+                    </label>
+                    <br><br>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 07
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 08
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 09
+                    </label>
+                    <br><br>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 10
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 11
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Table 12
+                    </label>
+                </form>
+            </div>
+            </center>s
+<br><br>
             <?php
-            $msg = FILTER_INPUT(INPUT_GET, 'msg');
-            if (isset($msg)) {
-                if ($msg == 'sukses') {
-                    echo '<p style="color:green;">Data berhasil disimpan.</p>';
-                } else if ($msg == 'gagal') {
-                    echo '<p style="color:red;">Data gagal disimpan.</p>';
-                } else if ($msg == 'ext') {
-                    echo '<p style="color:red;">Data gagal disimpan karena file cover tidak sesuai typenya.</p>';
-                }
-                else if ($msg == 'suksesu') {
-                    echo '<p style="color:green;">Data berhasil diubah.</p>';
-                } else if ($msg == 'gagalu') {
-                    echo '<p style="color:red;">Data gagal diubah.</p>';
-                }
-                else if ($msg == 'suksesx') {
-                    echo '<p style="color:green;">Data berhasil dihapus.</p>';
-                } else {
-                    echo '<p style="color:red;">Data gagal dihapus.</p>';
-                }
+            if($_SESSION['approved_user'] == TRUE) {
+                ?>
 
-            }
-            ?>
-        </fieldset>
-        <?php
-    }
-    ?>
+                <div class="form-group">
+                    <input type="submit" class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" value="Submit" name="btnSubmitUser"/>
+                </div>
+            <?php } ?>
+            </body>
 
-    <table class="display" id="user" style="text-align: center">
-        <thead>
-        <tr>
-            <th>ID User</th>
-            <th>Role</th>
-            <th>Nama</th>
-            <th>Username</th>
-            <th>Password</th>
-            <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php
-        /* @var $data as User*/
-        foreach ($hasilUser as $data) {
-            echo '<tr>';
-                echo '<td>'.$data->getIdUser().'</td>';
-                echo '<td>'.$data->getRole().'</td>';
-                echo '<td>'.$data->getNama().'</td>';
-                echo '<td>'.$data->getUsername().'</td>';
-                echo '<td>'.$data->getPassword().'</td>';
-                echo '<td><input type="button" onclick="editUser('.$data->getIdUser().')" value="Edit"></td>';
-           echo '</tr>';
-       }?>
 
-        </tbody>
-    </table>
 
+        </section>
+
+        <!-- Section -->
+        <section class="section section-lg dark bg-dark">
+
+            <!-- BG Image -->
+            <div class="bg-image bg-parallax"><img src="assets/img/photos/bg-croissant.jpg" alt=""></div>
+
+            <div class="container text-center">
+                <div class="col-lg-8 push-lg-2">
+                    <h2 class="mb-3">Would you like to visit Us?</h2>
+                    <h5 class="text-muted">Order foods and drinks even right now</h5>
+                    <a href="index.php?menu=order" class="btn btn-primary"><span>Order Now!</span></a>
+                    <!--                    <a href="book-a-table.php" class="btn btn-outline-primary"><span>Book a table</span></a>-->
+                </div>
+            </div>
+
+        </section>
 
         <!-- Footer -->
         <footer id="footer" class="bg-dark dark">
-            
+
             <div class="container">
                 <!-- Footer 1st Row -->
                 <div class="footer-first-row row">
@@ -314,12 +315,12 @@ include_once "function.php";
                                 </span>
                             </div>
                         </form>
-<!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
-<!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
+                        <!--                        <h5 class="text-muted mb-3">Social Media</h5>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+                        <!--                        <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
                     </div>
                 </div>
                 <!-- Footer 2nd Row -->
@@ -336,7 +337,7 @@ include_once "function.php";
 
     </div>
     <!-- Content / End -->
-</div>
+
     <!-- Panel Cart -->
     <div id="panel-cart">
         <div class="panel-cart-container">
@@ -416,22 +417,23 @@ include_once "function.php";
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>
         <nav class="module module-navigation"></nav>
-<!--        <div class="module module-social">-->
-<!--            <h6 class="text-sm mb-3">Follow Us!</h6>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
-<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
-<!--        </div>-->
+        <!--        <div class="module module-social">-->
+        <!--            <h6 class="text-sm mb-3">Follow Us!</h6>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+        <!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
+        <!--        </div>-->
     </nav>
 
     <!-- Body Overlay -->
     <div id="body-overlay"></div>
 
 </div>
+
 <!-- Modal / Product -->
-<!--di index-->
+<!-- diindex -->
 
 <!-- JS Plugins -->
 <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
@@ -450,16 +452,6 @@ include_once "function.php";
 <!-- JS Core -->
 <script src="assets/js/core.js"></script>
 
-<!-- JS Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-
-<script type="text/javascript" src="datatables/datatables.js"></script>
-<script type="text/javascript" src="datatables/datatables.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#user').DataTable();
-    });
-</script>
 </body>
+
 </html>
