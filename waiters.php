@@ -197,51 +197,20 @@ include_once "function.php";
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
             <body>
             <center>
-            <div class="container">
-                <h2>Tables</h2>
-                <p>Choose The Tables :</p>
-                <form>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="">Table 01
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="">Table 02
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="">Table 03
-                    </label>
-                    <br><br>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="">Table 04
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="">Table 05
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="">Table 06
-                    </label>
-                    <br><br>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="">Table 07
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="">Table 08
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="">Table 09
-                    </label>
-                    <br><br>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="">Table 10
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="">Table 11
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="">Table 12
-                    </label>
-                </form>
-            </div>
+                <div class="container">
+                    <h2>Tables</h2>
+                    <form>
+                        <label class="checkbox-inline">
+                            <div><a>Table 01</a></div>
+                            <?php
+                            foreach ($_SESSION['cart_item'] as $pilihan) { ?>
+                                <div><input type="checkbox" value=""><?php echo $pilihan["id_makanan"]; ?><?php echo $pilihan["nama_makanan"]; ?><?php echo $pilihan["quantity"]; ?></a></span></div>
+                                <?php
+                            }
+                            ?>
+                        </label>
+                    </form>
+                </div>
             </center>s
 <br><br>
             <?php
