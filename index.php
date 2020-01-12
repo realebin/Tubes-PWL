@@ -4,7 +4,7 @@ session_start();
 if (!isset($_SESSION['approved_user'])) {
     $_SESSION['approved_user'] = FALSE;
 }
-
+$hasil = 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -675,7 +675,9 @@ if(!isset($nav))
                             foreach ($_SESSION['cart_item'] as $pilihan) {
                                 $jumlah = $pilihan["quantity"] * $pilihan["harga"];
                                 $jumfin = $jumfin + $jumlah;
-                            }?>
+                            }
+                            $hasil = $hasil+$jumfin;
+                            ?>
                     <tr class="title">
                          <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal">Subtotal</a></span></td>
                         <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"></a></span></td>
