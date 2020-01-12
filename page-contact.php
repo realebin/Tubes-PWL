@@ -280,62 +280,38 @@ include_once "function.php";
             </div>
             <div class="panel-cart-content">
                 <table class="table-cart">
-                    <tr>
-                        <td class="title">
-                            <span class="name"><a href="#productModal" data-toggle="modal">Pizza Chicked BBQ</a></span>
-                            <span class="caption text-muted">26”, deep-pan, thin-crust</span>
-                        </td>
-                        <td class="price">$9.82</td>
-                        <td class="actions">
-                            <a href="#productModal" data-toggle="modal" class="action-icon"><i class="ti ti-pencil"></i></a>
-                            <a href="#" class="action-icon"><i class="ti ti-close"></i></a>
-                        </td>
+                    <tr class="title">
+                        <td> <span class="caption text-muted"><a href="#productModal" data-toggle="modal">Id Menu</a></span></td>
+                        <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal">Nama Makanan</a></span></td>
+                        <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal">Quantity</a></span></td>
+                        <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal">Harga</a></span></td>
                     </tr>
-                    <tr>
-                        <td class="title">
-                            <span class="name"><a href="#productModal" data-toggle="modal">Beef Burger</a></span>
-                            <span class="caption text-muted">Large (500g)</span>
-                        </td>
-                        <td class="price">$9.82</td>
-                        <td class="actions">
-                            <a href="#productModal" data-toggle="modal" class="action-icon"><i class="ti ti-pencil"></i></a>
-                            <a href="#" class="action-icon"><i class="ti ti-close"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="title">
-                            <span class="name"><a href="#productModal" data-toggle="modal">Extra Burger</a></span>
-                            <span class="caption text-muted">Small (200g)</span>
-                        </td>
-                        <td class="price text-success">$0.00</td>
-                        <td class="actions">
-                            <a href="#productModal" data-toggle="modal" class="action-icon"><i class="ti ti-pencil"></i></a>
-                            <a href="#" class="action-icon"><i class="ti ti-close"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="title">
-                            <span class="name">Weekend 20% OFF</span>
-                        </td>
-                        <td class="price text-success">-$8.22</td>
-                        <td class="actions"></td>
+                    <?php
+                    foreach ($_SESSION['cart_item'] as $pilihan) { ?>
+                        <tr class="title">
+                            <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"><?php echo $pilihan["id_makanan"]; ?></a></span></td>
+                            <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"><?php echo $pilihan["nama_makanan"]; ?></a></span></td>
+                            <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"><?php echo $pilihan["quantity"]; ?></a></span></td>
+                            <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"> Rp.<?php echo $pilihan["quantity"] * $pilihan["harga"] ; ?></a></span></td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+                    <?php
+                    $jumfin = 0;
+                    foreach ($_SESSION['cart_item'] as $pilihan) {
+                        $jumlah = $pilihan["quantity"] * $pilihan["harga"];
+                        $jumfin = $jumfin + $jumlah;
+                    }
+                    $hasil = $hasil+$jumfin;
+                    ?>
+                    <tr class="title">
+                        <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal">Subtotal</a></span></td>
+                        <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"></a></span></td>
+                        <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal"></a></span></td>
+                        <td><span class="caption text-muted"><a href="#productModal" data-toggle="modal">Rp. <?php echo $jumfin?></a></span></td>
                     </tr>
                 </table>
-                <div class="cart-summary">
-                    <div class="row">
-                        <div class="col-7 text-right text-muted">Order total:</div>
-                        <div class="col-5"><strong>$21.02</strong></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-7 text-right text-muted">Devliery:</div>
-                        <div class="col-5"><strong>$3.99</strong></div>
-                    </div>
-                    <hr class="hr-sm">
-                    <div class="row text-lg">
-                        <div class="col-7 text-right text-muted">Total:</div>
-                        <div class="col-5"><strong>$24.21</strong></div>
-                    </div>
-                </div>
             </div>
         </div>
         <a href="index.php?menu=checkout" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
