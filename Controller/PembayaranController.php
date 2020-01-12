@@ -30,6 +30,23 @@ class PembayaranController{
             header('location:index.php?menu=pemb&msg='.$msg);
         }
 
+        $btnCheckout = FILTER_INPUT(INPUT_POST,'btnCheckout');
+        if($btnCheckout){
+            //            ToDo: Buat Filter Input Post untuk id_makanan,harga,quantity
+            $id_makanan = FILTER_INPUT(INPUT_POST,'id_makanan');
+            $nama_makanan = FILTER_INPUT(INPUT_POST,'nama_makanan');
+            $harga = FILTER_INPUT(INPUT_POST,'harga');
+            $quantity = FILTER_INPUT(INPUT_POST,'quantity');
+            $noMeja = FILTER_INPUT(INPUT_POST,'noMeja');
+
+//            ToDo: Buat Objek Menu set data objek sama Filter Input Diatas
+
+//            Todo: Masukkin Objek Kedalam Array
+            $pesanan1=array("id_makanan"=>$id_makanan, "nama_makanan"=>$nama_makanan,"quantity"=>$quantity,"harga"=>$harga,"noMeja"=>$noMeja);
+//            Todo: Masukkin pesanan yang diatas kedalam array penampung pesanan
+            array_push($_SESSION['checkout'],$pesanan1);
+        }
+
 
         //////////////////ini buat delete//////////////
         $commandBtn = FILTER_INPUT(INPUT_GET, 'command');

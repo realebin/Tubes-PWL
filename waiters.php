@@ -175,7 +175,7 @@ include_once "function.php";
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 push-lg-5">
-                        <h1 class="mb-0">Dapoer</h1>
+                        <h1 class="mb-0">Waiters</h1>
                         <h4 class="text-muted mb-0">Check Orders for Kitchen</h4>
                     </div>
                 </div>
@@ -197,21 +197,21 @@ include_once "function.php";
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
             <body>
             <center>
-            <div class="container">
-                <h2>Tables</h2>
-                <form>
-                    <label class="checkbox-inline">
-                        <div><a>Table 01</a></div>
-                        <?php
-                        foreach ($_SESSION['cart_item'] as $pilihan) { ?>
-                            <div><input type="checkbox" value=""><?php echo $pilihan["id_makanan"]; ?><?php echo $pilihan["nama_makanan"]; ?><?php echo $pilihan["quantity"]; ?></a></span></div>
+                <div class="container">
+                    <h2>Tables</h2>
+                    <form>
+                        <label class="checkbox-inline">
+                            <div><a>Table 01</a></div>
                             <?php
-                        }
-                        ?>
-                    </label>
-                </form>
-            </div>
-            </center>
+                            foreach ($_SESSION['cart_item'] as $pilihan) { ?>
+                                <div><input type="checkbox" value=""><?php echo $pilihan["id_makanan"]; ?><?php echo $pilihan["nama_makanan"]; ?><?php echo $pilihan["quantity"]; ?></a></span></div>
+                                <?php
+                            }
+                            ?>
+                        </label>
+                    </form>
+                </div>
+            </center>s
 <br><br>
             <?php
             if($_SESSION['approved_user'] == TRUE) {

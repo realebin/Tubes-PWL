@@ -9,31 +9,31 @@
 <!-- Title -->
 <title>Mougs - ★★★★☆ Restaurant</title>
 
-    <link rel="stylesheet" type="text/css" href="datatables/datatables.css"/>
-    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+<!-- Favicons -->
+<link rel="shortcut icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
 
+<!-- CSS Plugins -->
+<link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
+<link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
+<link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
 
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="assets/img/favicon.png">
-    <link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
+<!-- CSS Icons -->
+<link rel="stylesheet" href="assets/css/themify-icons.css" />
+<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
 
-    <!-- CSS Plugins -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css" />
-    <link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css" />
-    <link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css" />
+<!-- CSS Theme -->
+<link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
 
-    <!-- CSS Icons -->
-    <link rel="stylesheet" href="assets/css/themify-icons.css" />
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
 
-    <!-- CSS Theme -->
-    <link id="theme" rel="stylesheet" href="assets/css/themes/theme-beige.min.css" />
-
-
+<link rel="stylesheet" type="text/css" href="datatables/datatables.css"/>
+<link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
 
 </head>
 
@@ -193,7 +193,7 @@ include_once "function.php";
                     </div>
                     <div class="form-group">
                         <label>Username :</label>
-                        <td><input type="text" name="uname" class="form-control" placeholder="Username"/></td>
+                        <td><input type="text" name="uname" class="form-control" placeholder="Username"/>
                     </div>
                     <div class="form-group">
                         <label>Password :</label>
@@ -415,7 +415,15 @@ include_once "function.php";
             </a>
             <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
         </div>
-
+        <nav class="module module-navigation"></nav>
+<!--        <div class="module module-social">-->
+<!--            <h6 class="text-sm mb-3">Follow Us!</h6>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>-->
+<!--            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>-->
+<!--        </div>-->
     </nav>
 
     <!-- Body Overlay -->
@@ -424,14 +432,8 @@ include_once "function.php";
 </div>
 <!-- Modal / Product -->
 <!--di index-->
+
 <!-- JS Plugins -->
-<script type="text/javascript" src="jquery-3.4.1.js"></script>
-<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="datatables/datatables.js"></script>
-<script type="text/javascript" src="datatables/datatables.min.js"></script>
-
-
-
 <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
 <script src="assets/plugins/tether/dist/js/tether.min.js"></script>
 <script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -448,11 +450,16 @@ include_once "function.php";
 <!-- JS Core -->
 <script src="assets/js/core.js"></script>
 
+<!-- JS Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script type="text/javascript" src="datatables/datatables.js"></script>
+<script type="text/javascript" src="datatables/datatables.min.js"></script>
+
 <script type="text/javascript">
     $(document).ready(function() {
         $('#user').DataTable();
     });
 </script>
-
 </body>
 </html>

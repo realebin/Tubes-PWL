@@ -116,59 +116,6 @@ include_once "Controller/UserController.php";
 
 include_once "function.php";
 ?>
-<!--nyoba cart -->
-<?php
-//$menuControl = new MenuController();
-//$menuDao = new MenuDaoImpl();
-//$menu = new Menu();
-//$link = PDOUtility::get_koneksi();
-//if(!empty($_GET["action"])) {
-//    switch($_GET["action"]) {
-//        case "add":
-//            if(!empty($_POST["quantity"])) {
-//                $productByCode =$menuDao->getOneMenu($menu->setIdMenu($_GET["code"]));
-////                $productByCode = PDOUtility::->runQuery("SELECT * FROM tblproduct WHERE code='" . $_GET["code"] . "'");
-//$itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"], 'image'=>$productByCode[0]["image"]));
-//
-//                if(!empty($_SESSION["cart_item"])) {
-//                    if(in_array($productByCode[0]["code"],array_keys($_SESSION["cart_item"]))) {
-//                        foreach($_SESSION["cart_item"] as $k => $v) {
-//                            if($productByCode[0]["code"] == $k) {
-//                                if(empty($_SESSION["cart_item"][$k]["quantity"])) {
-//                                    $_SESSION["cart_item"][$k]["quantity"] = 0;
-//                                    }
-//
-//                                $_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
-//                                }
-//                        }
-//                    } else {
-//                        $_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
-//                        }
-//                } else {
-//                    $_SESSION["cart_item"] = $itemArray;
-//                    }
-//                }
-//        break;
-//
-//case "remove":
-//    if(!empty($_SESSION["cart_item"])) {
-//        foreach($_SESSION["cart_item"] as $k => $v) {
-//            if($_GET["code"] == $k)
-//                unset($_SESSION["cart_item"][$k]);
-//            if(empty($_SESSION["cart_item"]))
-//                unset($_SESSION["cart_item"]);
-//            }
-//        }
-//    break;
-//
-//case "empty":
-//    unset($_SESSION["cart_item"]);
-//    break;
-//    }
-//}
-//?>
-<!--sampe sini-->
-
 
 <div id="body-wrapper" class="animsition">
 
@@ -246,13 +193,6 @@ include_once "function.php";
                     <a href="#" class="module module-cart right" data-toggle="panel-cart">
                         <span class="cart-icon">
                             <i class="ti ti-shopping-cart"></i>
-<!--                            --><?php
-//                            $count = 0;
-//                    foreach ($_SESSION['cart_item'] as $pilihan) {
-//                            $count+=1;
-//
-//                                }
-//                                    ?>
                             <span class="notification">2</span>
                         </span>
                         <span class="cart-value">$32.98</span>
@@ -722,7 +662,7 @@ include_once "function.php";
                 </table>
             </div>
         </div>
-        <a href="index.php?menu=checkout" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+        <a href="index.php?menu=checkout" class="panel-cart-action btn btn-secondary btn-block btn-lg" name="btnCheckout"><span>Go to checkout</span></a>
     </div>
 
     <!-- Panel Mobile -->

@@ -85,7 +85,6 @@ class UserDaoImpl
         $msg = 'gagalu';
         $link = PDOUtility::get_koneksi();
         try{
-            $link->beginTransaction();
             $sql = "UPDATE user SET role =? ,nama=?,username=?, password=? WHERE idUser =?";
             $stmt = $link->prepare($sql);
             $stmt->bindValue(1,$user->getRole(),PDO::PARAM_STR);
@@ -99,7 +98,6 @@ class UserDaoImpl
             $msg = 'suksesu';
         }
         catch (PDOException $err){
-            $link->rollBack();
             echo $err ->getMessage();
             die();
         }
